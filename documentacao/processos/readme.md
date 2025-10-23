@@ -11,7 +11,9 @@ Papeis
 Artefatos
 - Documento de Visão : Artefato responsável por compreender uma visão geral do produto que está sendo desenvolvido.
 - Especificações de caso de uso: Artefato que descreverá uma funcionalidade do sistema.
+- Documento de requisitos: Artefato que visa esclarecer funcionalidades, propósito e fluxo do sistema.
 - Produto : Artefato executável e entregável do que foi solicitado e desenvolvido.
+- Plano de Testes: Artefato que visa definir os testes do software a fim de manter a qualidade do sistema.
 
 Atividades
 - Analisar Negócio : Entender o contexto, objetivos, problemas e oportunidades que necessitam o hospital. Resulta na definição de escopo e em uma visão geral de cada funcionalidade.
