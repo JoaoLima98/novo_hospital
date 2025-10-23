@@ -1,14 +1,14 @@
-# Atividades do Processo de Software: Sistema de Triagem Hospitalar
+# Atividades do Processo de Software:
 
-Este documento detalha o fluxo de trabalho do processo de software, definindo o propósito e as ações primárias de cada atividade no desenvolvimento do **Sistema de Triagem Hospitalar**.
+Este documento detalha o fluxo do processo de software, definindo o propósito e as ações primárias de cada atividade no desenvolvimento do **Sistema de Triagem Hospitalar**.
 
 ----------
 
-## 1. Analisar o Fluxo de Atendimento
+## 1. Analisar Negócio
 
 ### Propósito
 
-A atividade **Analisar o Fluxo de Atendimento** é o ponto de partida. Seu objetivo é **entender profundamente o fluxo de trabalho da Enfermeira, do Médico e da Farmácia**, conforme o escopo definido. Esta etapa garante que o sistema a ser construído atenda às necessidades reais de cada ator e se integre de forma coesa.
+A atividade **Analisar Negócio** é o ponto de partida. Seu objetivo é entender o contexto, objetivos, problemas e oportunidades diante de uma solicitação, conforme o escopo definido.
 
 ### Responsável Principal
 
@@ -16,12 +16,12 @@ A atividade **Analisar o Fluxo de Atendimento** é o ponto de partida. Seu objet
 
 ### Fluxo de Artefatos
 
-**Entradas:** Diagrama de Caso de Uso, Necessidades para o fluxo de Triagem, Diagnóstico e Prescrição, Requisitos de conformidade (LGPD, Segurança do Paciente).
+**Entradas:** Demanda da funcionalidade descrita pelo cliente.
 
-**Saídas:** Escopo do Sistema Detalhado, Requisitos Funcionais, **[Documento de Visão](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/documento-visao.md#documento-de-vis%C3%A3o-sistema-de-fluxo-hospitalar)**.
+**Saídas:** Requisitos Funcionais, **[Documento de Visão](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/documento-visao.md#documento-de-vis%C3%A3o-sistema-de-fluxo-hospitalar)**.
 ### Principais Tarefas
 
-1.  **Levantamento de Requisitos:** Analisar ficha de triagem atualmente utilizada em papel, e entender atual fluxo de funciononamento do hospital, para detalhar cada funcionalidade do diagrama (`Gerenciar Paciente`, `Fazer Triagem`, etc.).
+1.  **Levantamento de Requisitos:** Analisar a demanda e construir os...
     
 2.  **Análise de Viabilidade:** Analisar o impacto das novas funcionalidades na rotina de atendimento.
     
