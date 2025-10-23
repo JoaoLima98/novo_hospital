@@ -3,7 +3,7 @@ Definição de Padrões e Processo de Desenvolvimento de Software
 Processo
 
 Papeis
-- [Analista de Negócio](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an) : Responsável por entender as necessidades do hospital para transpassar para o sistema, sem perder a essência do processo atual da instituição, e ajudar na criação da documentação.
+- [Analista de Negócio](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an) : Responsável por entender as necessidades do negócio para transpassar para o sistema, sem perder a essência do processo atual da instituição, e ajudar na criação da documentação.
 - [Analista de QA](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-qa-quality-assurance) : Responsável por garantir que o produto final esteja livre de defeitos e atenda à visão inicial.
 - [Desenvolvedor](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#desenvolvedor) : Responsável por projetar e construir o software, transformando os artefatos de requisitos detalhados em código funcional.
 - [Profissional UX](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an): Responsável por planejar e melhorar a experiência do usuário ao interagir com o produto final.
