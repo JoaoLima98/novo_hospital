@@ -9,16 +9,17 @@ Papeis
 - [Profissional UX](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an): Responsável por planejar e melhorar a experiência do usuário ao interagir com o produto final.
 
 Artefatos
-- Documento de Visão : Artefato responsável por compreender uma visão geral do produto que está sendo desenvolvido.
-- Especificações de caso de uso: Artefato que descreverá uma funcionalidade do sistema.
-- Documento de requisitos: Artefato que visa esclarecer funcionalidades, propósito e fluxo do sistema.
-- Produto : Artefato executável e entregável do que foi solicitado e desenvolvido.
-- Plano de Testes: Artefato que visa definir os testes do software a fim de manter a qualidade do sistema.
+- [Documento de Visão](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#1-documento-de-vis%C3%A3o) : Artefato responsável por compreender uma visão geral do produto que está sendo desenvolvido.
+- [Especificações de caso de uso](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#2-especifica%C3%A7%C3%A3o-de-caso-de-uso): Artefato que descreverá uma funcionalidade do sistema.
+- [Documento de requisitos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#3-documento-de-requisitos): Artefato que visa esclarecer funcionalidades, propósito e fluxo do sistema.
+- [Produto](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#4-produto-software-execut%C3%A1vel) : Artefato executável e entregável do que foi solicitado e desenvolvido.
+- [Plano de Testes](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#5-plano-de-testes): Artefato que visa definir os testes do software a fim de manter a qualidade do sistema.
 
 Atividades
-- Analisar Negócio : Entender o contexto, objetivos, problemas e oportunidades que necessitam o hospital. Resulta na definição de escopo e em uma visão geral de cada funcionalidade.
-- Especificar Funcionalidades: Detalhar as funcionalidades de alto nível em Histórias de Usuário claras e testáveis.
-- Codificar e Testar Unitariamente: Escrever, testar unitariamente e integrar o código-fonte para implementar as funcionalidades definidas nas Histórias de Usuário.
+- [Analisar Negócio](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#5-plano-de-testes) : Entender o contexto, objetivos, problemas e oportunidades diante de uma solicitação. Resulta na definição de escopo e em uma visão geral de cada funcionalidade.
+- [Especificar Funcionalidades](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#2-especificar-funcionalidades): Detalhar especificações claras, descrevendo exatamente como cada ator interagirá com o sistema.
+- [Codificar e Testar Unitariamente](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#3-codificar-e-testar-unitariamente): Escrever, testar unitariamente e integrar o código-fonte para implementar as funcionalidades definidas nas Especificações de Funcionalidades.
+
 Padrões Estabelecidos para o Desenvolvimento
 - Construir Documento de requisitos: Gerar um documento visível do funcionamento e dos atores do Sistema de Triagem.
 
