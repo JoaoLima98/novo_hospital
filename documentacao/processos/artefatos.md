@@ -101,3 +101,19 @@ Este documento deve responder as seguintes perguntas, voltados para os testes:
 - Qual a estratégia?
 - Quais as técnicas?
 - Quais indicadores?
+
+## 6. Gráfico de Gantt
+
+Artefato responsável por representar a estimativa de tempo de entrega.
+
+### Template
+
+{Preencher Template}
+
+## 7. Diagrama de Atividades
+
+Artefato que representa fluxo de trabalho de um processo de negócio ou de uma funcionalidade do sistema.
+
+### Template
+
+{Preencher Template}
