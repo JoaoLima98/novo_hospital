@@ -14,6 +14,18 @@
     1. **Entrada Principal** : Necessidades e objetivos do cliente/stakeholders.  
     2. **Saída Principal** : [Documento de Visão](artefatos.md#1-documento-de-visão)  
 
+## Gerente do Projeto
+
+**Perfil**  
+
+Responsável por planejar e administrar o cronograma e orçamento de recursos, bem como os riscos do projeto.
+
+**Atividades**  
+
+* [Analisar Negócio](atividades.md#1-analisar-negócio): Investigar, documentar e validar as necessidades de negócio,  Definir o escopo do projeto em termos de objetivos de negócio.
+    1. **Entrada Principal** : Necessidades e objetivos do cliente/stakeholders.  
+    2. **Saída Principal** : [Documento de Visão](artefatos.md#1-documento-de-visão)  
+
 ## Analista de QA (Quality Assurance)
 
 **Perfil**  
