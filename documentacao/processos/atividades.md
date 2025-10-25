@@ -30,7 +30,23 @@ A atividade **Analisar Negócio** é o ponto de partida. Seu objetivo é entende
 4.  **Documentação da Visão:** Criar o **[Documento de Visão](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an)** que formaliza os objetivos e o escopo do Sistema de Triagem Hospitalar.
 
 ---
-## 2. Especificar Funcionalidades
+## 2. Planejar
+### Propósito
+A atividade **Planejar** tem objetivo de transformar ideias/demandas iniciais em tarefas que encaminhem estas ideias para um produto final.
+
+### Responsáveis
+
+**[Analista de Negócio (AN)](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an)**.
+
+**[Gerente do Projeto](https://github.com/JoaoLima98/novo_hospital/edit/main/documentacao/processos/papeis.md#gerente-do-projeto)**.
+
+### Fluxo de Artefatos
+
+**Entradas:** 
+
+**Saídas:**
+
+## 3. Especificar Funcionalidades
 
 ### Propósito
 
@@ -119,3 +135,20 @@ A atividade **Garantir experiência do usuário** tem como objetivo garantir que
 ### Principais Tarefas
 
 1.   **Design:** Planejar o Front-end do sistema de maneira que o usuário tenha facilidade de utilizar o sistema.
+
+
+## 6. Revisar
+
+### Propósito
+
+A atividade de **Revisar** tem objetivo de avaliar e criticar de forma sistemática um artefato ou processo a fim de identificar e corrigir desvios ou erros.
+
+### Responsável Principal
+
+**[Analista de QA](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-qa-quality-assurance)**.
+
+### Fluxo de Artefatos
+
+**Entradas:** Software Executável.
+
+**Saídas:** Correção do ou aceitação do requisito ou software executável.
