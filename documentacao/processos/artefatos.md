@@ -7,7 +7,7 @@ Este documento define a estrutura e o propósito dos principais artefatos utiliz
 ## 1. Documento de Visão
 
 ### Propósito
-O **Documento de Visão** estabelece o propósito do produto, seu escopo de alto nível e a justificativa de negócio para sua criação. Ele serve como o principal guia e "contrato" inicial entre o negócio e a equipe técnica, definindo **o que** será construído e **por que**.
+O **Documento de Visão** estabelece o propósito do produto, seu escopo e a justificativa de negócio para sua criação. Ele serve como o principal guia e "contrato" inicial entre o negócio e a equipe técnica, definindo **o que** será construído e **por que**.
 
 ### Template
 
@@ -22,7 +22,7 @@ O **Documento de Visão** estabelece o propósito do produto, seu escopo de alto
 ## 2. Escopo do Produto
 *(Defina claramente o que o produto fará e, mais importante, o que ele **não** fará (exclusões).)*
 
-- **Funcionalidades Chave (Alto Nível):**
+- **Funcionalidades Chave:**
     - [Exemplo: Cadastro de Fornecedores e Produtos]
     - [Exemplo: Rastreamento em tempo real do nível de estoque]
     - [Exemplo: Geração de relatórios de baixa de estoque]
