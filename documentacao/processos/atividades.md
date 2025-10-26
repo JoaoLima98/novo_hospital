@@ -142,7 +142,7 @@ A atividade **Garantir experiência do usuário** tem como objetivo garantir que
 2.   **Organizar reunião de testes:** Organizar evento que possíveis usuários testem o sistema e deem feedback da facilidade de seu uso.
 
 
-## 7. Revisar
+## 7. Revisar demanda
 
 ### Propósito
 
@@ -150,7 +150,7 @@ A atividade de **Revisar** tem objetivo de avaliar e criticar de forma sistemát
 
 ### Responsável Principal
 
-**[Analista de QA](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-qa-quality-assurance)**.
+**[Analista de QA](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-qa-quality-assurance)** | **[Analista de Negócio (AN)](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an)**.
 
 ### Fluxo de Artefatos
 
