@@ -1,7 +1,4 @@
 
-# Papeis
-
-
 ## Analista de Negócio (AN)
 
 **Perfil**  
@@ -10,10 +7,10 @@
 
 **Atividades**  
 
-* [Analisar Negócio](atividades.md#1-analisar-negócio): Investigar, documentar e validar as necessidades de negócio,  Definir o escopo do projeto em termos de objetivos de negócio.
-    1. **Entrada Principal** : Necessidades e objetivos do cliente/stakeholders.  
-    2. **Saída Principal** : [Documento de Visão](artefatos.md#1-documento-de-visão)  
-
+* [Analisar Negócio](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#1-analisar-neg%C3%B3cio)
+* [Planejar](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#2-planejar)
+* [Revisar Demanda](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#7-revisar-demanda)
+  
 ## Gerente do Projeto
 
 **Perfil**  
@@ -22,9 +19,7 @@ Responsável por planejar e administrar o cronograma e orçamento de recursos, b
 
 **Atividades**  
 
-* [Planejar](https://github.com/JoaoLima98/novo_hospital/edit/main/documentacao/processos/atividades.md#2-planejar): {Inserir descrição}
-    1. **Entrada Principal** : Necessidades e objetivos do cliente/stakeholders.  
-    2. **Saída Principal** :  [Gráfico de Gantt](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#6-gr%C3%A1fico-de-gantt) | [Diagrama de atividade](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#7-diagrama-de-atividades) 
+* [Planejar](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#2-planejar)
 
 ## Analista de QA (Quality Assurance)
 
@@ -34,22 +29,19 @@ Responsável por planejar e administrar o cronograma e orçamento de recursos, b
 
 **Atividades**
 
-* [Especificar Funcionalidades](atividades.md#2-especificar-funcionalidades): Transformar as funcionalidades de alto nível em requisitos detalhados e testáveis, para isso, o analista deverá criar e manter critérios de aceitação.
-    1. **Entrada Principal** : [Documento de Visão](artefatos.md#1-documento-de-visão)   
-    2. **Saídas Principais** : | [Especificações de Casos de Uso](https://github.com/JoaoLima98/triagem_hospitalar/tree/main/documentacao/especificacoes/caso-de-uso)
-                               | [Plano de Testes](artefatos.md#5-plano-de-testes) 
+* [Especificar Funcionalidades](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#3-especificar-funcionalidades)
+* [Construir plano de testes](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#4-construir-plano-de-testes)
+* [Revisar Demanda](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#7-revisar-demanda)
 
 ## Desenvolvedor  
 
-**Perfil**  
+**Perfil** 
 
 É o construtor do sistema. Deve ter forte proficiência em linguagens de programação, princípios de design de software e um foco na qualidade do código e na manutenibilidade da solução.
 
 **Atividades**  
 
-* [Codificar e Testar Unitariamente](atividades.md#3-codificar-e-testar-unitariamente): Projetar a arquitetura e o design de baixo nível do software. Escrever código-fonte e integrar módulos.
-    1. **Entrada Principal** :  [Especificações de Casos de Uso](https://github.com/JoaoLima98/triagem_hospitalar/tree/main/documentacao/especificacoes/caso-de-uso) 
-    2. **Saída Principal** : [Produto (Software Executável)](artefatos.md#3-produto-software-executável)
+* [Codificar e Testar Unitariamente](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#5-codificar-e-testar-unitariamente)
  
 ## Profissional UX
 
@@ -59,7 +51,4 @@ Responsável por planejar e administrar o cronograma e orçamento de recursos, b
 
 **Atividades**
 
-Desenhar a Experiência e Interface: Construir e Validar o design visando garantir a usabilidade do sistema.
-
-1. **Entrada Principal** : [Especificações de Casos de Uso](https://github.com/JoaoLima98/triagem_hospitalar/tree/main/documentacao/especificacoes/caso-de-uso) 
-2. **Saída Principal** : [Produto (Software Executável)](artefatos.md#3-produto-software-executável) 
+* [Garantir experiência do usuário](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#6-garantir-experi%C3%AAncia-do-usu%C3%A1rio)
