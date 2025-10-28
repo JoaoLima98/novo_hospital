@@ -102,6 +102,13 @@ Este documento deve responder as seguintes perguntas, voltados para os testes:
 - Quais as técnicas?
 - Quais indicadores?
 
+- Tabela com os Cenários de testes com as colunas
+
+
+| DADO | COMPORTAMENTO | RESULTADO | ESPECIFICAÇÃO |
+| :--- | :--- | :--- | :--- |
+
+
 ## 6. Gráfico de Gantt
 
 Artefato responsável por representar a estimativa de tempo de entrega.
