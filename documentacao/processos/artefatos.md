@@ -104,12 +104,32 @@ Este documento deve responder as seguintes perguntas, voltados para os testes:
 
 - Tabela com os Cenários de testes com as colunas
 
-
-| DADO | COMPORTAMENTO | RESULTADO | ESPECIFICAÇÃO |
+|  ESPECIFICAÇÃO | DADO | COMPORTAMENTO | RESULTADO |
 | :--- | :--- | :--- | :--- |
+|  **ESPECIFICAÇÃO DO TESTE, EX:** Gerenciar Estoque de Medicamentos | **DADO TESTADO, EX:** Inserir um contato com nome existente | **COMPORTAMENTO TESTADO, EX:** Verificar unicidade ao cadastrar um contato | **RESULTADO ESPERADO, EX:** Exceção com mensagem: "Já existe um contato cadastrado com este nome." |
+
+---
+
+## 6. Relatório de testes
+
+O Relatórios de testes, como o nome já diz, visa relatar os testes que tiveram sucesso, fracassos e as suas ocorrências.
+
+### Template
 
 
-## 6. Gráfico de Gantt
+#### Total mínimo esperado de testes bem-sucedidos: 80%
+
+#### Total máximo esperado de testes mal-sucedidos: 20%
+
+
+| TOTAL BEM-SUCEDIDOS PLANEJADO | TOTAL BEM-SUCEDIDOS | TOTAL MAL-SUCEDIDOS PLANEJADO | TOTAL MAL-SUCEDIDOS | TOTAL DE TESTES |
+| :---: | :---: | :---: | :---: | :---: |
+| 10 | 8 | 0 | 2 | 10 |
+
+
+---
+
+## 7. Gráfico de Gantt
 
 Artefato responsável por representar a estimativa de tempo de entrega.
 
@@ -117,7 +137,7 @@ Artefato responsável por representar a estimativa de tempo de entrega.
 
 {Preencher Template}
 
-## 7. Diagrama de Atividades
+## 8. Diagrama de Atividades
 
 Artefato que representa fluxo de trabalho de um processo de negócio ou de uma funcionalidade do sistema.
 
