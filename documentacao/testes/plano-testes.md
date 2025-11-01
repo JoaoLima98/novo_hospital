@@ -10,9 +10,12 @@ Os testes cobrem os módulos:
 
 ## Estratégia
 Serão utilizados testes **automatizados de feature** com PHPUnit, validando as interações entre controladores, modelos e views.  
-A técnica adotada será a **caixa-preta funcional**, verificando o comportamento do sistema com base em entradas e saídas esperadas.
 
 ---
+## Técnica
+A técnica adotada será a **caixa-preta funcional**, verificando o comportamento do sistema com base em entradas e saídas esperadas.
+---
+
 
 ## Casos de Teste - FarmaciaController
 | DADO | COMPORTAMENTO | RESULTADO | ESPECIFICAÇÃO |
@@ -40,7 +43,7 @@ A técnica adotada será a **caixa-preta funcional**, verificando o comportament
 - **Execução:** `php artisan test`  
 
 ---
-## Métricas e Eficiência dos Testes
+## Indicadores
 - **Cobertura esperada:** mínimo de 80% das rotas e fluxos principais testados.  
 - **Tempo médio de execução:** inferior a 5 segundos por suite.  
 - **Falhas toleradas:** 0 falhas críticas (erros que comprometem prescrições ou estoque).  
