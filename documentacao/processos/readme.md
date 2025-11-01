@@ -58,6 +58,7 @@ Cartão para quando o item já foi aceito pelo cliente.
 - [Documento de requisitos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#3-documento-de-requisitos): Artefato que visa esclarecer funcionalidades, propósito e fluxo do sistema.
 - [Produto](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#4-produto-software-execut%C3%A1vel) : Artefato executável e entregável do que foi solicitado e desenvolvido.
 - [Plano de Testes](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#5-plano-de-testes): Artefato que visa definir os testes do software a fim de manter a qualidade do sistema.
+- [Relatorio de Testes](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#6-relat%C3%B3rio-de-testes): Artefato que visa relatar os testes que tiveram sucesso, fracassos e as suas ocorrências.
 
 ## Atividades
 - [Analisar Negócio](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#1-analisar-neg%C3%B3cio) : Entender o contexto, objetivos, problemas e oportunidades diante de uma solicitação. Resulta na definição de escopo e em uma visão geral de cada funcionalidade.
