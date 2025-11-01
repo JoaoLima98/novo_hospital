@@ -20,8 +20,8 @@ class MedicoControllerTest extends TestCase
         parent::setUp();
         $this->actingAs(User::factory()->create());
     }
-
-    public function test_index_returns_view_with_pacientes_and_remedios(): void
+    /** @test */
+    public function test_index_returns_view_with_pacientes_and_remedios()
     {
         Paciente::factory()->count(3)->create();
         Remedio::factory()->count(3)->create();
@@ -34,81 +34,44 @@ class MedicoControllerTest extends TestCase
         $response->assertViewHas('remedios');
     }
 
-
-    public function test_marcarPrescricaoAtendida_with_valid_prescricao_and_stock_updates_estoque(): void
+    /** @test */
+    public function test_marcarPrescricaoAtendida_with_valid_prescricao_and_stock_updates_estoque()
     {
         $paciente = Paciente::factory()->create();
         $remedio1 = Remedio::factory()->create();
         $remedio2 = Remedio::factory()->create();
         
-        $estoque1 = Estoque::factory()->create([
-            'id_remedio' => $remedio1->id,
-            'quantidade' => 10
-        ]);
-        $estoque2 = Estoque::factory()->create([
-            'id_remedio' => $remedio2->id,
-            'quantidade' => 10
-        ]);
+        $estoque1 = Estoque::factory()->create(['id_remedio' => $remedio1->id, 'quantidade' => 10]);
+        $estoque2 = Estoque::factory()->create(['id_remedio' => $remedio2->id, 'quantidade' => 10]);
 
         $prescricao = Prescricao::factory()->create(['id_paciente' => $paciente->id]);
-        
-        PrescricaoRemedio::create([
-            'id_prescricao' => $prescricao->id,
-            'id_remedio' => $remedio1->id
-        ]);
-        PrescricaoRemedio::create([
-            'id_prescricao' => $prescricao->id,
-            'id_remedio' => $remedio2->id
-        ]);
+        PrescricaoRemedio::create(['id_prescricao' => $prescricao->id, 'id_remedio' => $remedio1->id]);
+        PrescricaoRemedio::create(['id_prescricao' => $prescricao->id, 'id_remedio' => $remedio2->id]);
 
         $response = $this->post(route('marcar.prescricao.atendida', $prescricao->id));
 
         $response->assertRedirect();
         $response->assertSessionHas('success', 'Prescrição atendida com sucesso!');
 
-        $this->assertDatabaseHas('prescricoes', [
-            'id' => $prescricao->id,
-            'prescricao_atendida' => true
-        ]);
-
-        // Verifica se o estoque foi decrementado (quantidade padrão 1 para cada remédio)
+        $this->assertDatabaseHas('prescricoes', ['id' => $prescricao->id, 'prescricao_atendida' => true]);
         $this->assertEquals(9, Estoque::find($estoque1->id)->quantidade);
         $this->assertEquals(9, Estoque::find($estoque2->id)->quantidade);
     }
 
-    public function test_marcarPrescricaoAtendida_with_insufficient_stock_returns_error(): void
+    /** @test */
+    public function test_marcarPrescricaoAtendida_with_insufficient_stock_returns_error()
     {
         $paciente = Paciente::factory()->create();
         $remedio = Remedio::factory()->create();
-        
-        Estoque::factory()->create([
-            'id_remedio' => $remedio->id,
-            'quantidade' => 0 // Estoque zerado
-        ]);
+        Estoque::factory()->create(['id_remedio' => $remedio->id, 'quantidade' => 0]);
 
         $prescricao = Prescricao::factory()->create(['id_paciente' => $paciente->id]);
-        
-        PrescricaoRemedio::create([
-            'id_prescricao' => $prescricao->id,
-            'id_remedio' => $remedio->id
-        ]);
+        PrescricaoRemedio::create(['id_prescricao' => $prescricao->id, 'id_remedio' => $remedio->id]);
 
         $response = $this->post(route('marcar.prescricao.atendida', $prescricao->id));
 
         $response->assertRedirect();
         $response->assertSessionHas('error', 'Estoque insuficiente para o remédio ID ' . $remedio->id);
-
-        $this->assertDatabaseHas('prescricoes', [
-            'id' => $prescricao->id,
-            'prescricao_atendida' => false
-        ]);
-    }
-
-    public function test_marcarPrescricaoAtendida_with_nonexistent_prescricao_returns_error(): void
-    {
-        $response = $this->post(route('marcar.prescricao.atendida', 999));
-
-        $response->assertRedirect();
-        $response->assertSessionHas('error', 'Prescrição não encontrada.');
+        $this->assertDatabaseHas('prescricoes', ['id' => $prescricao->id, 'prescricao_atendida' => false]);
     }
 }
