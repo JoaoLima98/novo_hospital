@@ -103,7 +103,9 @@ Este documento deve responder as seguintes perguntas, voltados para os testes:
 - Quais indicadores?
 - Ferramentas e Ambiente
 
-- Tabela com os Cenários de testes com as colunas
+
+
+### Tabela com os Cenários de testes com as colunas
 
 |  ESPECIFICAÇÃO | DADO | COMPORTAMENTO | RESULTADO |
 | :--- | :--- | :--- | :--- |
