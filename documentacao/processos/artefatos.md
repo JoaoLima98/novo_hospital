@@ -118,9 +118,10 @@ O Relatórios de testes, como o nome já diz, visa relatar os testes que tiveram
 
 
 #### Total mínimo esperado de testes bem-sucedidos: 80%
-
 #### Total máximo esperado de testes mal-sucedidos: 20%
 
+#### Total de testes bem-sucedidos: x%
+#### Total de testes mal-sucedidos: x%
 
 | TOTAL BEM-SUCEDIDOS PLANEJADO | TOTAL BEM-SUCEDIDOS | TOTAL MAL-SUCEDIDOS PLANEJADO | TOTAL MAL-SUCEDIDOS | TOTAL DE TESTES |
 | :---: | :---: | :---: | :---: | :---: |
