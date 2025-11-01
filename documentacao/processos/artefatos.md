@@ -101,6 +101,7 @@ Este documento deve responder as seguintes perguntas, voltados para os testes:
 - Qual a estratégia?
 - Quais as técnicas?
 - Quais indicadores?
+- Ferramentas e Ambiente
 
 - Tabela com os Cenários de testes com as colunas
 
