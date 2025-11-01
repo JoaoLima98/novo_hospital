@@ -15,52 +15,13 @@ A técnica adotada será a **caixa-preta funcional**, verificando o comportament
 ---
 
 ## Casos de Teste - FarmaciaController
-
-### 1. `test_index_returns_view_with_pacientes`
-**Objetivo:** garantir que a página inicial da farmácia exibe a lista de pacientes.  
-**Entrada:** requisição GET para `farmacia`.  
-**Saída esperada:** status 200, view `Farmacia.indexFarmacia` e variável `pacientes`.
-
----
-
-### 2. `test_buscarGuia_with_valid_id_paciente_returns_prescricao`
-**Objetivo:** buscar prescrições por ID do paciente.  
-**Entrada:** GET `guia.buscar` com `id_paciente`.  
-**Saída esperada:** view contém `prescricao`.
-
----
-
-### 3. `test_storeLote_creates_new_estoque`
-**Objetivo:** validar o cadastro de novos lotes no estoque.  
-**Entrada:** POST `lote.store` com `id_remedio` e `quantidade`.  
-**Saída esperada:** redirecionamento, sessão `success` e registro salvo na tabela `estoques`.
-
----
-
-## Casos de Teste - MedicoController
-
-### 1. `test_index_returns_view_with_pacientes_and_remedios`
-**Objetivo:** verificar se a página inicial do médico carrega pacientes e remédios.  
-**Entrada:** GET `medico`.  
-**Saída esperada:** status 200, view `welcome`, com `pacientes` e `remedios`.
-
----
-
-### 2. `test_marcarPrescricaoAtendida_with_valid_prescricao_and_stock_updates_estoque`
-**Objetivo:** validar a marcação de prescrição como atendida e atualização do estoque.  
-**Entrada:** POST `marcar.prescricao.atendida` com ID válido.  
-**Saída esperada:**  
-- Prescrição marcada como atendida.  
-- Estoque decrementado corretamente.  
-- Sessão `success` com mensagem.
-
----
-
-### 3. `test_marcarPrescricaoAtendida_with_insufficient_stock_returns_error`
-**Objetivo:** verificar erro quando o estoque é insuficiente.  
-**Entrada:** POST `marcar.prescricao.atendida` com estoque zerado.  
-**Saída esperada:** sessão `error` informando falta de estoque e prescrição não atendida.
-
+| DADO | COMPORTAMENTO | RESULTADO | ESPECIFICAÇÃO |
+| :--- | :--- | :--- | :--- |
+| Inserir um lote de remédio com quantidade negativa | Verificar integridade ao cadastrar lote | Exceção com mensagem: "Não é permitido cadastrar com número negativo." | Gerenciar Estoque de Medicamentos |
+| Buscar guia médica com ID de paciente válido | Verificar retorno de prescrição existente | View guia.buscar é renderizada com prescrição correta associada ao paciente | Gerenciar Estoque de Medicamentos |
+| Buscar guia médica com ID de paciente inexistente | Verificar tratamento de erro ao buscar guia | Exceção com mensagem: "Paciente não encontrado." | Gerenciar Estoque de Medicamentos |
+| Marcar prescrição atendida com estoque suficiente | Verificar atualização de estoque e status da prescrição | Estoque reduzido corretamente e mensagem: "Prescrição atendida com sucesso!" | Gerenciar Estoque de Medicamentos |
+| Marcar prescrição atendida com estoque insuficiente | Verificar integridade no controle de estoque | Mensagem de erro: "Estoque insuficiente para o remédio ID X" e guia não será atendida | Gerenciar Estoque de Medicamentos |
 ---
 
 ## Critérios de Aceitação
