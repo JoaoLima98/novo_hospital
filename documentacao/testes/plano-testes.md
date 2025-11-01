@@ -13,7 +13,7 @@ Serão utilizados testes **automatizados de feature** com PHPUnit, validando as 
 
 ---
 ## Técnica
-A técnica adotada será a **caixa-preta funcional**, verificando o comportamento do sistema com base em entradas e saídas esperadas.
+- A técnica adotada será a **caixa-preta funcional**, verificando o comportamento do sistema com base em entradas e saídas esperadas.
 ---
 
 
