@@ -64,8 +64,10 @@ Cartão para quando o item já foi aceito pelo cliente.
 - [Analisar Negócio](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#1-analisar-neg%C3%B3cio) : Entender o contexto, objetivos, problemas e oportunidades diante de uma solicitação. Resulta na definição de escopo e em uma visão geral de cada funcionalidade.
 - [Planejar](https://github.com/JoaoLima98/novo_hospital/edit/main/documentacao/processos/atividades.md#2-planejar): Atividade que transforma ideias/demandas iniciais em tarefas que encaminhem estas ideias para um produto final.
 - [Especificar Funcionalidades](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#2-especificar-funcionalidades): Detalhar especificações claras, descrevendo exatamente como cada ator interagirá com o sistema.
+- [Construir Plano de Testes](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#4-construir-plano-de-testes): A atividade Construir plano de testes tem o objetivo de garantir a qualidade do produto final.
 - [Codificar e Testar Unitariamente](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#3-codificar-e-testar-unitariamente): Escrever, testar unitariamente e integrar o código-fonte para implementar as funcionalidades definidas nas Especificações de Funcionalidades.
-- [Revisar](https://github.com/JoaoLima98/novo_hospital/edit/main/documentacao/processos/atividades.md#6-revisar): Avaliação crítica e sistemática de um artefato ou processo para identificar e corrigir desvios ou erros.
+- [Garantir experiência do usuário](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#6-garantir-experi%C3%AAncia-do-usu%C3%A1rio): A atividade Garantir experiência do usuário tem como objetivo garantir que o usuário final tenha uma boa experiência ao utilizar o sistema
+- [Revisar demanda](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#7-revisar-demanda): Avaliação crítica e sistemática de um artefato ou processo para identificar e corrigir desvios ou erros.
 
 ### Padrões Estabelecidos para o Desenvolvimento
 - Construir Documento de requisitos: Gerar um documento visível do funcionamento e dos atores do Sistema de Triagem.
