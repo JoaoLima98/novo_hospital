@@ -133,18 +133,16 @@ O Relatórios de testes, como o nome já diz, visa relatar os testes que tiveram
 
 ---
 
-## 7. Gráfico de Gantt
+## 7. Plano de Gerenciamento do Projeto (PGP)
 
-Artefato responsável por representar a estimativa de tempo de entrega.
-
-### Template
-
-{Preencher Template}
-
-## 8. Diagrama de Atividades
-
-Artefato que representa fluxo de trabalho de um processo de negócio ou de uma funcionalidade do sistema.
+Este documento é o "Como" — o manual detalhado para executar, monitorar e controlar o projeto.
 
 ### Template
 
-{Preencher Template}
+-   **Escopo do projeto** (Define _todo_ o trabalho necessário para entregar o produto, incluindo gerenciamento, testes, implantação, etc.),
+
+-   **EAP - Estrutura Analítica do Projeto** (É a decomposição visual de todo o "Escopo do Projeto" em pacotes de trabalho gerenciáveis.),
+
+-   **Cronograma (Gantt e Atividades)** (O plano detalhado de todas as atividades, suas durações, dependências e responsáveis, geralmente representado por um Gráfico de Gantt. É baseado na EAP.)
+
+-   **Estimativas de esforço e custo** (As estimativas _detalhadas_, calculadas a partir da EAP e das atividades do cronograma.)
