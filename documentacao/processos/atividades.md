@@ -18,7 +18,7 @@ A atividade **Analisar Negócio** é o ponto de partida. Seu objetivo é entende
 
 **Entradas:** Demanda da funcionalidade descrita pelo cliente.
 
-**Saídas:** Requisitos Funcionais, atualização do **[Documento de Visão](#)**.
+**Saídas:** Requisitos Funcionais, atualização do **[Documento de Visão]((https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#1-documento-de-vis%C3%A3o) )**.
 ### Principais Tarefas
 
 1.  **Reunir com cliente:** Organizar reunião com o cliente a fim de compreender as novas demandas.
@@ -36,9 +36,9 @@ A atividade **Planejar** tem objetivo de transformar ideias/demandas iniciais em
 
 ### Fluxo de Artefatos
 
-**Entradas:** **[Documento de Visão](#)**, Solicitação do cliente.
+**Entradas:** **[Documento de Visão]((https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#1-documento-de-vis%C3%A3o))**, Solicitação do cliente.
 
-**Saídas:** Nova Iteração
+**Saídas:** Nova Iteração, [Plano de Gerenciamento do Projeto (PGP)](https://github.com/JoaoLima98/novo_hospital/edit/main/documentacao/processos/artefatos.md#7-plano-de-gerenciamento-do-projeto-pgp)
 ### Principais Tarefas
 
 1.  **Revisar demanada:** Rever a demanda exigida pelo cliente.
