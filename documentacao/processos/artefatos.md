@@ -208,10 +208,91 @@ Este documento é o "Como" — o manual detalhado para executar, monitorar e con
 
 ### Template
 
--   **Escopo do projeto** (Define _todo_ o trabalho necessário para entregar o produto, incluindo gerenciamento, testes, implantação, etc.),
+```
 
--   **EAP - Estrutura Analítica do Projeto** (É a decomposição visual de todo o "Escopo do Projeto" em pacotes de trabalho gerenciáveis.),
 
--   **Cronograma (Gantt e Atividades)** (O plano detalhado de todas as atividades, suas durações, dependências e responsáveis, geralmente representado por um Gráfico de Gantt. É baseado na EAP.)
+# Plano de Gerenciamento do Projeto (PGP)
 
--   **Estimativas de esforço e custo** (As estimativas _detalhadas_, calculadas a partir da EAP e das atividades do cronograma.)
+**Projeto:** [Nome do Projeto]
+
+**Equipe:** [Nomes dos Membros da Equipe]
+
+**Data:** [Data de Início]
+
+---
+
+### Registro de Alterações:
+
+| Versão | Responsável | Data | Alterações |
+| :--- | :--- | :--- | :--- |
+| 0.1 | [Nome] | [Data] | Criação do Documento |
+| | | | |
+| | | | |
+
+
+## 1. EAP - Estrutura Analítica do Projeto
+
+[A EAP (ou WBS - Work Breakdown Structure) decompõe o trabalho total do projeto em pacotes de trabalho menores e mais gerenciáveis.]
+
+[Insira aqui o diagrama da EAP (imagem ou link) ou a lista estruturada.]
+
+* **1. [Entrega Principal 1]**
+    * 1.1. [Pacote de Trabalho 1.1]
+    * 1.2. [Pacote de Trabalho 1.2]
+* **2. [Entrega Principal 2]**
+    * 2.1. [Pacote de Trabalho 2.1]
+    * 2.2. [Pacote de Trabalho 2.2]
+* **3. [Gerenciamento do Projeto]**
+    * 3.1. [Planejamento]
+    * 3.2. [Controle e Monitoramento]
+
+---
+
+## 2. Cronograma - (Gantt)
+
+[O cronograma detalha a sequência de atividades, suas durações estimadas e as datas de início e término. Geralmente é visualizado como um Gráfico de Gantt.]
+
+[Insira aqui a imagem do Gráfico de Gantt ou um link para a ferramenta de gerenciamento (ex: MS Project, Planner, Trello, Asana).]
+
+**Principais Marcos (Milestones):**
+
+| Marco | Data Prevista |
+| :--- | :--- |
+| [Início do Projeto] | [Data] |
+| [Conclusão da Fase 1] | [Data] |
+| [Entrega do Protótipo] | [Data] |
+| [Fim do Projeto] | [Data] |
+
+---
+
+## 3. Diagrama de Atividades do Projeto
+
+[Esta seção apresenta o fluxo de trabalho e a sequência das atividades, mostrando as dependências entre elas.]
+
+[Insira aqui o Diagrama de Atividades]
+
+---
+
+## 4. Estimativas de Esforço e Custo
+
+### 4.1. Estimativa de Esforço
+[Detalhe o esforço estimado (geralmente em horas-homem ou dias) necessário para completar as atividades do projeto, muitas vezes baseado na EAP.]
+
+| Pacote de Trabalho (EAP) | Estimativa (Horas) | Recursos Alocados |
+| :--- | :--- | :--- |
+| [1.1. Pacote de Trabalho] | [HH] | [Nome ou Perfil] |
+| [1.2. Pacote de Trabalho] | [HH] | [Nome ou Perfil] |
+| [2.1. Pacote de Trabalho] | [HH] | [Nome ou Perfil] |
+| **Total Estimado** | **[Total HH]** | |
+
+### 4.2. Estimativa de Custo
+[Apresente o orçamento detalhado do projeto, dividindo os custos por categoria.]
+
+| Categoria de Custo | Estimativa (R$) | Justificativa / Descrição |
+| :--- | :--- | :--- |
+| Recurso 1 | [R$ x,xx] | [Custo da equipe baseado no esforço estimado] |
+| Software | [R$ x,xx] | [Nome das ferramentas ou licenças] |
+
+
+
+```
