@@ -250,9 +250,9 @@ Este documento é o "Como" — o manual detalhado para executar, monitorar e con
 
 ## 2. Cronograma - (Gantt)
 
-[O cronograma detalha a sequência de atividades, suas durações estimadas e as datas de início e término. Geralmente é visualizado como um Gráfico de Gantt.]
+[O cronograma detalha a sequência de atividades, suas durações estimadas e as datas de início e término visualizado como um Gráfico de Gantt.]
 
-[Insira aqui a imagem do Gráfico de Gantt ou um link para a ferramenta de gerenciamento (ex: MS Project, Planner, Trello, Asana).]
+[Insira aqui a imagem do Gráfico de Gantt ou um link para a ferramenta de gerenciamento.]
 
 **Principais Marcos (Milestones):**
 
@@ -276,7 +276,7 @@ Este documento é o "Como" — o manual detalhado para executar, monitorar e con
 ## 4. Estimativas de Esforço e Custo
 
 ### 4.1. Estimativa de Esforço
-[Detalhe o esforço estimado (geralmente em horas-homem ou dias) necessário para completar as atividades do projeto, muitas vezes baseado na EAP.]
+[Detalhe o esforço estimado (em horas ou dias) necessário para completar as atividades do projeto, muitas vezes baseado na EAP.]
 
 | Pacote de Trabalho (EAP) | Estimativa (Horas) | Recursos Alocados |
 | :--- | :--- | :--- |
