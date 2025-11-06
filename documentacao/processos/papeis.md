@@ -43,12 +43,3 @@ Responsável por planejar e administrar o cronograma e orçamento de recursos, b
 
 * [Codificar e Testar Unitariamente](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#5-codificar-e-testar-unitariamente)
  
-## Profissional UX
-
-**Perfil**
-
-É o responsável por planejar e melhorar a experiência do usuário ao interagir com o produto final.
-
-**Atividades**
-
-* [Garantir experiência do usuário](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#6-garantir-experi%C3%AAncia-do-usu%C3%A1rio)
