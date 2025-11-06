@@ -296,3 +296,74 @@ Este documento é o "Como" — o manual detalhado para executar, monitorar e con
 
 
 ```
+
+## 8. Documento de Especificação de Requisitos
+
+Documento suporte que contém melhor definição dos casos de uso.
+
+### Template
+
+```
+
+# Documento de Especificação de Requisitos
+
+  
+
+## Projeto:
+
+
+  
+
+### Registro de Alterações
+
+  
+
+| Versão | Responsáveis | Data | Alterações |
+|:--|:--|:--|:--|
+
+  
+
+---
+
+  
+
+## 1. Introdução
+
+  
+
+Este documento apresenta a especificação dos requisitos da ferramenta **AAAA**.
+
+A atividade de análise de requisitos foi conduzida aplicando-se técnicas de modelagem de casos de uso, modelagem de classes e modelagem de comportamento dinâmico do sistema.
+
+  
+
+Os modelos apresentados foram elaborados usando a linguagem **UML**. Este documento está organizado da seguinte forma:
+
+- A seção 2 apresenta o modelo de casos de uso, incluindo descrições de atores, diagramas de casos de uso e descrições de casos de uso.  
+
+---
+
+  
+
+## 2. Modelo de Casos de Uso
+
+  
+
+O modelo de casos de uso visa capturar e descrever as funcionalidades que um sistema deve prover para os atores que interagem com o mesmo.
+
+Os atores identificados no contexto deste projeto estão descritos na tabela abaixo.
+
+  
+
+**Tabela 2 – Atores**
+
+  
+
+| Ator | Descrição |
+|:--|:--|
+|:--|:--|
+  
+
+A seguir, são apresentados os diagramas de casos de uso e descrições associadas, organizados por subsistema.
+
+```
