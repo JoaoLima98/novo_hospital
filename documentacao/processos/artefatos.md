@@ -81,9 +81,78 @@ A **História de Usuário** descreve uma funcionalidade do sistema a partir da p
 O documento de requisitos que visa esclarecer funcionalidades, propósito e fluxo do sistema, a partir das Regras de Negócio, Requisitos funcionais e não funcionais e afins...
 
 ### Template
+```
+# Documento de Requisitos - Modelo de Template
 
+**Projeto:** [Nome do Projeto]
 
-Disponível em: [**Documento de Requisitos - Modelo de Template**](https://docs.google.com/document/d/14_ZbOQq3aVavelnnB9D3wRqyQivDFaTPBvYiMCzllCE/edit?usp=sharing)
+**Discentes:** [Nomes dos Discentes]
+
+---
+
+### Registro de Alterações:
+
+| Versão | Responsável | Data | Alterações |
+| :--- | :--- | :--- | :--- |
+| 0.1 | [Nome] | [Data] | Criação do Documento |
+| | | | |
+| | | | |
+
+---
+
+## 1. Introdução
+
+[Esta seção deve apresentar os requisitos de usuário da ferramenta, sua organização e o propósito do documento.]
+
+## 2. Descrição do Propósito do Sistema
+
+[Descreva o objetivo principal do sistema, o problema que ele visa resolver e como ele modernizará/otimizará o processo atual. Inclua informações sobre a centralização e informatização do fluxo, as etapas integradas e os benefícios esperados, como controle de acesso, acompanhamento em tempo real e armazenamento histórico.]
+
+## 3. Descrição do Minimundo
+
+[Detalhe o contexto operacional do sistema, incluindo o local de implementação (ex: Hospital Municipal de São Paulo do Potengi) e as fases do processo de atendimento. Descreva cada fase (Recepção, Enfermagem, Atendimento Médico, Farmácia), os profissionais envolvidos, as informações coletadas em cada etapa e como o sistema integra esses dados. Mencione as funcionalidades adicionais como acompanhamento de status, consulta de histórico, controle de acesso, relatórios gerenciais e backup de dados automáticos.]
+
+## 4. Requisitos de Usuário
+
+[Liste os requisitos de usuário identificados, divididos em Requisitos Funcionais, Regras de Negócio e Requisitos Não Funcionais. Para cada requisito, inclua um identificador, uma descrição detalhada, a prioridade e as dependências, se houver.]
+
+### Requisitos Funcionais
+
+| Identificador | Descrição | Prioridade | Depende de |
+| :--- | :--- | :--- | :--- |
+| RF01 | [Descrição do requisito funcional 1] | [Descrição da prioridade 1] | [Descrição da dependência 1] |
+| RF02 | [Descrição do requisito funcional 2] | [Descrição da prioridade 2] | [Descrição da dependência 2] |
+| ... | ... | ... | ... |
+
+### Regras de Negócio
+
+| Identificador | Descrição | Prioridade | Depende de |
+| :--- | :--- | :--- | :--- |
+| RN01 | [Descrição da regra de negócio 1] | [Descrição da prioridade 1] | [Descrição da dependência 1] |
+| RN02 | [Descrição da regra de negócio 2] | [Descrição da prioridade 2] | [Descrição da dependência 2] |
+| ... | ... | ... | ... |
+
+### Requisitos Não Funcionais
+
+| Identificador | Descrição | Categoria | Escopo | Prioridade | Depende de |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| RNF01 | [Descrição do requisito não funcional 1] | [Descrição da categoria 1] | [Descrição do escopo 1] | [Descrição da prioridade 1] | [Descrição da dependência 1] |
+| RNF02 | [Descrição do requisito não funcional 2] | [Descrição da categoria 2] | [Descrição do escopo 2] | [Descrição da prioridade 2] | [Descrição da dependência 2] |
+| ... | ... | ... | ... | ... | ... |
+
+## 5. Modelo de Casos de Uso
+
+[Esta seção deve conter o diagrama e a descrição dos casos de uso do sistema, detalhando as interações entre os atores e o sistema.]
+
+## 6. Protótipos
+
+[Esta seção deve apresentar imagens iniciais do produto]
+
+## 7. Diagrama de atividades
+
+[Esta seção deve apresentar Diagrama de atividades do produto]
+
+```
 
 ## 4. Produto (Software Executável)
 
