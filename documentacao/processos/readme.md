@@ -46,9 +46,7 @@ Cartão para quando o item já foi aceito pelo cliente.
 ## Papeis
 - [Analista de Negócio](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an) : Responsável por entender as necessidades do negócio para transpassar para o sistema, sem perder a essência do processo atual da instituição, e ajudar na criação da documentação.
 - [Gerente do Projeto](https://github.com/JoaoLima98/novo_hospital/edit/main/documentacao/processos/papeis.md#gerente-do-projeto): Responsável por planejar e administrar o cronograma e orçamento de recursos.
-- [Analista de QA](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-qa-quality-assurance) : Responsável por garantir que o produto final esteja livre de defeitos e atenda à visão inicial.
 - [Desenvolvedor](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#desenvolvedor) : Responsável por projetar e construir o software, transformando os artefatos de requisitos detalhados em código.
-- [Profissional UX](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/papeis.md#profissional-ux): Responsável por planejar e melhorar a experiência do usuário ao interagir com o produto final.
 
 ## Artefatos
 - [Plano de Gerenciamento do Projeto (PGP)](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#7-plano-de-gerenciamento-do-projeto-pgp): Artefato responsável por representar a estimativa de tempo de entrega.
@@ -65,7 +63,6 @@ Cartão para quando o item já foi aceito pelo cliente.
 - [Especificar Funcionalidades](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#2-especificar-funcionalidades): Detalhar especificações claras, descrevendo exatamente como cada ator interagirá com o sistema.
 - [Construir Plano de Testes](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#4-construir-plano-de-testes): A atividade Construir plano de testes tem o objetivo de garantir a qualidade do produto final.
 - [Codificar e Testar Unitariamente](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#3-codificar-e-testar-unitariamente): Escrever, testar unitariamente e integrar o código-fonte para implementar as funcionalidades definidas nas Especificações de Funcionalidades.
-- [Garantir experiência do usuário](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#6-garantir-experi%C3%AAncia-do-usu%C3%A1rio): A atividade Garantir experiência do usuário tem como objetivo garantir que o usuário final tenha uma boa experiência ao utilizar o sistema
 - [Revisar demanda](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#7-revisar-demanda): Avaliação crítica e sistemática de um artefato ou processo para identificar e corrigir desvios ou erros.
 
 ### Padrões Estabelecidos para o Desenvolvimento
