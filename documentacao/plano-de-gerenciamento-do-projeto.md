@@ -25,7 +25,7 @@ _A fazer_
 
 ## 2. Cronograma - (Gantt)
 
-_A inserir_
+[Gráfico GANTT](https://app.clickup.com/90132624030/v/g/2ky55cmy-613)
 
 ## 3. Diagrama de Atividades do Projeto
 
