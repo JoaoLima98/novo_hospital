@@ -120,21 +120,6 @@ A atividade **Codificar** é a implementação técnica do Sistema de Triagem. O
 
 ---
 
-## 6. Garantir experiência do usuário
-
-### Propósito
-
-A atividade **Garantir experiência do usuário** tem como objetivo garantir que o usuário final tenha uma boa experiência ao utilizar o sistema
-
-### Responsável Principal
-
-**[Profissional UX](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#profissional-ux)**.
-
-### Fluxo de Artefatos
-
-**Entradas:** [Especificações de Casos de Uso](https://github.com/JoaoLima98/triagem_hospitalar/tree/main/documentacao/especificacoes), [Documento de Visão](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/documento_visao.md)
-
-**Saídas:**  Front-end limpo e fácil de manusear.
 
 ### Principais Tarefas
 
@@ -142,7 +127,7 @@ A atividade **Garantir experiência do usuário** tem como objetivo garantir que
 2.   **Organizar reunião de testes:** Organizar evento que possíveis usuários testem o sistema e deem feedback da facilidade de seu uso.
 
 
-## 7. Revisar demanda
+## 6. Revisar demanda
 
 ### Propósito
 
