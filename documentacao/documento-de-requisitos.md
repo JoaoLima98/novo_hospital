@@ -3,7 +3,7 @@
 
 **Projeto:** Sistema de Fluxo Hospitalar
 
-**Discentes:** João de Azevedo Lima Neto, Jocian Douglas Sousa Carneiro e Johnny Reberty Alves Oliveira
+**Discentes:** João de Azevedo Lima Neto, Jocian Douglas Sousa Carneiro
 
 ---
 
