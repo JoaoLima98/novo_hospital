@@ -116,7 +116,6 @@ A atividade **Codificar** é a implementação técnica do Sistema de Triagem. O
     
 2.  **Escriver Código:** Implementar a lógica de cada funcionalidade do sistema.
 3.  **Escriver de Testes Unitários**: Implementar testes unitários automatizando o fluxo de testes do sistema e garantindo funcionamento das funcionalidades.    
-4.  **Integração Contínua:** Unir o código das diferentes funcionalidades, garantindo a integração do sistema.
 
 ---
 
