@@ -51,7 +51,7 @@ Cartão para quando o item já foi aceito pelo cliente.
 - [Profissional UX](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/papeis.md#profissional-ux): Responsável por planejar e melhorar a experiência do usuário ao interagir com o produto final.
 
 ## Artefatos
-- [Plano de Gerenciamento do Projeto (PGP)](https://github.com/JoaoLima98/novo_hospital/edit/main/documentacao/processos/artefatos.md#7-plano-de-gerenciamento-do-projeto-pgp): Artefato responsável por representar a estimativa de tempo de entrega.
+- [Plano de Gerenciamento do Projeto (PGP)](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#7-plano-de-gerenciamento-do-projeto-pgp): Artefato responsável por representar a estimativa de tempo de entrega.
 - [Documento de Visão](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#1-documento-de-vis%C3%A3o) : Artefato responsável por compreender uma visão geral do produto que está sendo desenvolvido.
 - [Especificações de caso de uso](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#2-especifica%C3%A7%C3%A3o-de-caso-de-uso): Artefato que descreverá uma funcionalidade do sistema.
 - [Documento de requisitos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#3-documento-de-requisitos): Artefato que visa esclarecer funcionalidades, propósito e fluxo do sistema.
