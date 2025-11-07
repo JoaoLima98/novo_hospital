@@ -366,4 +366,6 @@ Os atores identificados no contexto deste projeto estão descritos na tabela aba
 
 A seguir, são apresentados os diagramas de casos de uso e descrições associadas, organizados por subsistema.
 
+## 3. Diagrama de classes
+
 ```
