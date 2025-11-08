@@ -95,7 +95,6 @@ A fase de garantia de qualidade para verificar o funcionamento do sistema e corr
 
 ## 4. Estimativas de Esforço e Custo
 
-## 4. Estimativas de Esforço e Custo
 4.1. Estimativa de Esforço
 | Pacote de Trabalho (EAP) | Estimativa (Horas) | Recursos Alocados |
 | :--- | :--- | :--- |
