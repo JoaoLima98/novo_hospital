@@ -273,25 +273,32 @@ Este documento é o "Como" — o manual detalhado para executar, monitorar e con
 
 ---
 
+
 ## 4. Estimativas de Esforço e Custo
 
 ### 4.1. Estimativa de Esforço
-[Detalhe o esforço estimado (em horas ou dias) necessário para completar as atividades do projeto, muitas vezes baseado na EAP.]
 
 | Pacote de Trabalho (EAP) | Estimativa (Horas) | Recursos Alocados |
 | :--- | :--- | :--- |
-| [1.1. Pacote de Trabalho] | [HH] | [Nome ou Perfil] |
-| [1.2. Pacote de Trabalho] | [HH] | [Nome ou Perfil] |
-| [2.1. Pacote de Trabalho] | [HH] | [Nome ou Perfil] |
-| **Total Estimado** | **[Total HH]** | |
+| 1.1. Planejamento do Projeto | 12h | Gerente de Projeto (João)|
+| 1.2. Levantamento de Requisitos | 16h | Analista de Negócio (João) |
+| 2.1. Desenvolvimento Backend | 60h | Desenvolvedor 1 (Douglas) |
+| 2.2. Desenvolvimento Frontend | 50h | Desenvolvedor 2 (Douglas) |
+| 3.1. Testes e Validação | 20h | Desenvolvedor 1 e 2  (Douglas)|
+| 4.1. Implantação e Treinamento | 12h | Gerente de Projeto (João)|
+| **Total Estimado** | **170h** | |
 
 ### 4.2. Estimativa de Custo
-[Apresente o orçamento detalhado do projeto, dividindo os custos por categoria.]
 
 | Categoria de Custo | Estimativa (R$) | Justificativa / Descrição |
 | :--- | :--- | :--- |
-| Recurso 1 | [R$ x,xx] | [Custo da equipe baseado no esforço estimado] |
-| Software | [R$ x,xx] | [Nome das ferramentas ou licenças] |
+| Desenvolvedores (2 x R$ 50/h x 110h) | R$ 5.500,00 | Custo total das horas de backend, frontend e testes |
+| Gerente de Projeto (R$ 80/h x 24h) | R$ 1.920,00 | Planejamento e implantação |
+| Analista de Negócio (R$ 65/h x 16h) | R$ 1.040,00 | Levantamento e documentação de requisitos |
+| Hospedagem | R$ 350,00 | Hostinger (plano anual compartilhado) |
+| Domínio | R$ 50,00 | Registro de domínio anual (.com ou .com.br) |
+| Ferramentas e Licenças | R$ 200,00 | Softwares de apoio (ex: Figma, Trello, VS Code extensões pagas) |
+| **Total Estimado** | **R$ 9.060,00** | |
 
 
 
