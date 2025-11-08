@@ -14,6 +14,7 @@
 | :--- | :--- | :--- | :--- |
 | 0.1 | João de Azevedo Lima Neto | 04/11/2025 | Criação do documento |
 | 0.2 | João de Azevedo Lima Neto, Jocian Douglas Sousa Carneiro | 06/11/2025 | Adicionados Gantt e esboço EAP |
+| 1.0 | João de Azevedo Lima Neto, Jocian Douglas Sousa Carneiro | 08/11/2025 | Adicionadas estimativas de esforços e custo |
 | | | | |
 
 
