@@ -59,4 +59,3 @@ _A fazer_
 | Domínio                                  | R$ 50,00        | Registro de domínio anual (.com ou .com.br)                                                |
 | Ferramentas e Licenças                   | R$ 200,00       | Softwares de apoio (Clickup, VS Code extensões pagas)                            |
 | **Total Estimado**                       | **R$ 8.850,00** | **Soma das estimativas de custo acima**                                                    |
-
