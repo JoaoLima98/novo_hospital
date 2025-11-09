@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/medico',[MedicoController::class,'index'])->name('medico');
 Route::post('/prescricao/criar',[MedicoController::class,'criarPrescricao'])->name('criar.prescricao');
-Route::post('/marcar-prescricao-atendida/{id}',[MedicoController::class,'marcarPrescricaoAtendida'])->name('marcar.prescricao.atendida');
+Route::post('/marcar-prescricao-atendida/{id}',[FarmaciaController::class,'marcarPrescricaoAtendida'])->name('marcar.prescricao.atendida');
 
 #aqui vai servir tanto pra medico quanto p farmacia/recepcao 
 Route::get('/painel-buscar-guias',[FarmaciaController::class,'painelGuias'])->name('painel.guias');

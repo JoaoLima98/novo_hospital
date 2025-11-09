@@ -3,14 +3,16 @@
 
 **Perfil**  
 
-É o principal elo de comunicação entre as partes interessadas do negócio e a equipe de desenvolvimento. Deve ter uma forte compreensão das necessidades do cliente e do mercado, além de habilidades em comunicação, análise de dados e resolução de problemas.  
+É o principal elo de comunicação entre as partes interessadas do negócio e a equipe de desenvolvimento e por **garantir** que o produto final esteja livre de defeitos e atenda à visão inicial. Requer atenção aos detalhes, raciocínio lógico e profundo conhecimento em técnicas de especificação de requisitos e testes de software.
 
 **Atividades**  
 
 * [Analisar Negócio](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#1-analisar-neg%C3%B3cio)
-* [Planejar](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#2-planejar)
+* Contribuir com o [Gerente de Projeto](https://github.com/JoaoLima98/novo_hospital/edit/main/documentacao/processos/papeis.md#gerente-do-projeto) no [Planejamento](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#2-planejar)
+* [Especificar Funcionalidades](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#3-especificar-funcionalidades)
+* [Construir plano de testes](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#4-construir-plano-de-testes)
 * [Revisar Demanda](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#7-revisar-demanda)
-  
+
 ## Gerente do Projeto
 
 **Perfil**  
@@ -20,18 +22,8 @@ Responsável por planejar e administrar o cronograma e orçamento de recursos, b
 **Atividades**  
 
 * [Planejar](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#2-planejar)
-
-## Analista de QA (Quality Assurance)
-
-**Perfil**  
-
-É o especialista responsável por **garantir** que o produto final esteja livre de defeitos e atenda à visão inicial. Requer atenção aos detalhes, raciocínio lógico e profundo conhecimento em técnicas de especificação de requisitos e testes de software.
-
-**Atividades**
-
-* [Especificar Funcionalidades](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#3-especificar-funcionalidades)
-* [Construir plano de testes](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#4-construir-plano-de-testes)
-* [Revisar Demanda](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#7-revisar-demanda)
+* Contribuir com o [Analista de Negócio](https://github.com/JoaoLima98/novo_hospital/edit/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an) na atividade [Especificar Funcionalidades](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#3-especificar-funcionalidades).
+* Contribuir com o [Analista de Negócio](https://github.com/JoaoLima98/novo_hospital/edit/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an) na atividade [Revisar Demanda](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#7-revisar-demanda).
 
 ## Desenvolvedor  
 
@@ -43,12 +35,3 @@ Responsável por planejar e administrar o cronograma e orçamento de recursos, b
 
 * [Codificar e Testar Unitariamente](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#5-codificar-e-testar-unitariamente)
  
-## Profissional UX
-
-**Perfil**
-
-É o responsável por planejar e melhorar a experiência do usuário ao interagir com o produto final.
-
-**Atividades**
-
-* [Garantir experiência do usuário](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#6-garantir-experi%C3%AAncia-do-usu%C3%A1rio)

@@ -18,7 +18,7 @@ A atividade **Analisar Negócio** é o ponto de partida. Seu objetivo é entende
 
 **Entradas:** Demanda da funcionalidade descrita pelo cliente.
 
-**Saídas:** Requisitos Funcionais, atualização do **[Documento de Visão](#)**.
+**Saídas:** Requisitos Funcionais, atualização do **[Documento de Visão]((https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#1-documento-de-vis%C3%A3o) )**.
 ### Principais Tarefas
 
 1.  **Reunir com cliente:** Organizar reunião com o cliente a fim de compreender as novas demandas.
@@ -36,9 +36,9 @@ A atividade **Planejar** tem objetivo de transformar ideias/demandas iniciais em
 
 ### Fluxo de Artefatos
 
-**Entradas:** **[Documento de Visão](#)**, Solicitação do cliente.
+**Entradas:** **[Documento de Visão]((https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#1-documento-de-vis%C3%A3o))**, Solicitação do cliente.
 
-**Saídas:** Nova Iteração
+**Saídas:** Nova Iteração, [Plano de Gerenciamento do Projeto (PGP)](https://github.com/JoaoLima98/novo_hospital/edit/main/documentacao/processos/artefatos.md#7-plano-de-gerenciamento-do-projeto-pgp), [Documento de Especificação de Requisitos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#8-documento-de-especifica%C3%A7%C3%A3o-de-requisitos).
 ### Principais Tarefas
 
 1.  **Revisar demanada:** Rever a demanda exigida pelo cliente.
@@ -108,41 +108,19 @@ A atividade **Codificar** é a implementação técnica do Sistema de Triagem. O
 
 **Entradas:** [Especificações de Casos de Uso](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#template-1), [Plano de testes](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#5-plano-de-testes).
 
-**Saídas:**  [Produto Executável](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/artefatos.md#4-produto-software-execut%C3%A1vel), Código-fonte, Testes Unitários.
+**Saídas:**  [Produto Executável](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/artefatos.md#4-produto-software-execut%C3%A1vel), Código-fonte, Testes Unitários, Relatório de Testes e Casos de testes detalhados.
 
 ### Principais Tarefas
 
 1.  **Construir Design:** Planejar a estrutura do código, considerando a segurança dos dados do paciente e a comunicação entre os diferentes casos de uso.
     
-2.  **Escriver Código:** Implementar a lógica de cada funcionalidade do sistema.
-3.  **Escriver de Testes Unitários**: Implementar testes unitários automatizando o fluxo de testes do sistema e garantindo funcionamento das funcionalidades.    
-4.  **Integração Contínua:** Unir o código das diferentes funcionalidades, garantindo a integração do sistema.
-
+2.  **Escrever Código:** Implementar a lógica de cada funcionalidade do sistema.
+3.  **Escrever Testes Unitários**: Implementar testes unitários automatizando o fluxo de testes do sistema e garantindo funcionamento das funcionalidades.    
+4.  **Escrever relatórios e casos de testes exploratórios**: Construir os relatos dos testes exploratórios e os resultados gerais dos testes.
 ---
 
-## 6. Garantir experiência do usuário
 
-### Propósito
-
-A atividade **Garantir experiência do usuário** tem como objetivo garantir que o usuário final tenha uma boa experiência ao utilizar o sistema
-
-### Responsável Principal
-
-**[Profissional UX](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#profissional-ux)**.
-
-### Fluxo de Artefatos
-
-**Entradas:** [Especificações de Casos de Uso](https://github.com/JoaoLima98/triagem_hospitalar/tree/main/documentacao/especificacoes), [Documento de Visão](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/documento_visao.md)
-
-**Saídas:**  Front-end limpo e fácil de manusear.
-
-### Principais Tarefas
-
-1.   **Design:** Planejar o Front-end do sistema de maneira que o usuário tenha facilidade de utilizar o sistema.
-2.   **Organizar reunião de testes:** Organizar evento que possíveis usuários testem o sistema e deem feedback da facilidade de seu uso.
-
-
-## 7. Revisar demanda
+## 6. Revisar demanda
 
 ### Propósito
 

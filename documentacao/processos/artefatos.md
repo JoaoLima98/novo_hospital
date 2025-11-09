@@ -81,9 +81,78 @@ A **História de Usuário** descreve uma funcionalidade do sistema a partir da p
 O documento de requisitos que visa esclarecer funcionalidades, propósito e fluxo do sistema, a partir das Regras de Negócio, Requisitos funcionais e não funcionais e afins...
 
 ### Template
+```
+# Documento de Requisitos - Modelo de Template
 
+**Projeto:** [Nome do Projeto]
 
-Disponível em: [**Documento de Requisitos - Modelo de Template**](https://docs.google.com/document/d/14_ZbOQq3aVavelnnB9D3wRqyQivDFaTPBvYiMCzllCE/edit?usp=sharing)
+**Discentes:** [Nomes dos Discentes]
+
+---
+
+### Registro de Alterações:
+
+| Versão | Responsável | Data | Alterações |
+| :--- | :--- | :--- | :--- |
+| 0.1 | [Nome] | [Data] | Criação do Documento |
+| | | | |
+| | | | |
+
+---
+
+## 1. Introdução
+
+[Esta seção deve apresentar os requisitos de usuário da ferramenta, sua organização e o propósito do documento.]
+
+## 2. Descrição do Propósito do Sistema
+
+[Descreva o objetivo principal do sistema, o problema que ele visa resolver e como ele modernizará/otimizará o processo atual. Inclua informações sobre a centralização e informatização do fluxo, as etapas integradas e os benefícios esperados, como controle de acesso, acompanhamento em tempo real e armazenamento histórico.]
+
+## 3. Descrição do Minimundo
+
+[Detalhe o contexto operacional do sistema, incluindo o local de implementação (ex: Hospital Municipal de São Paulo do Potengi) e as fases do processo de atendimento. Descreva cada fase (Recepção, Enfermagem, Atendimento Médico, Farmácia), os profissionais envolvidos, as informações coletadas em cada etapa e como o sistema integra esses dados. Mencione as funcionalidades adicionais como acompanhamento de status, consulta de histórico, controle de acesso, relatórios gerenciais e backup de dados automáticos.]
+
+## 4. Requisitos de Usuário
+
+[Liste os requisitos de usuário identificados, divididos em Requisitos Funcionais, Regras de Negócio e Requisitos Não Funcionais. Para cada requisito, inclua um identificador, uma descrição detalhada, a prioridade e as dependências, se houver.]
+
+### Requisitos Funcionais
+
+| Identificador | Descrição | Prioridade | Depende de |
+| :--- | :--- | :--- | :--- |
+| RF01 | [Descrição do requisito funcional 1] | [Descrição da prioridade 1] | [Descrição da dependência 1] |
+| RF02 | [Descrição do requisito funcional 2] | [Descrição da prioridade 2] | [Descrição da dependência 2] |
+| ... | ... | ... | ... |
+
+### Regras de Negócio
+
+| Identificador | Descrição | Prioridade | Depende de |
+| :--- | :--- | :--- | :--- |
+| RN01 | [Descrição da regra de negócio 1] | [Descrição da prioridade 1] | [Descrição da dependência 1] |
+| RN02 | [Descrição da regra de negócio 2] | [Descrição da prioridade 2] | [Descrição da dependência 2] |
+| ... | ... | ... | ... |
+
+### Requisitos Não Funcionais
+
+| Identificador | Descrição | Categoria | Escopo | Prioridade | Depende de |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| RNF01 | [Descrição do requisito não funcional 1] | [Descrição da categoria 1] | [Descrição do escopo 1] | [Descrição da prioridade 1] | [Descrição da dependência 1] |
+| RNF02 | [Descrição do requisito não funcional 2] | [Descrição da categoria 2] | [Descrição do escopo 2] | [Descrição da prioridade 2] | [Descrição da dependência 2] |
+| ... | ... | ... | ... | ... | ... |
+
+## 5. Modelo de Casos de Uso
+
+[Esta seção deve conter o diagrama e a descrição dos casos de uso do sistema, detalhando as interações entre os atores e o sistema.]
+
+## 6. Protótipos
+
+[Esta seção deve apresentar imagens iniciais do produto]
+
+## 7. Diagrama de atividades
+
+[Esta seção deve apresentar Diagrama de atividades do produto]
+
+```
 
 ## 4. Produto (Software Executável)
 
@@ -101,8 +170,11 @@ Este documento deve responder as seguintes perguntas, voltados para os testes:
 - Qual a estratégia?
 - Quais as técnicas?
 - Quais indicadores?
+- Ferramentas e Ambiente
 
-- Tabela com os Cenários de testes com as colunas
+
+
+### Tabela com os Cenários de testes com as colunas
 
 |  ESPECIFICAÇÃO | DADO | COMPORTAMENTO | RESULTADO |
 | :--- | :--- | :--- | :--- |
@@ -130,18 +202,205 @@ O Relatórios de testes, como o nome já diz, visa relatar os testes que tiveram
 
 ---
 
-## 7. Gráfico de Gantt
+## 7. Plano de Gerenciamento do Projeto (PGP)
 
-Artefato responsável por representar a estimativa de tempo de entrega.
-
-### Template
-
-{Preencher Template}
-
-## 8. Diagrama de Atividades
-
-Artefato que representa fluxo de trabalho de um processo de negócio ou de uma funcionalidade do sistema.
+Este documento é o "Como" — o manual detalhado para executar, monitorar e controlar o projeto.
 
 ### Template
 
-{Preencher Template}
+```
+
+
+# Plano de Gerenciamento do Projeto (PGP)
+
+**Projeto:** [Nome do Projeto]
+
+**Equipe:** [Nomes dos Membros da Equipe]
+
+**Data:** [Data de Início]
+
+---
+
+### Registro de Alterações:
+
+| Versão | Responsável | Data | Alterações |
+| :--- | :--- | :--- | :--- |
+| 0.1 | [Nome] | [Data] | Criação do Documento |
+| | | | |
+| | | | |
+
+
+## 1. EAP - Estrutura Analítica do Projeto
+
+[A EAP (ou WBS - Work Breakdown Structure) decompõe o trabalho total do projeto em pacotes de trabalho menores e mais gerenciáveis.]
+
+[Insira aqui o diagrama da EAP (imagem ou link) ou a lista estruturada.]
+
+* **1. [Entrega Principal 1]**
+    * 1.1. [Pacote de Trabalho 1.1]
+    * 1.2. [Pacote de Trabalho 1.2]
+* **2. [Entrega Principal 2]**
+    * 2.1. [Pacote de Trabalho 2.1]
+    * 2.2. [Pacote de Trabalho 2.2]
+* **3. [Gerenciamento do Projeto]**
+    * 3.1. [Planejamento]
+    * 3.2. [Controle e Monitoramento]
+
+---
+
+## 2. Cronograma - (Gantt)
+
+[O cronograma detalha a sequência de atividades, suas durações estimadas e as datas de início e término visualizado como um Gráfico de Gantt.]
+
+[Insira aqui a imagem do Gráfico de Gantt ou um link para a ferramenta de gerenciamento.]
+
+**Principais Marcos (Milestones):**
+
+| Marco | Data Prevista |
+| :--- | :--- |
+| [Início do Projeto] | [Data] |
+| [Conclusão da Fase 1] | [Data] |
+| [Entrega do Protótipo] | [Data] |
+| [Fim do Projeto] | [Data] |
+
+---
+
+## 3. Diagrama de Atividades do Projeto
+
+[Esta seção apresenta o fluxo de trabalho e a sequência das atividades, mostrando as dependências entre elas.]
+
+[Insira aqui o Diagrama de Atividades]
+
+---
+
+## 4. Estimativas de Esforço e Custo
+
+### 4.1. Estimativa de Esforço
+[Detalhe o esforço estimado (em horas ou dias) necessário para completar as atividades do projeto, muitas vezes baseado na EAP.]
+
+| Pacote de Trabalho (EAP) | Estimativa (Horas) | Recursos Alocados |
+| :--- | :--- | :--- |
+| [1.1. Pacote de Trabalho] | [HH] | [Nome ou Perfil] |
+| [1.2. Pacote de Trabalho] | [HH] | [Nome ou Perfil] |
+| [2.1. Pacote de Trabalho] | [HH] | [Nome ou Perfil] |
+| **Total Estimado** | **[Total HH]** | |
+
+### 4.2. Estimativa de Custo
+[Apresente o orçamento detalhado do projeto, dividindo os custos por categoria.]
+
+| Categoria de Custo | Estimativa (R$) | Justificativa / Descrição |
+| :--- | :--- | :--- |
+| Recurso 1 | [R$ x,xx] | [Custo da equipe baseado no esforço estimado] |
+| Software | [R$ x,xx] | [Nome das ferramentas ou licenças] |
+
+
+
+```
+
+## 8. Documento de Especificação de Requisitos
+
+Documento suporte que contém melhor definição dos casos de uso.
+
+### Template
+
+```
+
+# Documento de Especificação de Requisitos
+
+  
+
+## Projeto:
+
+
+  
+
+### Registro de Alterações
+
+  
+
+| Versão | Responsáveis | Data | Alterações |
+|:--|:--|:--|:--|
+
+  
+
+---
+
+  
+
+## 1. Introdução
+
+  
+
+Este documento apresenta a especificação dos requisitos da ferramenta **AAAA**.
+
+A atividade de análise de requisitos foi conduzida aplicando-se técnicas de modelagem de casos de uso, modelagem de classes e modelagem de comportamento dinâmico do sistema.
+
+  
+
+Os modelos apresentados foram elaborados usando a linguagem **UML**. Este documento está organizado da seguinte forma:
+
+- A seção 2 apresenta o modelo de casos de uso, incluindo descrições de atores, diagramas de casos de uso e descrições de casos de uso.  
+
+---
+
+  
+
+## 2. Modelo de Casos de Uso
+
+  
+
+O modelo de casos de uso visa capturar e descrever as funcionalidades que um sistema deve prover para os atores que interagem com o mesmo.
+
+Os atores identificados no contexto deste projeto estão descritos na tabela abaixo.
+
+  
+
+**Tabela 2 – Atores**
+
+  
+
+| Ator | Descrição |
+|:--|:--|
+|:--|:--|
+  
+
+A seguir, são apresentados os diagramas de casos de uso e descrições associadas, organizados por subsistema.
+
+## 3. Diagrama de classes
+
+```
+
+## 9. Casos de teste
+
+Documento que detalha determinados casos de testes, sendo obrigatórios para os cenários exploratórios e opcionais para os unitários.
+
+### Template
+
+```
+
+# Caso de Teste: [Inserir Nome]
+**Resumo:** [Inserir o título ou objetivo resumido do teste]
+
+---
+
+- **Prioridade:** [Baixa / Média / Alta]
+- **Status:** [Planejado / Aprovado / Falhou / Em Execução]
+- **Executor:** [Nome do Responsável]
+- **Data de criação:** DD/MM/AAAA
+
+### Pré-condição
+O que precisa estar pronto antes do teste começar.
+* Ex: Estar logado no sistema com perfil administrativo.
+
+### Passos
+1. [Ação 1 - ex: Acessar a tela X]
+2. [Ação 2 - ex: Clicar no botão Y]
+3. [Ação 3 - ex: Preencher campo Z]
+
+### Resultado Esperado
+* [Descrever exatamente o que o sistema deve fazer após os passos acima]
+
+---
+**Observações:** [Inserir observações relevantes ou "sem observações"]
+
+```
