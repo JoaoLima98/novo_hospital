@@ -15,6 +15,7 @@
 | :--- | :--- | :--- | :--- |
 | 0.1 | João de Azevedo Lima Neto | 07/11/2025 | Criação do Documento |
 | 1.0 | Jocian Douglas Souza Carneiro, João de Azevedo Lima Neto | 08/11/2025 | Adição da descrição de casos de uso e criação da primeira versão do diagrama de classes |
+| 1.1 | João de Azevedo Lima Neto | 08/11/2025 | Atualização no diagrama de casos de uso |
   
 
 ---
