@@ -10,4 +10,8 @@ class PrescricaoRemedio extends Model
     use HasFactory;
     protected $table = 'prescricao_remedios';
     protected $fillable = ['id_prescricao','id_remedio'];
+
+    public function remedio(){
+        return $this->belongsTo(Remedio::class,'id_remedio');
+    }
 }

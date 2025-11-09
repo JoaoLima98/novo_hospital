@@ -84,33 +84,36 @@ class FarmaciaController extends Controller
         return redirect()->route('consultar.estoque')->with('success', 'Lote criado com sucesso.');
     }
 
-    public function marcarPrescricaoAtendida(int $id)
+    public function marcarPrescricaoAtendida(Request $request, int $id)
     {
         $prescricao = Prescricao::find($id);
-        if(!$prescricao){
+        if (!$prescricao) {
             return back()->with('error', 'Prescrição não encontrada.');
         }
 
-        $idRemedios = PrescricaoRemedio::where('id_prescricao', $prescricao->id)->get();
+        $remediosSelecionados = $request->input('remedios', []);
+        if (empty($remediosSelecionados)) {
+            return back()->with('error', 'Nenhum medicamento selecionado.');
+        }
 
-        // Checa estoque antes de atualizar prescrição
-        foreach ($idRemedios as $remedioPrescrito) {
-            $qtd = $remedioPrescrito->quantidade ?? 1;
-            $estoque = Estoque::where('id_remedio', $remedioPrescrito->id_remedio)->first();
+        $itens = PrescricaoRemedio::where('id_prescricao', $id)
+            ->whereIn('id_remedio', $remediosSelecionados)
+            ->get();
+
+        foreach ($itens as $item) {
+            $estoque = Estoque::where('id_remedio', $item->id_remedio)->first();
+            $qtd = $item->quantidade ?? 1;
 
             if (!$estoque || $estoque->quantidade < $qtd) {
-                return back()->with('error', 'Estoque insuficiente para o remédio ID '.$remedioPrescrito->id_remedio);
+                return back()->with('error', 'Estoque insuficiente para '.$item->remedio->nome);
             }
         }
 
-        // Decrementa o estoque
-        foreach ($idRemedios as $remedioPrescrito) {
-            $qtd = $remedioPrescrito->quantidade ?? 1;
-            Estoque::where('id_remedio', $remedioPrescrito->id_remedio)
-                ->decrement('quantidade', $qtd);
+        foreach ($itens as $item) {
+            Estoque::where('id_remedio', $item->id_remedio)
+                ->decrement('quantidade', $item->quantidade ?? 1);
         }
 
-        // Marca a prescrição como atendida
         $prescricao->update(['prescricao_atendida' => true]);
 
         return back()->with('success', 'Prescrição atendida com sucesso!');
