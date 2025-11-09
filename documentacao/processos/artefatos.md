@@ -369,3 +369,38 @@ A seguir, são apresentados os diagramas de casos de uso e descrições associad
 ## 3. Diagrama de classes
 
 ```
+
+## 9. Cenários de teste
+
+Documento que detalha determinados casos de testes, sendo obrigatórios para os cenários exploratórios e opcionais para os unitários.
+
+### Template
+
+```
+
+# Caso de Teste: [Inserir Nome]
+**Resumo:** [Inserir o título ou objetivo resumido do teste]
+
+---
+
+- **Prioridade:** [Baixa / Média / Alta]
+- **Status:** [Planejado / Aprovado / Falhou / Em Execução]
+- **Executor:** [Nome do Responsável]
+- **Data de criação:** DD/MM/AAAA
+
+### Pré-condição
+O que precisa estar pronto antes do teste começar.
+* Ex: Estar logado no sistema com perfil administrativo.
+
+### Passos
+1. [Ação 1 - ex: Acessar a tela X]
+2. [Ação 2 - ex: Clicar no botão Y]
+3. [Ação 3 - ex: Preencher campo Z]
+
+### Resultado Esperado
+* [Descrever exatamente o que o sistema deve fazer após os passos acima]
+
+---
+**Observações:** [Inserir observações relevantes ou "sem observações"]
+
+```
