@@ -49,18 +49,20 @@ O sistema deve permitir o **acompanhamento em tempo real do status de cada pacie
 
 Tomando por base o contexto do sistema, foram identificados os seguintes requisitos de usuário:
 
+
 ### Requisitos Funcionais
 
 | Identificador | Descrição | Prioridade | Depende de |
 | :--- | :--- | :--- | :--- |
-| RF01 | O sistema deve permitir o **cadastro de pacientes** na recepção, incluindo: Cartão SUS, CPF, Endereço, Telefone, Outras informações básicas. | Alta | |
-| RF02 | Cada setor deve **acessar e complementar** o mesmo registro do paciente:<br>Recepção: dados pessoais e administrativos;<br>Enfermagem: sintomas e informações iniciais da triagem;<br>Médico: exame clínico, diagnóstico e prescrição;<br>Farmacêutico: atende guia do paciente. | Alta | |
-| RF03 | O sistema deve **atualizar automaticamente o status** do paciente conforme ele avança nas etapas:<br>Exemplo: “Aguardando atendimento médico → Em atendimento médico → Aguardando medicamentos → Finalizado”. | Alta | RF03 |
-| RF04 | Os atores recepcionista, médico e enfermeira devem poder **consultar todo o histórico de atendimentos anteriores** de um paciente. | Médio | |
-| RF05 | O sistema deve **diferenciar os tipos de usuário** e restringir funcionalidades:<br>Recepcionista;<br>Enfermeira;<br>Médico;<br>Farmacêutico;<br>Administrador; | Alta | |
-| RF06 | O médico deve poder **inserir prescrições** no sistema, visíveis apenas ao setor farmacêutico e recepção. | Alta | RF02 |
-| RF07 | O sistema deve gerar **relatórios de atendimentos, triagens e diagnósticos** para fins administrativos e estatísticos. | Médio | RF02, RF04 |
-| RF08 | O sistema deve permitir à enfermeira conduzir a triagem pelo sistema, inserindo informações como:<br>Protocolo Manchester, Total Glasgow, Frequência Cardíaca, Peso, Outras informações importantes para o atendimento. | Alta | RF01 |
+| **RF01 - Gerenciar Paciente** | O sistema deve permitir o **cadastro de pacientes** na recepção, incluindo: Cartão SUS, CPF, Endereço, Telefone, Outras informações básicas. | Alta | |
+| **RF02 - Acompanhar e Atualizar Registro do Paciente** | Cada setor deve **acessar e complementar** o mesmo registro do paciente:<br>Recepção: dados pessoais e administrativos;<br>Enfermagem: sintomas e informações iniciais da triagem;<br>Médico: exame clínico, diagnóstico e prescrição;<br>Farmacêutico: atende guia do paciente. | Alta | |
+| **RF03 - Atualizar Status do Paciente** | O sistema deve **atualizar automaticamente o status** do paciente conforme ele avança nas etapas:<br>Exemplo: “Aguardando atendimento médico → Em atendimento médico → Aguardando medicamentos → Finalizado”. | Alta | RF01 |
+| **RF04 - Verificar Histórico do Paciente** | Os atores recepcionista, médico e enfermeira devem poder **consultar todo o histórico de atendimentos anteriores** de um paciente. | Médio | |
+| **RF05 - Criar Autenticação** | O sistema deve possibilitar a criação de **diferentes tipos de funcionários** e restringir funcionalidades:<br>Recepcionista;<br>Enfermeira;<br>Médico;<br>Farmacêutico;<br>Administrador; | Alta | |
+| **RF06 - Diagnosticar Paciente e Prescrever Medicamento** | O médico deve poder **inserir prescrições** no sistema após realizar o diagnóstico, visíveis apenas ao setor farmacêutico e recepção. | Alta | RF02 |
+| **RF07 - Gerar Relatórios** | O sistema deve gerar **relatórios de atendimentos, triagens e diagnósticos** para fins administrativos e estatísticos. | Médio | RF01, RF04 |
+| **RF08 - Fazer Triagem** | O sistema deve permitir à enfermeira conduzir a triagem pelo sistema, inserindo informações como:<br>Protocolo Manchester, Total Glasgow, Frequência Cardíaca, Peso, Outras informações importantes para o atendimento. | Alta | RF01 |
+| **RF09 - Gerenciar Estoque de Medicamentos** | O sistema deve permitir o farmacêutico consultar a guia dos pacientes e entregar os medicamentos disponíveis necessários | Alta | RF06 |
 
 
 ### Regras de Negócio
