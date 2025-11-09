@@ -370,7 +370,7 @@ A seguir, são apresentados os diagramas de casos de uso e descrições associad
 
 ```
 
-## 9. Cenários de teste
+## 9. Casos de teste
 
 Documento que detalha determinados casos de testes, sendo obrigatórios para os cenários exploratórios e opcionais para os unitários.
 
