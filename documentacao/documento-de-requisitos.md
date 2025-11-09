@@ -13,6 +13,7 @@
 | :--- | :--- | :--- | :--- |
 | 0.1 | Johnny Reberty Alves Oliveira | 06/10/2025 | Criação do Documento |
 | 0.5 | João de Azevedo Lima Neto, Jocian Douglas Sousa Carneiro | 01/11/2025 | Reorganização e reestruturação do documento, incluindo ajustes nas seções 3 e 4 |
+| 0.6 | João de Azevedo Lima Neto| 09/11/2025 | Ajuste nos requisitos funcionais |
 
 
 ---
