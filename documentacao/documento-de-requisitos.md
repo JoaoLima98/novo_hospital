@@ -34,11 +34,13 @@ Além de informatizar o processo de triagem, o sistema também proporcionará **
 
 ## 3. Descrição do Minimundo
 
+### 3.1 Minimundo - Descrito
+
 O **Hospital Regional de São Paulo do Potengi** possui um setor de triagem que funciona como a porta de entrada para todos os atendimentos realizados. O processo de atendimento é dividido em **quatro fases distintas**, cada uma executada por profissionais diferentes e interligadas por meio de um único sistema de informação.
 
-Na **Fase 1 – Recepção**, o paciente chega ao hospital e apresenta seu **Cartão SUS** ou **CPF**. O atendente realiza o **cadastro dos dados pessoais e de contato**, criando automaticamente um **registro único** no sistema. Esses dados são persistidos no banco de dados e ficam disponíveis para as etapas seguintes do atendimento.
+Na **Fase 1 – Recepção**, o paciente chega ao hospital e apresenta seu **Cartão SUS** ou **CPF** para o recepcionista poder verificar se já há registro do paciente no sistema, se já houver, ele já pode ser encaminhado para etapa de triagem/enfermagem. Caso não haja registro do paciente, o atendente realiza o **cadastro dos dados pessoais e de contato**, criando um **registro único** no sistema. Esses dados são persistidos no banco de dados e ficam disponíveis para as etapas seguintes do atendimento.
 
-Na **Fase 2 – Enfermagem**, o paciente é encaminhado à enfermeira responsável, que acessa o mesmo registro e adiciona **informações clínicas iniciais**, como sintomas relatados, sinais vitais e possíveis alergias. Essas informações complementam o cadastro inicial e são utilizadas na avaliação médica posterior.
+Na **Fase 2 – Enfermagem/Triagem**, o paciente é encaminhado à enfermeira responsável, que acessa o mesmo registro e adiciona **informações clínicas iniciais**, como sintomas relatados, sinais vitais e possíveis alergias. Essas informações complementam o cadastro inicial e são utilizadas na avaliação médica posterior.
 
 Na **Fase 3 – Atendimento Médico**, o médico acessa o registro consolidado do paciente e adiciona **informações do exame clínico**, **diagnóstico** e **prescrição médica**. Após o atendimento, o sistema atualiza o status do paciente e armazena o registro como parte do **histórico de atendimentos**, que poderá ser consultado em visitas futuras.
 
@@ -46,9 +48,19 @@ Por fim, na **Fase 4 – Farmácia**, o farmacêutico visualiza as **prescriçõ
 
 O sistema deve permitir o **acompanhamento em tempo real do status de cada paciente**, desde o momento da chegada até a finalização do atendimento, além de disponibilizar funcionalidades de **consulta de histórico, controle de acesso por função, geração de relatórios gerenciais.** Com sua implantação, o hospital passará a contar com um processo digital e integrado, eliminando as fichas manuais, garantindo maior **agilidade**, **segurança da informação** e **continuidade no acompanhamento médico dos pacientes**, trazendo benefícios tanto para os profissionais de saúde quanto para a população atendida.
 
+Quanto a cada funcionário **(recepcionista, enfermeira, médico e farmacêutico)** cada um terá acesso apenas as suas determinadas fatias do sistema. Ao cadastrar um novo funcionário, o admnistrador deverá selecionar o perfil do profissional que, ao utilizar o sistema, não terá acesso as partes que não os dizem respeito.
+
+---
+
+### 3.2 Minimundo - Diagrama de domínio
+
+<img width="1631" height="1234" alt="Diagrama de dominio-hospital" src="https://github.com/user-attachments/assets/f1d7c6e9-4c85-4277-8885-2a447d5c6675" />
+
+---
+
 ## 4. Requisitos de Usuário
 
-Tomando por base o contexto do sistema, foram identificados os seguintes requisitos de usuário:
+Tomando por base o contexto do sistema, foram identificados os seguintes requisitos de usuário
 
 
 ### Requisitos Funcionais
