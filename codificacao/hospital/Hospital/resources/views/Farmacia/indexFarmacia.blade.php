@@ -107,22 +107,64 @@
             allowClear: true
         });
     });
+</script>
+@if(isset($prescricao) && !$prescricao->prescricao_atendida)
+<script>
     $(document).on('click', '#btnAtender', function (e) {
         e.preventDefault();
+
+        const remedios = @json($prescricao->remedios ?? []) ;
+        let html = '<form id="remediosForm">';
+        remedios.forEach(remedio => {
+            html += `
+                <div style="text-align:left; margin-bottom: 6px;">
+                    <input type="checkbox" name="remedios[]" value="${remedio.id}" id="remedio_${remedio.id}">
+                    <label for="remedio_${remedio.id}"> ${remedio.nome}</label>
+                </div>
+            `;
+        });
+        html += '</form>';
+
         Swal.fire({
-            title: 'Confirmar ação?',
-            text: "Deseja marcar esta prescrição como atendida?",
-            icon: 'warning',
+            title: 'Selecionar medicamentos entregues',
+            html: html,
+            icon: 'question',
             showCancelButton: true,
+            confirmButtonText: 'Confirmar Entrega',
+            cancelButtonText: 'Cancelar',
             confirmButtonColor: '#28a745',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Sim, confirmar',
-            cancelButtonText: 'Cancelar'
+            preConfirm: () => {
+                const selecionados = [];
+                $('#remediosForm input[name="remedios[]"]:checked').each(function(){
+                    selecionados.push($(this).val());
+                });
+
+                if (selecionados.length === 0) {
+                    Swal.showValidationMessage('Selecione pelo menos um medicamento!');
+                }
+                return selecionados;
+            }
         }).then((result) => {
             if (result.isConfirmed) {
-                $('#formAtender').submit();
+                // Cria form e envia via POST com os IDs selecionados
+                const form = $('<form>', {
+                    action: "{{ route('marcar.prescricao.atendida', $prescricao->id) }}",
+                    method: 'POST'
+                });
+                form.append('@csrf');
+                result.value.forEach(id => {
+                    form.append($('<input>', {
+                        type: 'hidden',
+                        name: 'remedios[]',
+                        value: id
+                    }));
+                });
+                $('body').append(form);
+                form.submit();
             }
         });
     });
 </script>
+@endif 
 @endsection
