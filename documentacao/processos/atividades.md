@@ -108,22 +108,16 @@ A atividade **Codificar** é a implementação técnica do Sistema de Triagem. O
 
 **Entradas:** [Especificações de Casos de Uso](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#template-1), [Plano de testes](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#5-plano-de-testes).
 
-**Saídas:**  [Produto Executável](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/artefatos.md#4-produto-software-execut%C3%A1vel), Código-fonte, Testes Unitários.
+**Saídas:**  [Produto Executável](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/artefatos.md#4-produto-software-execut%C3%A1vel), Código-fonte, Testes Unitários, Relatório de Testes e Casos de testes detalhados.
 
 ### Principais Tarefas
 
 1.  **Construir Design:** Planejar a estrutura do código, considerando a segurança dos dados do paciente e a comunicação entre os diferentes casos de uso.
     
-2.  **Escriver Código:** Implementar a lógica de cada funcionalidade do sistema.
-3.  **Escriver de Testes Unitários**: Implementar testes unitários automatizando o fluxo de testes do sistema e garantindo funcionamento das funcionalidades.    
-
+2.  **Escrever Código:** Implementar a lógica de cada funcionalidade do sistema.
+3.  **Escrever Testes Unitários**: Implementar testes unitários automatizando o fluxo de testes do sistema e garantindo funcionamento das funcionalidades.    
+4.  **Escrever relatórios e casos de testes exploratórios**: Construir os relatos dos testes exploratórios e os resultados gerais dos testes.
 ---
-
-
-### Principais Tarefas
-
-1.   **Design:** Planejar o Front-end do sistema de maneira que o usuário tenha facilidade de utilizar o sistema.
-2.   **Organizar reunião de testes:** Organizar evento que possíveis usuários testem o sistema e deem feedback da facilidade de seu uso.
 
 
 ## 6. Revisar demanda
