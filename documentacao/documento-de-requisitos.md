@@ -105,12 +105,7 @@ Tomando por base o contexto do sistema, foram identificados os seguintes requisi
 | RNF05 | O sistema deve seguir as normas de **proteção de dados pessoais (LGPD)** e padrões do **SUS**. | Segurança | Sistema | Alta | |
 
 
-## 5. Diagrama de Casos de Uso
-
-
-<img width="1352" height="1438" alt="Diagrama caso de uso Triagem Hospitalar - Diagrama de caso de uso" src="https://github.com/user-attachments/assets/fb4f2dc0-0293-4992-b490-2b35ade5215b" />
-
-## 6. Protótipos
+## 5. Protótipos
 
 - 1
 <img width="1919" height="920" alt="image" src="https://github.com/user-attachments/assets/0e2b570c-ee51-4e26-b5e5-9410a994fb47" />
@@ -123,7 +118,7 @@ Tomando por base o contexto do sistema, foram identificados os seguintes requisi
 
 <img width="1906" height="919" alt="image" src="https://github.com/user-attachments/assets/5ad97f0e-a2ee-467b-aaa8-489180d17017" />
 
-## 7. Diagrama de Atividades do Produto:
+## 6. Diagrama de Atividades do Produto:
 
 <img width="1760" height="1140" alt="Diagrama de atividade hospital" src="https://github.com/user-attachments/assets/210a1c39-5e79-4303-8668-076210719fa4" />
 
