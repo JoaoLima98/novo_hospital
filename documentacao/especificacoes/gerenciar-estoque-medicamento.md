@@ -36,7 +36,7 @@
 
 -  **Falha:** O sistema permanece no estado anterior. A guia se mantém para ser atualizada.
 
-## 6. Casos de Teste
+## 6. Cenários de Teste
 | DADO | COMPORTAMENTO | RESULTADO  | TIPO |
 | :--- | :--- | :--- | :--- |
 | Inserir um lote de remédio com quantidade negativa | Verificar integridade ao cadastrar lote | Exceção com mensagem: "Não é permitido cadastrar com número negativo." | Unitário |
