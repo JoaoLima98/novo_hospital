@@ -30,9 +30,10 @@ O **Documento de Visão** estabelece o propósito do produto, seu escopo e a jus
 - **Fora do Escopo:**
     - [Exemplo: Integração com o sistema de contabilidade externo]
     - [Exemplo: Aplicativo móvel para gerentes]
+    
+## 3. Justificativa
 
-## 3. Diagrama de Casos de Uso (Simplificado)
-*(Representação visual simples das principais funcionalidades e dos atores que as utilizam.)*
+**Benefícios** que a criação deste sistema pode proporcionar ao ser implementado em mercado.
 
 ```
 
