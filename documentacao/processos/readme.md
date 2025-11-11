@@ -45,7 +45,7 @@ Cartão para quando o item já foi aceito pelo cliente.
 ---
 ## Papeis
 - [Analista de Negócio](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an) : Responsável por entender as necessidades do negócio para transpassar para o sistema, sem perder a essência do processo atual da instituição, e ajudar na criação da documentação.
-- [Gerente do Projeto](https://github.com/JoaoLima98/novo_hospital/edit/main/documentacao/processos/papeis.md#gerente-do-projeto): Responsável por planejar e administrar o cronograma e orçamento de recursos.
+- [Gerente do Projeto](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/papeis.md#gerente-do-projeto): Responsável por planejar e administrar o cronograma e orçamento de recursos.
 - [Desenvolvedor](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/papeis.md#desenvolvedor) : Responsável por projetar e construir o software, transformando os artefatos de requisitos detalhados em código.
 
 ## Artefatos
@@ -61,11 +61,11 @@ Cartão para quando o item já foi aceito pelo cliente.
 
 ## Atividades
 - [Analisar Negócio](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#1-analisar-neg%C3%B3cio) : Entender o contexto, objetivos, problemas e oportunidades diante de uma solicitação. Resulta na definição de escopo e em uma visão geral de cada funcionalidade.
-- [Planejar](https://github.com/JoaoLima98/novo_hospital/edit/main/documentacao/processos/atividades.md#2-planejar): Atividade que transforma ideias/demandas iniciais em tarefas que encaminhem estas ideias para um produto final.
-- [Especificar Funcionalidades](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#2-especificar-funcionalidades): Detalhar especificações claras, descrevendo exatamente como cada ator interagirá com o sistema.
+- [Planejar](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#2-planejar): Atividade que transforma ideias/demandas iniciais em tarefas que encaminhem estas ideias para um produto final.
+- [Especificar Funcionalidades](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#3-especificar-funcionalidades): Detalhar especificações claras, descrevendo exatamente como cada ator interagirá com o sistema.
 - [Construir Plano de Testes](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#4-construir-plano-de-testes): A atividade Construir plano de testes tem o objetivo de garantir a qualidade do produto final.
-- [Codificar e Testar Unitariamente](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#3-codificar-e-testar-unitariamente): Escrever, testar unitariamente e integrar o código-fonte para implementar as funcionalidades definidas nas Especificações de Funcionalidades.
-- [Revisar demanda](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#7-revisar-demanda): Avaliação crítica e sistemática de um artefato ou processo para identificar e corrigir desvios ou erros.
+- [Codificar e Testar Unitariamente](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#5-codificar-e-testar-unitariamente): Escrever, testar unitariamente e integrar o código-fonte para implementar as funcionalidades definidas nas Especificações de Funcionalidades.
+- [Revisar demanda](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#6-revisar-demanda): Avaliação crítica e sistemática de um artefato ou processo para identificar e corrigir desvios ou erros.
 
 ### Padrões Estabelecidos para o Desenvolvimento
 - Construir Documento de requisitos: Gerar um documento visível do funcionamento e dos atores do Sistema de Triagem.
