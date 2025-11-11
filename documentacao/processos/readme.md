@@ -44,9 +44,9 @@ Cartão para quando o item já foi aceito pelo cliente.
 
 ---
 ## Papeis
-- [Analista de Negócio](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an) : Responsável por entender as necessidades do negócio para transpassar para o sistema, sem perder a essência do processo atual da instituição, e ajudar na criação da documentação.
+- [Analista de Negócio](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an) : Responsável por entender as necessidades do negócio para transpassar para o sistema, sem perder a essência do processo atual da instituição, e ajudar na criação da documentação.
 - [Gerente do Projeto](https://github.com/JoaoLima98/novo_hospital/edit/main/documentacao/processos/papeis.md#gerente-do-projeto): Responsável por planejar e administrar o cronograma e orçamento de recursos.
-- [Desenvolvedor](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#desenvolvedor) : Responsável por projetar e construir o software, transformando os artefatos de requisitos detalhados em código.
+- [Desenvolvedor](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/papeis.md#desenvolvedor) : Responsável por projetar e construir o software, transformando os artefatos de requisitos detalhados em código.
 
 ## Artefatos
 - [Plano de Gerenciamento do Projeto (PGP)](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#7-plano-de-gerenciamento-do-projeto-pgp): Artefato responsável por representar as estimativas de esforço e custo, bem como o EAP entre outros tópicos importantes...
