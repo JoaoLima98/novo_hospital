@@ -76,9 +76,9 @@ A **História de Usuário** descreve uma funcionalidade do sistema a partir da p
 
 ## 6. Cenários de testes
 
-|  ESPECIFICAÇÃO | DADO | COMPORTAMENTO | RESULTADO |
+| DADO | COMPORTAMENTO | RESULTADO |
 | :--- | :--- | :--- | :--- |
-|  **ESPECIFICAÇÃO DO TESTE, EX:** Gerenciar Estoque de Medicamentos | **DADO TESTADO, EX:** Inserir um contato com nome existente | **COMPORTAMENTO TESTADO, EX:** Verificar unicidade ao cadastrar um contato | **RESULTADO ESPERADO, EX:** Exceção com mensagem: "Já existe um contato cadastrado com este nome." |
+| **DADO TESTADO, EX:** Inserir um contato com nome existente | **COMPORTAMENTO TESTADO, EX:** Verificar unicidade ao cadastrar um contato | **RESULTADO ESPERADO, EX:** Exceção com mensagem: "Já existe um contato cadastrado com este nome." |
 
 ```
 
