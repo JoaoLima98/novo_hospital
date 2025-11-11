@@ -56,23 +56,10 @@ Este caso de uso abrange o processo de criação de perfil, login e controle de 
 
 
 
-
-
-
-
-
-
 ### 4.2.b. Credencias inválidas ou não encontradas.
 
--   Se o email ou senha não forem válidos, o sistema retorna uma mensagem de erro: "Credenciais inválidas"
--   Se o email ou senha estiverem errados, o sistema retorna uma mensagem de erro: "Credenciais incorretas"
-
-### 4.2.b Credenciais inválidas.
-- Se o email, coren ou CRM não seguirem seus determinados padrões, o sistema deve retornar mensagem de erro, exemplo: "O email deve ser no padrão joao@email.com"
-
-
-
-
+-   Se o email ou senha não forem válidos, o sistema retorna uma mensagem de erro, exemplo: "Credenciais inválidas"
+-   Se o email ou senha estiverem errados, o sistema retorna uma mensagem de erro, exemplo: "Credenciais incorretas"
 
 
 ### 4.3.c. Controle de acesso.
@@ -83,4 +70,14 @@ Este caso de uso abrange o processo de criação de perfil, login e controle de 
 
 -   **Sucesso:** O novo Perfil é criado com sucesso e é apresentada uma mensagem de sucesso.
     
--   **Falha:** O Perfil não é autenticado, permanecendo fora do sistema e a determinanda mensagem de erro é apresentada.
+-   **Falha:** O Perfil não é criado, permanecendo fora do sistema e a determinanda mensagem de erro é apresentada.
+
+## 6. Cenários de teste
+| DADO | COMPORTAMENTO | RESULTADO  | TIPO |
+| :--- | :--- | :--- | :--- |
+| Inserir um email repetido ao cadastrar novo funcionário | Verificar unicidade | Exceção com mensagem: "Email já está sendo utilizado" | Unitário |
+| Inserir um CRM repetido ao cadastrar novo médico | Verificar unicidade | Exceção com mensagem: "CRM já está sendo utilizado" |  Unitário |
+| Inserir um email fora do padrão de email, exemplo: joaoemailcom | Verificação de padrões | Exceção com mensagem: "email deve seguir o padrão joao@email.com" |  Unitário |
+| Inserir um email dentro do padrão de email, exemplo: joao@email.com | Verificação de padrões | Permitido o cadastro |  Unitário |
+| Tentar acessar uma rota que o ator não deve ter acesso | Verificação privacidade e segurança | Mensagem de erro: "Acesso negado" |  Exploratórios baseado em cenário |
+
