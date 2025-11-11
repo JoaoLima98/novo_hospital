@@ -14,18 +14,7 @@ Serão utilizados testes **automatizados de feature** com PHPUnit, validando as 
 ---
 ## Técnica
 - A técnica adotada serão as **caixa-preta**, através do prórpio sistema, e **caixa-branca** através de testes dentro do código (como os testes unitários) verificando o comportamento do sistema com base em entradas e saídas esperadas.
----
 
-
-## Casos de Teste - Farmacia
-| DADO | COMPORTAMENTO | RESULTADO | ESPECIFICAÇÃO | Tipo |
-| :--- | :--- | :--- | :--- | :--- |
-| Inserir um lote de remédio com quantidade negativa | Verificar integridade ao cadastrar lote | Exceção com mensagem: "Não é permitido cadastrar com número negativo." | Gerenciar Estoque de Medicamentos | Unitário |
-| Buscar guia médica com ID de paciente válido | Verificar retorno de prescrição existente | Apresentada prescrição correta associada ao paciente | Gerenciar Estoque de Medicamentos | Unitário |
-| Buscar guia médica com ID de paciente inexistente | Verificar tratamento de erro ao buscar guia | Exceção com mensagem: "Paciente não encontrado." | Gerenciar Estoque de Medicamentos | Unitário |
-| Marcar prescrição atendida com estoque suficiente | Verificar atualização de estoque e status da prescrição | Estoque reduzido corretamente e mensagem: "Prescrição atendida com sucesso!" | Gerenciar Estoque de Medicamentos | Unitário |
-| Marcar prescrição atendida com estoque insuficiente | Verificar integridade no controle de estoque | A checkbox dos medicamentos em falta ficarão indisponíveis para marcar | Gerenciar Estoque de Medicamentos | Exploratório baseado em cenários |
-| Atender guia já atendida | Verificar retorno de prescrição existente | Mensagem de erro: "Esta guia já foi atendida!" | Gerenciar Estoque de Medicamentos | Exploratório baseado em cenários|
 ---
 
 ## Critérios de Aceitação
