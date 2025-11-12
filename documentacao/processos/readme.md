@@ -1,6 +1,6 @@
+# Processos do Projeto
 
-# Processos do Projeto 
-Definição de Padrões e Processo de Desenvolvimento de Software
+Documento geral que deve gerir completamente o processo definindo os Padrões e Processo de Desenvolvimento de Software.
 
 ## Descrição de Status
 
