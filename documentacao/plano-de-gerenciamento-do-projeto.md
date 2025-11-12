@@ -15,6 +15,7 @@
 | 0.1 | João de Azevedo Lima Neto | 04/11/2025 | Criação do documento |
 | 0.2 | João de Azevedo Lima Neto, Jocian Douglas Sousa Carneiro | 06/11/2025 | Adicionados Gantt e esboço EAP |
 | 1.0 | João de Azevedo Lima Neto, Jocian Douglas Sousa Carneiro | 08/11/2025 | Adicionadas estimativas de esforços e custo |
+| 1.1 | João de Azevedo Lima Neto, Jocian Douglas Sousa Carneiro | 09/11/2025 | Atualizado diagrama de atividade do projeto para refletir melhor o processo atual |
 | | | | |
 
 
@@ -90,7 +91,8 @@ A fase de garantia de qualidade para verificar o funcionamento do sistema e corr
 
 ## 3. Diagrama de Atividades do Projeto
 
-<img width="2060" height="1691" alt="Diagrama de atividade do projeto" src="https://github.com/user-attachments/assets/e5211c75-ee78-42a8-ad68-2338e557171d" />
+<img width="1810" height="1691" alt="Diagrama de atividade do projeto" src="https://github.com/user-attachments/assets/04012608-8680-41c1-97e0-3334ed4a92c4" />
+
 
 ---
 

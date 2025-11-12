@@ -30,9 +30,10 @@ O **Documento de Visão** estabelece o propósito do produto, seu escopo e a jus
 - **Fora do Escopo:**
     - [Exemplo: Integração com o sistema de contabilidade externo]
     - [Exemplo: Aplicativo móvel para gerentes]
+    
+## 3. Justificativa
 
-## 3. Diagrama de Casos de Uso (Simplificado)
-*(Representação visual simples das principais funcionalidades e dos atores que as utilizam.)*
+**Benefícios** que a criação deste sistema pode proporcionar ao ser implementado em mercado.
 
 ```
 
@@ -73,6 +74,12 @@ A **História de Usuário** descreve uma funcionalidade do sistema a partir da p
 ## 5. Pós-condições
 - **Sucesso:** Fluxo principal atingido.
 - **Falha:** Fluxo principal não atingido.
+
+## 6. Cenários de testes
+
+| DADO | COMPORTAMENTO | RESULTADO | TIPO |
+| :--- | :--- | :--- | :--- |
+| **DADO TESTADO, EX:** Inserir um contato com nome existente | **COMPORTAMENTO TESTADO, EX:** Verificar unicidade ao cadastrar um contato | **RESULTADO ESPERADO, EX:** Exceção com mensagem: "Já existe um contato cadastrado com este nome." | EX: UNITÁRIO, EXPLORATÓRIO, ETC... |
 
 ```
 
@@ -167,40 +174,22 @@ O documento que visa definir os testes do software a fim de manter a qualidade d
 
 Este documento deve responder as seguintes perguntas, voltados para os testes:
 - Qual o objetivo?
+- Escopo
+- Critérios de Aceitação?
+- Ferramentas e Ambientes utilizados?
 - Qual a estratégia?
 - Quais as técnicas?
 - Quais indicadores?
 - Ferramentas e Ambiente
 
-
-
-### Tabela com os Cenários de testes com as colunas
-
-|  ESPECIFICAÇÃO | DADO | COMPORTAMENTO | RESULTADO |
-| :--- | :--- | :--- | :--- |
-|  **ESPECIFICAÇÃO DO TESTE, EX:** Gerenciar Estoque de Medicamentos | **DADO TESTADO, EX:** Inserir um contato com nome existente | **COMPORTAMENTO TESTADO, EX:** Verificar unicidade ao cadastrar um contato | **RESULTADO ESPERADO, EX:** Exceção com mensagem: "Já existe um contato cadastrado com este nome." |
-
 ---
 
-## 6. Relatório de testes
+## 6. Relatório de testes (Unitários)
 
-O Relatórios de testes, como o nome já diz, visa relatar os testes que tiveram sucesso, fracassos e as suas ocorrências.
+O Relatórios de testes, como o nome já diz, visa relatar os testes que tiveram sucesso e fracassos.
 
-### Template
+Este documento será gerado pela ferramenta de Testes Unitários.
 
-
-#### Total mínimo esperado de testes bem-sucedidos: 80%
-#### Total máximo esperado de testes mal-sucedidos: 20%
-
-#### Total de testes bem-sucedidos: x%
-#### Total de testes mal-sucedidos: x%
-
-| TOTAL BEM-SUCEDIDOS PLANEJADO | TOTAL BEM-SUCEDIDOS | TOTAL MAL-SUCEDIDOS PLANEJADO | TOTAL MAL-SUCEDIDOS | TOTAL DE TESTES |
-| :---: | :---: | :---: | :---: | :---: |
-| 10 | 8 | 0 | 2 | 10 |
-
-
----
 
 ## 7. Plano de Gerenciamento do Projeto (PGP)
 
@@ -370,7 +359,7 @@ A seguir, são apresentados os diagramas de casos de uso e descrições associad
 
 ```
 
-## 9. Casos de teste
+## 9. Casos de teste (Exploratórios)
 
 Documento que detalha determinados casos de testes, sendo obrigatórios para os cenários exploratórios e opcionais para os unitários.
 

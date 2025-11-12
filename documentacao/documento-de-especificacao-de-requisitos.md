@@ -15,6 +15,7 @@
 | :--- | :--- | :--- | :--- |
 | 0.1 | João de Azevedo Lima Neto | 07/11/2025 | Criação do Documento |
 | 1.0 | Jocian Douglas Souza Carneiro, João de Azevedo Lima Neto | 08/11/2025 | Adição da descrição de casos de uso e criação da primeira versão do diagrama de classes |
+| 1.1 | João de Azevedo Lima Neto | 08/11/2025 | Atualização no diagrama de casos de uso |
   
 
 ---
@@ -55,7 +56,7 @@ Os atores identificados no contexto deste projeto estão descritos na tabela aba
 
 ### 2.2 Diagrama de caso de uso
 
-<img width="1352" height="1438" alt="Diagrama caso de uso Triagem Hospitalar - Diagrama de caso de uso" src="https://github.com/user-attachments/assets/9c4d17fe-05e4-4b2f-94b3-2eaa94cdcbb2" />
+<img width="1352" height="1478" alt="Diagrama caso de uso Triagem Hospitalar - Diagrama de caso de uso" src="https://github.com/user-attachments/assets/6826381c-e2ed-4b96-ac65-e68e92748a6e" />
 
 
 ### 2.3 Descrições dos casos de uso:

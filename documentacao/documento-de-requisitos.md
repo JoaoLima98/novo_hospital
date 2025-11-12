@@ -13,7 +13,10 @@
 | :--- | :--- | :--- | :--- |
 | 0.1 | Johnny Reberty Alves Oliveira | 06/10/2025 | Criação do Documento |
 | 0.5 | João de Azevedo Lima Neto, Jocian Douglas Sousa Carneiro | 01/11/2025 | Reorganização e reestruturação do documento, incluindo ajustes nas seções 3 e 4 |
-
+| 0.6 | João de Azevedo Lima Neto| 09/11/2025 | Ajuste nos requisitos funcionais |
+| 1.0 | João de Azevedo Lima Neto| 09/11/2025 | Ajustado a seção 3 para conter o minimundo descrito e em forma de diagrama. O diagrama contém apenas o que nosso sistema engloba até o momento |
+| 1.1 | João de Azevedo Lima Neto| 09/11/2025 | Realocado diagrama de caso de uso para o documento de especificação de caso de uso |
+| 1.2 | João de Azevedo Lima Neto| 12/11/2025 | Ajuste na descrição do caso de uso que descreve melhor a funcionalidade |
 
 ---
 
@@ -33,11 +36,13 @@ Além de informatizar o processo de triagem, o sistema também proporcionará **
 
 ## 3. Descrição do Minimundo
 
+### 3.1 Minimundo - Descrito
+
 O **Hospital Regional de São Paulo do Potengi** possui um setor de triagem que funciona como a porta de entrada para todos os atendimentos realizados. O processo de atendimento é dividido em **quatro fases distintas**, cada uma executada por profissionais diferentes e interligadas por meio de um único sistema de informação.
 
-Na **Fase 1 – Recepção**, o paciente chega ao hospital e apresenta seu **Cartão SUS** ou **CPF**. O atendente realiza o **cadastro dos dados pessoais e de contato**, criando automaticamente um **registro único** no sistema. Esses dados são persistidos no banco de dados e ficam disponíveis para as etapas seguintes do atendimento.
+Na **Fase 1 – Recepção**, o paciente chega ao hospital e apresenta seu **Cartão SUS** ou **CPF** para o recepcionista poder verificar se já há registro do paciente no sistema, se já houver, ele já pode ser encaminhado para etapa de triagem/enfermagem. Caso não haja registro do paciente, o atendente realiza o **cadastro dos dados pessoais e de contato**, criando um **registro único** no sistema. Esses dados são persistidos no banco de dados e ficam disponíveis para as etapas seguintes do atendimento.
 
-Na **Fase 2 – Enfermagem**, o paciente é encaminhado à enfermeira responsável, que acessa o mesmo registro e adiciona **informações clínicas iniciais**, como sintomas relatados, sinais vitais e possíveis alergias. Essas informações complementam o cadastro inicial e são utilizadas na avaliação médica posterior.
+Na **Fase 2 – Enfermagem/Triagem**, o paciente é encaminhado à enfermeira responsável, que acessa o mesmo registro e adiciona **informações clínicas iniciais**, como sintomas relatados, sinais vitais e possíveis alergias. Essas informações complementam o cadastro inicial e são utilizadas na avaliação médica posterior.
 
 Na **Fase 3 – Atendimento Médico**, o médico acessa o registro consolidado do paciente e adiciona **informações do exame clínico**, **diagnóstico** e **prescrição médica**. Após o atendimento, o sistema atualiza o status do paciente e armazena o registro como parte do **histórico de atendimentos**, que poderá ser consultado em visitas futuras.
 
@@ -45,22 +50,34 @@ Por fim, na **Fase 4 – Farmácia**, o farmacêutico visualiza as **prescriçõ
 
 O sistema deve permitir o **acompanhamento em tempo real do status de cada paciente**, desde o momento da chegada até a finalização do atendimento, além de disponibilizar funcionalidades de **consulta de histórico, controle de acesso por função, geração de relatórios gerenciais.** Com sua implantação, o hospital passará a contar com um processo digital e integrado, eliminando as fichas manuais, garantindo maior **agilidade**, **segurança da informação** e **continuidade no acompanhamento médico dos pacientes**, trazendo benefícios tanto para os profissionais de saúde quanto para a população atendida.
 
+Quanto a cada funcionário **(recepcionista, enfermeira, médico e farmacêutico)** cada um terá acesso apenas as suas determinadas fatias do sistema. Ao cadastrar um novo funcionário, o admnistrador deverá selecionar o perfil do profissional que, ao utilizar o sistema, não terá acesso as partes que não os dizem respeito.
+
+---
+
+### 3.2 Minimundo - Diagrama de domínio
+
+<img width="1631" height="1234" alt="Diagrama de dominio-hospital" src="https://github.com/user-attachments/assets/f1d7c6e9-4c85-4277-8885-2a447d5c6675" />
+
+---
+
 ## 4. Requisitos de Usuário
 
-Tomando por base o contexto do sistema, foram identificados os seguintes requisitos de usuário:
+Tomando por base o contexto do sistema, foram identificados os seguintes requisitos de usuário
+
 
 ### Requisitos Funcionais
 
 | Identificador | Descrição | Prioridade | Depende de |
 | :--- | :--- | :--- | :--- |
-| RF01 | O sistema deve permitir o **cadastro de pacientes** na recepção, incluindo: Cartão SUS, CPF, Endereço, Telefone, Outras informações básicas. | Alta | |
-| RF02 | Cada setor deve **acessar e complementar** o mesmo registro do paciente:<br>Recepção: dados pessoais e administrativos;<br>Enfermagem: sintomas e informações iniciais da triagem;<br>Médico: exame clínico, diagnóstico e prescrição;<br>Farmacêutico: atende guia do paciente. | Alta | |
-| RF03 | O sistema deve **atualizar automaticamente o status** do paciente conforme ele avança nas etapas:<br>Exemplo: “Aguardando atendimento médico → Em atendimento médico → Aguardando medicamentos → Finalizado”. | Alta | RF03 |
-| RF04 | Os atores recepcionista, médico e enfermeira devem poder **consultar todo o histórico de atendimentos anteriores** de um paciente. | Médio | |
-| RF05 | O sistema deve **diferenciar os tipos de usuário** e restringir funcionalidades:<br>Recepcionista;<br>Enfermeira;<br>Médico;<br>Farmacêutico;<br>Administrador; | Alta | |
-| RF06 | O médico deve poder **inserir prescrições** no sistema, visíveis apenas ao setor farmacêutico e recepção. | Alta | RF02 |
-| RF07 | O sistema deve gerar **relatórios de atendimentos, triagens e diagnósticos** para fins administrativos e estatísticos. | Médio | RF02, RF04 |
-| RF08 | O sistema deve permitir à enfermeira conduzir a triagem pelo sistema, inserindo informações como:<br>Protocolo Manchester, Total Glasgow, Frequência Cardíaca, Peso, Outras informações importantes para o atendimento. | Alta | RF01 |
+| **RF01 - Gerenciar Paciente** | O sistema deve permitir o **cadastro de pacientes** na recepção, incluindo: Cartão SUS, CPF, Endereço, Telefone, Outras informações básicas. | Alta | |
+| **RF02 - Acompanhar e Atualizar Registro do Paciente** | Cada setor deve **acessar e complementar** o mesmo registro do paciente:<br>Recepção: dados pessoais e administrativos;<br>Enfermagem: sintomas e informações iniciais da triagem;<br>Médico: exame clínico, diagnóstico e prescrição;<br>Farmacêutico: atende guia do paciente. | Alta | |
+| **RF03 - Atualizar Status do Paciente** | O sistema deve **atualizar automaticamente o status** do paciente conforme ele avança nas etapas:<br>Exemplo: “Aguardando atendimento médico → Em atendimento médico → Aguardando medicamentos → Finalizado”. | Alta | RF01 |
+| **RF04 - Verificar Histórico do Paciente** | Os atores recepcionista, médico e enfermeira devem poder **consultar todo o histórico de atendimentos anteriores** de um paciente. | Médio | |
+| **RF05 - Criar Autenticação** | O sistema deve possibilitar a criação de **diferentes tipos de funcionários** e restringir funcionalidades:<br>Recepcionista;<br>Enfermeira;<br>Médico;<br>Farmacêutico;<br>Administrador; | Alta | |
+| **RF06 - Diagnosticar Paciente e Prescrever Medicamento** | O médico deve poder **inserir prescrições** no sistema após realizar o diagnóstico, visíveis apenas ao setor farmacêutico e recepção. | Alta | RF02 |
+| **RF07 - Gerar Relatórios** | O sistema deve gerar **relatórios de atendimentos, triagens e diagnósticos** para fins administrativos e estatísticos. | Médio | RF01, RF04 |
+| **RF08 - Fazer Triagem** | O sistema deve permitir à enfermeira conduzir a triagem pelo sistema, inserindo informações como:<br>Protocolo Manchester, Total Glasgow, Frequência Cardíaca, Peso, Outras informações importantes para o atendimento. | Alta | RF01 |
+| **RF09 - Gerenciar Estoque de Medicamentos** | O sistema deve permitir o farmacêutico consultar a guia dos pacientes e entregar os medicamentos disponíveis necessários, bem como cadastrar um novo lote de medicamentos | Alta | RF06 |
 
 
 ### Regras de Negócio
@@ -90,12 +107,7 @@ Tomando por base o contexto do sistema, foram identificados os seguintes requisi
 | RNF05 | O sistema deve seguir as normas de **proteção de dados pessoais (LGPD)** e padrões do **SUS**. | Segurança | Sistema | Alta | |
 
 
-## 5. Diagrama de Casos de Uso
-
-
-<img width="1352" height="1438" alt="Diagrama caso de uso Triagem Hospitalar - Diagrama de caso de uso" src="https://github.com/user-attachments/assets/fb4f2dc0-0293-4992-b490-2b35ade5215b" />
-
-## 6. Protótipos
+## 5. Protótipos
 
 - 1
 <img width="1919" height="920" alt="image" src="https://github.com/user-attachments/assets/0e2b570c-ee51-4e26-b5e5-9410a994fb47" />
@@ -108,7 +120,7 @@ Tomando por base o contexto do sistema, foram identificados os seguintes requisi
 
 <img width="1906" height="919" alt="image" src="https://github.com/user-attachments/assets/5ad97f0e-a2ee-467b-aaa8-489180d17017" />
 
-## 7. Diagrama de Atividades do Produto:
+## 6. Diagrama de Atividades do Produto:
 
 <img width="1760" height="1140" alt="Diagrama de atividade hospital" src="https://github.com/user-attachments/assets/210a1c39-5e79-4303-8668-076210719fa4" />
 
