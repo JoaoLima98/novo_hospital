@@ -96,7 +96,7 @@
         </div>
 
         <div class="container">
-            <form action="{{ route('lote.store') }}" class="form-lote" method="POST">
+            <form action="{{ route('store.lote') }}" class="form-lote" method="POST">
                 @csrf
                 <select name="id_remedio" id="remedios-select" class="form-control">
                     <option value="">Selecione um medicamento</option>

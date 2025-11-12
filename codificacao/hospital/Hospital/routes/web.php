@@ -2,14 +2,14 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FarmaciaController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\MedicoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RemedioController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/',[IndexController::class,'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -35,7 +35,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/criar-remedio',[RemedioController::class,'create'])->name('criar.remedio');
     Route::get('/criar-estoque',[FarmaciaController::class,'criarLote'])->name('criar.lote');
-    Route::post('/criar-lote',[FarmaciaController::class,'storeLote'])->name('lote.store');
+    Route::post('/criar-lote',[FarmaciaController::class,'storeLote'])->name('store.lote');
 
     Route::get('/criar-usuario',[AdminController::class,'criarUsuario'])->name('criar.usuario');
     Route::post('/criar-usuario',[AdminController::class,'StoreUsuario'])->name('store.usuario');

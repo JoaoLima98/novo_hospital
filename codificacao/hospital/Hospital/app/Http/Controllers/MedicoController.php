@@ -8,11 +8,13 @@ use App\Models\Prescricao;
 use App\Models\PrescricaoRemedio;
 use App\Models\Remedio;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class MedicoController extends Controller
 {
 
     public function index(){
+        Gate::authorize('medico');
         $pacientes = Paciente::all();
         $remedios = Remedio::all();
 
