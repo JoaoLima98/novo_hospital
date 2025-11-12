@@ -5,11 +5,14 @@ namespace App\Http\Controllers;
 use App\Models\Farmaceutico;
 use App\Models\Medico;
 use App\Models\User;
+use Illuminate\Container\Attributes\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class AdminController extends Controller
 {
     public function criarUsuario(){
+        Gate::authorize('adm');
         return view('admin.criarUser');
     }
 
@@ -23,6 +26,10 @@ class AdminController extends Controller
                 'perfil' => 'medico',
                 'password' => bcrypt($request->password),
             ]);
+            $medicoExiste = Medico::where('crm', $request->crm)->first();
+            if($medicoExiste){
+                return back()->with('error', 'CRM já cadastrado !');
+            }
             Medico::create([
                 'user_id' => $user->id,
                 'nome'    => $request->name,
