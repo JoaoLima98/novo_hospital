@@ -16,7 +16,7 @@
 | 0.6 | João de Azevedo Lima Neto| 09/11/2025 | Ajuste nos requisitos funcionais |
 | 1.0 | João de Azevedo Lima Neto| 09/11/2025 | Ajustado a seção 3 para conter o minimundo descrito e em forma de diagrama. O diagrama contém apenas o que nosso sistema engloba até o momento |
 | 1.1 | João de Azevedo Lima Neto| 09/11/2025 | Realocado diagrama de caso de uso para o documento de especificação de caso de uso |
-| 1.2 | João de Azevedo Lima Neto| 09/11/2025 | Ajuste na descrição do caso de uso que descreve melhor a funcionalidade |
+| 1.2 | João de Azevedo Lima Neto| 12/11/2025 | Ajuste na descrição do caso de uso que descreve melhor a funcionalidade |
 
 ---
 
