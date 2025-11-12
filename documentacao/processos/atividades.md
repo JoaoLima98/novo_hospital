@@ -1,6 +1,6 @@
 # Atividades do Processo de Software:
 
-Este documento detalha o fluxo do processo de software, definindo o propósito e as ações primárias de cada atividade no desenvolvimento do **Sistema de Triagem Hospitalar**.
+Este documento detalha o fluxo do processo de software, definindo o propósito e as ações primárias de cada atividade no desenvolvimento do **Sistema de Triagem Hospitalar**. Cada iteração irá gerar artefatos ou atualizar os artefatos existentes para complementar o produto final.
 
 ----------
 
@@ -12,13 +12,13 @@ A atividade **Analisar Negócio** é o ponto de partida. Seu objetivo é entende
 
 ### Responsável Principal
 
-**[Analista de Negócio (AN)](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an)**.
+**[Analista de Negócio (AN)](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an)**.
 
 ### Fluxo de Artefatos
 
 **Entradas:** Demanda da funcionalidade descrita pelo cliente.
 
-**Saídas:** Requisitos Funcionais, atualização do **[Documento de Visão]((https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#1-documento-de-vis%C3%A3o) )**.
+**Saídas:** Requisitos Funcionais, **[Documento de Visão](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#1-documento-de-vis%C3%A3o)**.
 ### Principais Tarefas
 
 1.  **Reunir com cliente:** Organizar reunião com o cliente a fim de compreender as novas demandas.
@@ -32,13 +32,13 @@ A atividade **Planejar** tem objetivo de transformar ideias/demandas iniciais em
 
 ### Responsáveis
 
-**[Analista de Negócio (AN)](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an)** | **[Gerente do Projeto](https://github.com/JoaoLima98/novo_hospital/edit/main/documentacao/processos/papeis.md#gerente-do-projeto)**
+ **[Gerente do Projeto](https://github.com/JoaoLima98/novo_hospital/edit/main/documentacao/processos/papeis.md#gerente-do-projeto)** | Auxiliado pelo **[Analista de Negócio (AN)](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an)**
 
 ### Fluxo de Artefatos
 
-**Entradas:** **[Documento de Visão]((https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#1-documento-de-vis%C3%A3o))**, Solicitação do cliente.
+**Entradas:** **[Documento de Visão](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#1-documento-de-vis%C3%A3o)**, Solicitação do cliente.
 
-**Saídas:** Nova Iteração, [Plano de Gerenciamento do Projeto (PGP)](https://github.com/JoaoLima98/novo_hospital/edit/main/documentacao/processos/artefatos.md#7-plano-de-gerenciamento-do-projeto-pgp), [Documento de Especificação de Requisitos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#8-documento-de-especifica%C3%A7%C3%A3o-de-requisitos).
+**Saídas:** Nova Iteração, **[Plano de Gerenciamento do Projeto (PGP)](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#7-plano-de-gerenciamento-do-projeto-pgp)**, **[Documento de Especificação de Requisitos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#8-documento-de-especifica%C3%A7%C3%A3o-de-requisitos)**, **[Documento de Requisitos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#3-documento-de-requisitos)**.
 ### Principais Tarefas
 
 1.  **Revisar demanada:** Rever a demanda exigida pelo cliente.
@@ -52,7 +52,7 @@ A atividade **Especificar Funcionalidades** transforma os casos de uso do diagra
 
 ### Responsável Principal
 
-**[Analista de QA](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-qa-quality-assurance)**.
+**[Analista de Negócio (AN)](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an)** | Auxiliado pelo **[Gerente do Projeto](https://github.com/JoaoLima98/novo_hospital/edit/main/documentacao/processos/papeis.md#gerente-do-projeto)**
 
 ### Fluxo de Artefatos
 
@@ -79,8 +79,7 @@ A atividade **Construir plano de testes** tem o objetivo de garantir a qualidade
 
 ### Responsável Principal
 
-**[Analista de QA](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-qa-quality-assurance)**.
-
+**[Analista de Negócio (AN)](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an)**
 ### Fluxo de Artefatos
 
 **Entradas**: **[Documento de Visão](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an)**, Diagrama de Caso de Uso, Especificação do caso de uso.
@@ -106,9 +105,9 @@ A atividade **Codificar** é a implementação técnica do Sistema de Triagem. O
 
 ### Fluxo de Artefatos
 
-**Entradas:** [Especificações de Casos de Uso](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#template-1), [Plano de testes](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#5-plano-de-testes).
+**Entradas:** **[Especificações de Casos de Uso](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#2-especifica%C3%A7%C3%A3o-de-caso-de-uso)**, **[Plano de testes](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#5-plano-de-testes)**.
 
-**Saídas:**  [Produto Executável](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/artefatos.md#4-produto-software-execut%C3%A1vel), Código-fonte, Testes Unitários, Relatório de Testes e Casos de testes detalhados.
+**Saídas:**  **[Produto Executável](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/artefatos.md#4-produto-software-execut%C3%A1vel)**, Código-fonte, Testes Unitários, [Relatório de Testes](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#6-relat%C3%B3rio-de-testes-unit%C3%A1rios) e [Casos de testes detalhados](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#9-casos-de-teste-explorat%C3%B3rios).
 
 ### Principais Tarefas
 
@@ -128,10 +127,10 @@ A atividade de **Revisar** tem objetivo de avaliar e criticar de forma sistemát
 
 ### Responsável Principal
 
-**[Analista de QA](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-qa-quality-assurance)** | **[Analista de Negócio (AN)](https://github.com/JoaoLima98/triagem_hospitalar/blob/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an)**.
+**[Analista de Negócio (AN)](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/papeis.md#analista-de-neg%C3%B3cio-an)** | **[Gerente do Projeto](https://github.com/JoaoLima98/novo_hospital/edit/main/documentacao/processos/papeis.md#gerente-do-projeto)**
 
 ### Fluxo de Artefatos
 
-**Entradas:** Software Executável, [Especificações de Casos de Uso](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#template-1).
+**Entradas:** Software Executável, **[Especificações de Casos de Uso](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#2-especifica%C3%A7%C3%A3o-de-caso-de-uso)**.
 
 **Saídas:** Correção do ou aceitação do requisito ou software executável.
