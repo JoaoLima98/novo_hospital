@@ -16,6 +16,7 @@
 | 0.6 | João de Azevedo Lima Neto| 09/11/2025 | Ajuste nos requisitos funcionais |
 | 1.0 | João de Azevedo Lima Neto| 09/11/2025 | Ajustado a seção 3 para conter o minimundo descrito e em forma de diagrama. O diagrama contém apenas o que nosso sistema engloba até o momento |
 | 1.1 | João de Azevedo Lima Neto| 09/11/2025 | Realocado diagrama de caso de uso para o documento de especificação de caso de uso |
+| 1.2 | João de Azevedo Lima Neto| 09/11/2025 | Ajuste na descrição do caso de uso que descreve melhor a funcionalidade |
 
 ---
 
@@ -76,7 +77,7 @@ Tomando por base o contexto do sistema, foram identificados os seguintes requisi
 | **RF06 - Diagnosticar Paciente e Prescrever Medicamento** | O médico deve poder **inserir prescrições** no sistema após realizar o diagnóstico, visíveis apenas ao setor farmacêutico e recepção. | Alta | RF02 |
 | **RF07 - Gerar Relatórios** | O sistema deve gerar **relatórios de atendimentos, triagens e diagnósticos** para fins administrativos e estatísticos. | Médio | RF01, RF04 |
 | **RF08 - Fazer Triagem** | O sistema deve permitir à enfermeira conduzir a triagem pelo sistema, inserindo informações como:<br>Protocolo Manchester, Total Glasgow, Frequência Cardíaca, Peso, Outras informações importantes para o atendimento. | Alta | RF01 |
-| **RF09 - Gerenciar Estoque de Medicamentos** | O sistema deve permitir o farmacêutico consultar a guia dos pacientes e entregar os medicamentos disponíveis necessários | Alta | RF06 |
+| **RF09 - Gerenciar Estoque de Medicamentos** | O sistema deve permitir o farmacêutico consultar a guia dos pacientes e entregar os medicamentos disponíveis necessários, bem como cadastrar um novo lote de medicamentos | Alta | RF06 |
 
 
 ### Regras de Negócio
