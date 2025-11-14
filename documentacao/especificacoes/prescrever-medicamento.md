@@ -1,4 +1,4 @@
-# Caso de Uso: Fazer Prescrição
+# Caso de Uso: Prescrever Medicamento
 
 ## 1. Atores
  - Médico
