@@ -9,9 +9,9 @@
 ## 3. Fluxo Principal
 
 ### a) Nova posologia
-1. O ator acessa o sistema a partir do login de nível médico;
+1. O ator acessar o sistema a partir do login de nível médico;
 2. O sistema apresenta a tela com a opção de buscar um paciente;
-3. Ao escolher o paciente, o ator poderá adicionar uma posologia;
+3. Ao escolher o paciente, o ator poderá adicionar uma posologia (Posologia é o estudo e a definição da forma correta de utilizar um medicamento);
 4. Ao selecionar adicionar posologia, o sistema irá apresentar um modal da posologia;
 5. O modal para adicionar uma nova posologia deve apresentar os medicamentos disponíveis (ibuprofeno, amoxilina, etc...) , quantidade (1/2, 1, 2, 30 ...) , unidade (comprimido, gotas, sachê) em formato de select, intervalo entre o medicamento em horas (6, 8 , 12...) e a duração em horas (24, 48, 72, 120);
    como no esboço abaixo:
