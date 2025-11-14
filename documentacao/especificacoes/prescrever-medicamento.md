@@ -13,10 +13,15 @@
 2. O sistema apresenta a tela com a opção de buscar um paciente;
 3. Ao escolher o paciente, o ator poderá adicionar uma posologia (Posologia é o estudo e a definição da forma correta de utilizar um medicamento);
 4. Ao selecionar adicionar posologia, o sistema irá apresentar um modal da posologia;
-5. O modal para adicionar uma nova posologia deve apresentar os medicamentos disponíveis (ibuprofeno, amoxilina, etc...) , quantidade (1/2, 1, 2, 30 ...) , unidade (comprimido, gotas, sachê) em formato de select, intervalo entre o medicamento em horas (6, 8 , 12...) e a duração em horas (24, 48, 72, 120);
+5. O modal para adicionar uma nova posologia deve apresentar os **medicamentos** disponíveis (ibuprofeno, amoxilina, etc...), **quantidade** (1/2, 1, 2, 30 ...), **unidade** (comprimido, gotas, sachê) em formato de select, **intervalo** entre o medicamento em **horas** (6, 8 , 12...) e a **duração em horas** (24, 48, 72, 120);
    como no esboço abaixo:
-   <img width="1000" height="574" alt="image" src="https://github.com/user-attachments/assets/3a5116e8-a131-45ad-9308-3983e0ae85ef" />
+   
+  <img width="1024" height="585" alt="image" src="https://github.com/user-attachments/assets/9e68f0fb-58cb-42e0-a518-7402efcefbce" />
 
+
+
+6. Se o médico precisar escrever mais alguma instrução ou observação, poderá escrever no campo de observações adicionais (Textarea).
+7. Por fim ele ir pressionar o botão **"Gerar prescrição"** para finalizar a prescrição medica.
 
 ### b) Edição e remoção de posologia
 1. Depois de criado a posologia, o sistema irá apresentar um botão amarelo para edição e um vermelho para remoção da posologia, com ícones que representem estas ações;
