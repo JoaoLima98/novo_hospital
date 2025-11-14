@@ -63,7 +63,7 @@ Os atores identificados no contexto deste projeto estão descritos na tabela aba
 ### 2.3 Descrições dos casos de uso:
 - [Criar autenticação](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/criar-autenticacao.md#caso-de-uso-criar-autentica%C3%A7%C3%A3o)
 - [Gerenciar Estoque de Medicamentos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/gerenciar-estoque-medicamento.md#caso-de-uso-gerenciar-estoque-de-medicamentos)
-- [Prescrever Medicamento](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/fazer-prescricao.md)
+- [Prescrever Medicamento](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/prescrever-medicamento.md)
 
 
 ## 3. Diagrama de Classes
