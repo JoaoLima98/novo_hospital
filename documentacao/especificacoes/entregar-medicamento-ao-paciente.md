@@ -27,7 +27,9 @@ Exemplo no esboço abaixo:
 
 
 6.1 No **status** deve conter o botão de **"Atender"** aquela guia se ainda não foi atendida.
+
 6.2 Se já foi atendida, e todos os medicamentos foram entregues ao paciente, o botão deve ficar cinza com o texto **"Totalmente atendido".**
+
 6.3 Se não tinha disponibilidade de entregar todos os medicamentos por falta no estoque, o botão deve ficar Laranja com o texto **Parcialmente Atendido** e poderá ser terminado atendimento quando tiver o medicamento restante disponível novamente no estoque.
 
 
