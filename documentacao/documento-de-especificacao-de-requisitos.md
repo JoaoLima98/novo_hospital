@@ -18,6 +18,7 @@
 | 1.1 | João de Azevedo Lima Neto | 08/11/2025 | Atualização no diagrama de casos de uso |
 | 1.2 | João de Azevedo Lima Neto | 14/11/2025 | Adicionado descrição/especificação do caso de uso prescrever medicamento |
 | 1.3 | João de Azevedo Lima Neto | 14/11/2025 | Atualização no diagrama de caso de uso para ajustar o caso prescrever medicamento e em adição ajustado as cores para ficar mais legível a pedido do Cliente/Professor Maurício |
+| 1.4 | João de Azevedo Lima Neto | 15/11/2025 | Atualização no diagrama de caso de uso para separar o caso de gerenciamento de medicamentos em Entregar Medicamento ao Paciente e Registrar Entrada de medicamentos |
 
 ---
 
@@ -57,13 +58,15 @@ Os atores identificados no contexto deste projeto estão descritos na tabela aba
 
 ### 2.2 Diagrama de caso de uso
 
-<img width="1352" height="1478" alt="Diagrama caso de uso Triagem Hospitalar - Diagrama de caso de uso" src="https://github.com/user-attachments/assets/e36136dd-8b5d-4456-94e3-c854d4322ae3" />
+<img width="1352" height="1478" alt="Diagrama caso de uso Triagem Hospitalar - Diagrama de caso de uso" src="https://github.com/user-attachments/assets/4a5e6402-6d7e-4397-951a-5b4836c59f24" />
+
 
 
 
 ### 2.3 Descrições dos casos de uso:
 - [Criar autenticação](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/criar-autenticacao.md#caso-de-uso-criar-autentica%C3%A7%C3%A3o)
-- [Gerenciar Estoque de Medicamentos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/gerenciar-estoque-medicamento.md#caso-de-uso-gerenciar-estoque-de-medicamentos)
+- [Registrar Entrada de Medicamentos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/registrar-entrada-de-medicamentos.md)
+- [Entregar Medicamento ao Paciente](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/entregar-medicamento-ao-paciente.md)
 - [Prescrever Medicamento](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/prescrever-medicamento.md)
 
 
