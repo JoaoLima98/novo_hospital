@@ -17,7 +17,8 @@
 | 1.0 | João de Azevedo Lima Neto| 09/11/2025 | Ajustado a seção 3 para conter o minimundo descrito e em forma de diagrama. O diagrama contém apenas o que nosso sistema engloba até o momento |
 | 1.1 | João de Azevedo Lima Neto| 09/11/2025 | Realocado diagrama de caso de uso para o documento de especificação de caso de uso |
 | 1.2 | João de Azevedo Lima Neto| 12/11/2025 | Ajuste na descrição do caso de uso que descreve melhor a funcionalidade |
-| 1.3 | João de Azevedo Lima Neto| 12/11/2025 | Correção no RF06 |
+| 1.3 | João de Azevedo Lima Neto| 14/11/2025 | Correção no RF06 |
+| 1.4 | João de Azevedo Lima Neto| 15/11/2025 | Correção no RF09 e adição do RF10 |
 
 ---
 
@@ -70,16 +71,16 @@ Tomando por base o contexto do sistema, foram identificados os seguintes requisi
 
 | Identificador | Descrição | Prioridade | Depende de |
 | :--- | :--- | :--- | :--- |
-| **RF01 - Gerenciar Paciente** | O sistema deve permitir o **cadastro de pacientes** na recepção, incluindo: Cartão SUS, CPF, Endereço, Telefone, Outras informações básicas. | Alta | |
-| **RF02 - Acompanhar e Atualizar Registro do Paciente** | Cada setor deve **acessar e complementar** o mesmo registro do paciente:<br>Recepção: dados pessoais e administrativos;<br>Enfermagem: sintomas e informações iniciais da triagem;<br>Médico: exame clínico, diagnóstico e prescrição;<br>Farmacêutico: atende guia do paciente. | Alta | |
+| **RF01 - Gerenciar Paciente** | O sistema deve permitir o **cadastro de pacientes** na recepção, incluindo: Cartão SUS, CPF, Endereço, Telefone, Outras informações básicas. | Alta | - |
+| **RF02 - Acompanhar e Atualizar Registro do Paciente** | Cada setor deve **acessar e complementar** o mesmo registro do paciente:<br>Recepção: dados pessoais e administrativos;<br>Enfermagem: sintomas e informações iniciais da triagem;<br>Médico: exame clínico, diagnóstico e prescrição;<br>Farmacêutico: atende guia do paciente. | Alta | - |
 | **RF03 - Atualizar Status do Paciente** | O sistema deve **atualizar automaticamente o status** do paciente conforme ele avança nas etapas:<br>Exemplo: “Aguardando atendimento médico → Em atendimento médico → Aguardando medicamentos → Finalizado”. | Alta | RF01 |
-| **RF04 - Verificar Histórico do Paciente** | Os atores recepcionista, médico e enfermeira devem poder **consultar todo o histórico de atendimentos anteriores** de um paciente. | Médio | |
-| **RF05 - Criar Autenticação** | O sistema deve possibilitar a criação de **diferentes tipos de funcionários** e restringir funcionalidades:<br>Recepcionista;<br>Enfermeira;<br>Médico;<br>Farmacêutico;<br>Administrador; | Alta | |
+| **RF04 - Verificar Histórico do Paciente** | Os atores recepcionista, médico e enfermeira devem poder **consultar todo o histórico de atendimentos anteriores** de um paciente. | Médio | - |
+| **RF05 - Criar Autenticação** | O sistema deve possibilitar a criação de **diferentes tipos de funcionários** e restringir funcionalidades:<br>Recepcionista;<br>Enfermeira;<br>Médico;<br>Farmacêutico;<br>Administrador; | Alta | - |
 | **RF06 - Prescrever Medicamento** | O médico deve poder **inserir prescrições**, adicionando posologias, no sistema após realizar o diagnóstico, visíveis apenas ao setor farmacêutico e recepção. | Alta | RF02 |
 | **RF07 - Gerar Relatórios** | O sistema deve gerar **relatórios de atendimentos, triagens e diagnósticos** para fins administrativos e estatísticos. | Médio | RF01, RF04 |
 | **RF08 - Fazer Triagem** | O sistema deve permitir à enfermeira conduzir a triagem pelo sistema, inserindo informações como:<br>Protocolo Manchester, Total Glasgow, Frequência Cardíaca, Peso, Outras informações importantes para o atendimento. | Alta | RF01 |
-| **RF09 - Gerenciar Estoque de Medicamentos** | O sistema deve permitir o farmacêutico consultar a guia dos pacientes e entregar os medicamentos disponíveis necessários, bem como cadastrar um novo lote de medicamentos | Alta | RF06 |
-
+| **RF09 - Registrar Entrada de medicamentos** | O sistema deve permitir o farmacêutico cadastrar novo lote de medicamentos | Alta | - |
+| **RF10 - Entregar Medicamento ao Paciente** | O sistema deve permitir o farmacêutico consultar a guia dos pacientes e entregar os medicamentos disponíveis necessários | Alta | RF06, RF09 |
 
 ### Regras de Negócio
 
