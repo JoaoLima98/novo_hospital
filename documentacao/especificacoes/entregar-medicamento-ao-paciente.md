@@ -1,4 +1,4 @@
-# Caso de Uso: - Entregar Medicamento ao Paciente
+# Caso de Uso: Entregar Medicamento ao Paciente
 ## 1. Atores
 
 - Farmacêutico.
