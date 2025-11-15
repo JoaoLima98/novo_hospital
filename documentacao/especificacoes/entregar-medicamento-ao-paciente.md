@@ -20,7 +20,7 @@
 Esboço:
 <img width="1029" height="438" alt="image" src="https://github.com/user-attachments/assets/b479b354-c484-4ed3-ba3c-408ee9893f93" />
 
-6. Ao selecionar atender, um modal com os medicamentos da posologia vão ser apresentados _(Medicamentos disponíveis no estoque tem que ter uma representação visual e indisponíveis outra)_, se estiver disponível no estoque, ele vai entregar todos, se não vai entregar os disponíveis e o status se tornará **Parcialmente Atendido**. 
+6. Ao selecionar atender, um modal com os medicamentos da posologia vão ser apresentados _(Medicamentos disponíveis no estoque tem que ter uma representação visual e indisponíveis outra)_, se estiver disponível no estoque, ele vai entregar todos, se não, vai entregar os disponíveis e o status se tornará **Parcialmente Atendido**. 
 Exemplo no esboço abaixo:
 
 <img width="784" height="364" alt="image" src="https://github.com/user-attachments/assets/d6cde219-7d90-4793-be81-49e10338dd01" />
@@ -42,7 +42,7 @@ Exemplo no esboço abaixo:
 
 ### 4.2 Falta de medicamento
 
-- O sistema entregará somente os medicamentos que tem na guia e estão disponíveis. Os que estiverem em falta, não serão entregues e a guia será atualizada para o status **"Parcialmente Atendido"**, podendo ser finalizado posteriormente quando o medicamento restante estiver disponível no estoque.
+- O sistema entregará somente os medicamentos que tem na guia e estão disponíveis. Os que estiverem em falta, não serão entregues e a guia será atualizada para o status **"Parcialmente Atendido"**, podendo ser finalizado posteriormente quando o medicamento restante estiver disponível no estoque. **Observação**: Este fluxo vale também caso nenhum dos medicamentos da guia esteja disponível, o status da guia também vai para **Parcialmente Atendido**.
   
 
 ### 4.3 Se a guia já foi totalmente atendida
@@ -66,5 +66,6 @@ Exemplo no esboço abaixo:
 | Buscar guia médica com ID de paciente inexistente | Verificar tratamento de erro ao buscar guia | Exceção com mensagem: "Paciente não encontrado." |  Unitário |
 | Marcar prescrição atendida com estoque suficiente | Verificar atualização de estoque e status da prescrição | Estoque reduzido corretamente e status atualizado para **"Totalmente Atendido"** |  Unitário |
 | Marcar prescrição atendida com estoque insuficiente para 1 medicamento e outro não | Verificar integridade no controle de estoque | O sistema deve entregar o medicamento disponível, e o status deve se tornar **"Parcialmente Atendido"** | Exploratório baseado em cenários |
+| Marcar prescrição atendida com estoque insuficiente para 2 medicamentos distintos | Verificar integridade no controle de estoque | O sistema não mudará nada no estoque e o status deve se tornar **"Parcialmente Atendido"** | Exploratório baseado em cenários |
 | Atender guia já atendida | Verificar retorno de prescrição existente | O botão deve estar desabilitado (inativo) com o texto **"Totalmente Atendido"** e nenhuma ação deve ser disparada | Exploratório baseado em cenários|
 | Atender cancela o modal de atender | Verificar integridade no controle de estoque | Se o ator não confirmar o modal ao atender, o sistema deve se manter como estava, voltando para a tabela das guias | Exploratório baseado em cenários| 
