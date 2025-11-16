@@ -14,4 +14,5 @@ class Estoque extends Model
     {
         return $this->belongsTo(Remedio::class, 'id_remedio');
     }
+    
 }
