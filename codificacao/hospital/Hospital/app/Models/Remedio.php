@@ -12,6 +12,14 @@ class Remedio extends Model
 
     public function prescricoes()
     {
-        return $this->belongsToMany(Prescricao::class, 'prescricao_remedios', 'id_remedio', 'id_prescricao');
+        return $this->belongsToMany(Prescricao::class, 'prescricao_remedios', 'id_remedio', 'id_prescricao')
+                    ->withPivot(['quantidade', 'unidade_medida', 'intervalo', 'duracao']);
     }
+
+    public function estoques()
+    {
+        return $this->hasMany(Estoque::class, 'id_remedio', 'id');
+    }
+
+    
 }

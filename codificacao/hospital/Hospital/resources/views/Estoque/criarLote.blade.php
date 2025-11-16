@@ -5,7 +5,6 @@
 @section('nav')
 <a href="{{ route('consultar.estoque') }}" class="nav-item"><i class="fas fa-pills"></i> Estoque de remédios</a>
 <a href="{{ route('painel.guias') }}" class="nav-item"><i class="fas fa-calendar-check"></i> Consultar Guia</a>
-<a href="{{ route('entregar.medicamentos') }}" class="nav-item"><i class="fas fa-pills"></i> Entregar Medicamentos</a>
 @endsection
 <style>
         /* Adicione seus estilos do select2-custom-style.css aqui se desejar */
