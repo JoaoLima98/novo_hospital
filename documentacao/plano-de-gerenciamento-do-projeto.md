@@ -16,6 +16,7 @@
 | 0.2 | João de Azevedo Lima Neto, Jocian Douglas Sousa Carneiro | 06/11/2025 | Adicionados Gantt e esboço EAP |
 | 1.0 | João de Azevedo Lima Neto, Jocian Douglas Sousa Carneiro | 08/11/2025 | Adicionadas estimativas de esforços e custo |
 | 1.1 | João de Azevedo Lima Neto, Jocian Douglas Sousa Carneiro | 09/11/2025 | Atualizado diagrama de atividade do projeto para refletir melhor o processo atual |
+| 1.2 | João de Azevedo Lima Neto | 14/11/2025 | Adicionado novo milestone (Marco) |
 | | | | |
 
 
@@ -88,6 +89,7 @@ A fase de garantia de qualidade para verificar o funcionamento do sistema e corr
 | Marco (Milestone) | Data Prevista |
 | :--- | :--- |
 | Primeira entrega avaliativa | 12/11/2025 |
+| Prévia da 2ª etapa | 17/12/2025 |
 
 ## 3. Diagrama de Atividades do Projeto
 
