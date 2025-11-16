@@ -32,6 +32,12 @@ class MedicoController extends Controller
             PrescricaoRemedio::create([
                 'id_prescricao' => $prescricao->id,
                 'id_remedio' => $remedio['id'],
+                
+                'quantidade' => $remedio['quantidade'],
+                'unidade_medida' => $remedio['unidade'],
+                'intervalo' => $remedio['intervalo'],
+                'duracao' => $remedio['duracao'],
+
             ]);
         }
         return back()->with('success', 'Prescrição criada com sucesso ! GUIA: '.$prescricao->id);
