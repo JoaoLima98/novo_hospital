@@ -47,7 +47,6 @@
 ## 6. Cenários de Teste
 | DADO | COMPORTAMENTO | RESULTADO  | TIPO |
 | :--- | :--- | :--- | :--- |
-| Inserir um lote de remédio com quantidade negativa | Verificar integridade ao cadastrar lote | Exceção com mensagem: "Quantidade inválida." | Unitário |
+| Inserir um lote de remédio com quantidade negativa ou campo quantidade vazio | Verificar integridade ao cadastrar lote | Exceção com mensagem: "Quantidade inválida." | Unitário |
 | Inserir lote sem medicamento | Verificar integridade ao cadastrar lote | o sistema deve apresentar uma mensagem informando que o campo é obrigatório. | Unitário |
-| Inserir lote sem adicionar quantidade | Verificar integridade ao cadastrar lote | o sistema deve apresentar uma exceção com mensagem: "Quantidade inválida." | Unitário |
 | Cancelar operação de cadastro de lotes | Verificar integridade ao cadastrar lote | O estoque se mantém no estado anterior, não é adicionado nenhum lote de medicamentos. | Exploratório baseado em cenário |
