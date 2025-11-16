@@ -9,7 +9,8 @@ class Prescricao extends Model
 {
     use HasFactory;
     protected $table = 'prescricoes';
-    protected $fillable = ['id_medico', 'id_paciente', 'data_prescricao', 'observacao','prescricao_atendida'];
+    protected $fillable = ['id_medico', 'id_paciente', 'data_prescricao', 
+                           'observacao','prescricao_atendida'];
 
     public function medico()
     {
