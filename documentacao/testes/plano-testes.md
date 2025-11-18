@@ -1,5 +1,7 @@
 # Plano de Testes
 
+**Integrantes**: Jocian Douglas Souza Carneiro e João de Azevedo Lima Neto
+
 ## Objetivo
 Garantir que o fluxo de atendimento ao paciente — desde sua recepção até a entrega dos medicamentos — ocorra de forma correta, sem inconsistências ou falhas, tornando o sistema conciso com sua idealização.
 
