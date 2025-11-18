@@ -6,7 +6,7 @@
     <title>Login</title>
     
     <!-- Se você estiver usando Vite (padrão do Laravel), use isso: -->
-    <!-- @vite('resources/css/app.css') -->
+    
     
     <!-- Se não, use o link direto do Tailwind para testar: -->
     <script src="https://cdn.tailwindcss.com"></script>
