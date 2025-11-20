@@ -20,6 +20,7 @@
 | 1.3 | João de Azevedo Lima Neto| 14/11/2025 | Correção no RF06 |
 | 1.4 | João de Azevedo Lima Neto| 15/11/2025 | Correção no RF09 e adição do RF10 |
 | 1.5 | João de Azevedo Lima Neto| 15/11/2025 | Correção no RF05 e adição do RF11 e RF12 |
+| 1.6 | João de Azevedo Lima Neto| 15/11/2025 | Criação do RF13 e RF14 |
 
 ---
 
@@ -84,6 +85,8 @@ Tomando por base o contexto do sistema, foram identificados os seguintes requisi
 | **RF10 - Entregar Medicamento ao Paciente** | O sistema deve permitir o farmacêutico consultar a guia dos pacientes e entregar os medicamentos disponíveis necessários | Alta | RF06, RF09 |
 | **RF11 - Iniciar Sessão** | O sistema deve permitir o inicio de sessão no sistema | Alta | RF05 |
 | **RF12 - Encerrar Sessão** | O sistema deve o encerramento de sessão no sistema | Alta | RF05, RF11 |
+| **RF13 - Gerenciar medicamentos** | O sistema deve permitir ao farmacêutico o gerenciamento de novos medicamentos, inserindo nome e valor de alerta | Alta | - |
+| **RF14 - Disparar alerta de falta de medicamentos** | O sistema deve enviar um alerta quando os medicamentos forem menor que o valor de alerta escolhido pelo farmacêutico | Alta | - |
 
 ### Regras de Negócio
 
