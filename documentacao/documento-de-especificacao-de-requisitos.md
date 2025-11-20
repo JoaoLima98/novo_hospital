@@ -20,6 +20,7 @@
 | 1.3 | João de Azevedo Lima Neto | 14/11/2025 | Atualização no diagrama de caso de uso para ajustar o caso prescrever medicamento e em adição ajustado as cores para ficar mais legível a pedido do Cliente/Professor Maurício |
 | 1.4 | João de Azevedo Lima Neto | 15/11/2025 | Atualização no diagrama de caso de uso para separar o caso de gerenciamento de medicamentos em Entregar Medicamento ao Paciente e Registrar Entrada de medicamentos |
 | 1.5 | João de Azevedo Lima Neto | 15/11/2025 | Atualização no diagrama de caso de uso para separar o caso criar autenticação, agora sendo Cadastrar Funcionário e Iniciar Sessão, além da adição do Encerra Sessão, seus equivalentes acrécimos na descrição de caso de uso |
+| 1.6 | João de Azevedo Lima Neto | 20/11/2025 | Atualização no diagrama de caso de uso para adicionar os casos Disparar alerta de falta de medicamentos e Gerenciar medicamentos bem como suas inserções nas descrições de caso de uso, além do acréscimo da reorganização em ordem alfabética |
 
 ---
 
@@ -59,19 +60,18 @@ Os atores identificados no contexto deste projeto estão descritos na tabela aba
 
 ### 2.2 Diagrama de caso de uso
 
-<img width="1372" height="1478" alt="Diagrama caso de uso Triagem Hospitalar - Diagrama de caso de uso" src="https://github.com/user-attachments/assets/fbda5d76-4d38-4140-a6bd-3dd3118b835d" />
-
-
+<img width="1612" height="1478" alt="Diagrama caso de uso Triagem Hospitalar - Diagrama de caso de uso" src="https://github.com/user-attachments/assets/6ec6c257-f064-49c7-a584-7c996c9e71c4" />
 
 
 ### 2.3 Descrições dos casos de uso:
 - [Cadastrar Funcionario](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/cadastrar-funcionario.md)
-- [Registrar Entrada de Medicamentos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/registrar-entrada-de-medicamentos.md)
-- [Entregar Medicamento ao Paciente](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/entregar-medicamento-ao-paciente.md)
-- [Prescrever Medicamento](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/prescrever-medicamento.md)
-- [Iniciar Sessão](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/iniciar-sessao.md)
+- [Disparar alerta de falta de medicamentos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/disparar-alerta-falta-medicamento.md)
 - [Encerra Sessão](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/encerrar-sessao.md)
-
+- [Entregar Medicamento ao Paciente](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/entregar-medicamento-ao-paciente.md)
+- [Gerenciar Medicamentos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/gerenciar-medicamentos.md)
+- [Iniciar Sessão](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/iniciar-sessao.md)
+- [Prescrever Medicamento](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/prescrever-medicamento.md)
+- [Registrar Entrada de Medicamentos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/registrar-entrada-de-medicamentos.md)
 
 ## 3. Diagrama de Classes
 
