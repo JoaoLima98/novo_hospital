@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Remedio extends Model
 {
     use HasFactory;
-    protected $fillable = ['nome'];
+    protected $fillable = ['nome','qtd_alerta'];
 
     public function prescricoes()
     {

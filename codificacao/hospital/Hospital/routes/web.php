@@ -29,6 +29,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/consultar-guias',[FarmaciaController::class,'consultarGuias'])->name('consultar.guias');
 
     Route::get('/farmacia',[FarmaciaController::class,'index'])->name('farmacia');
+    Route::get('/remedios',[FarmaciaController::class,'remedios'])->name('remedios');
+
+    Route::put('/remedios-atualizar-alerta/{id}',[FarmaciaController::class,'alertaEstoque'])->name('remedios.update.alerta');
+
     Route::get('/farmacia/entregar-medicamentos',[FarmaciaController::class,'index'])->name('entregar.medicamentos');
     Route::get('/guia/buscar',[FarmaciaController::class,'buscarGuia'])->name('guia.buscar');
     Route::get('/consultar-estoque',[FarmaciaController::class,'consultarEstoque'])->name('consultar.estoque');
