@@ -21,6 +21,7 @@
 | 1.4 | João de Azevedo Lima Neto | 15/11/2025 | Atualização no diagrama de caso de uso para separar o caso de gerenciamento de medicamentos em Entregar Medicamento ao Paciente e Registrar Entrada de medicamentos |
 | 1.5 | João de Azevedo Lima Neto | 15/11/2025 | Atualização no diagrama de caso de uso para separar o caso criar autenticação, agora sendo Cadastrar Funcionário e Iniciar Sessão, além da adição do Encerra Sessão, seus equivalentes acrécimos na descrição de caso de uso |
 | 1.6 | João de Azevedo Lima Neto | 20/11/2025 | Atualização no diagrama de caso de uso para adicionar os casos Disparar alerta de falta de medicamentos e Gerenciar medicamentos bem como suas inserções nas descrições de caso de uso, além do acréscimo da reorganização em ordem alfabética |
+| 1.7 | João de Azevedo Lima Neto | 24/11/2025 | Inserção nas descrições de caso de uso de Fazer Triagem |
 
 ---
 
@@ -68,6 +69,7 @@ Os atores identificados no contexto deste projeto estão descritos na tabela aba
 - [Disparar alerta de falta de medicamentos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/disparar-alerta-falta-medicamento.md)
 - [Encerra Sessão](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/encerrar-sessao.md)
 - [Entregar Medicamento ao Paciente](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/entregar-medicamento-ao-paciente.md)
+- [Fazer Triagem](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/fazer-triagem.md)
 - [Gerenciar Medicamentos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/gerenciar-medicamentos.md)
 - [Iniciar Sessão](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/iniciar-sessao.md)
 - [Prescrever Medicamento](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/prescrever-medicamento.md)
