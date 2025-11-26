@@ -5,172 +5,264 @@
 @section('content')
 
 <style>
+    /* --- ESTILOS VISUAIS (Mantidos conforme aprovado) --- */
     .medication-entry {
-        transition: all 0.3s ease;
+        border: 1px solid #e0e0e0 !important;
+        border-radius: 12px !important;
+        padding: 20px !important;
+        background: #ffffff !important;
+        margin-bottom: 20px !important;
+        position: relative !important;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+        transition: all 0.3s ease !important;
     }
 
     .medication-entry:hover {
-        box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12) !important;
+        transform: translateY(-2px) !important;
     }
 
-    .dosage-group {
-        background-color: #f8f9fa;
-        padding: 1.25rem;
-        border-radius: 0.5rem;
-        border-left: 4px solid #0d6efd;
+    .medication-title {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+        font-size: 1.3rem !important;
+        font-weight: 600 !important;
+        margin-bottom: 20px !important;
+        color: #2c3e50 !important;
+        border-bottom: 2px solid #f0f0f0 !important;
+        padding-bottom: 12px !important;
+        display: flex !important;
+        align-items: center !important;
+        padding-right: 90px !important; /* Espaço para botões */
     }
 
+    .input-sketch {
+        border: 1px solid #d0d0d0 !important;
+        border-radius: 8px !important;
+        padding: 10px 14px !important;
+        background-color: #fff !important;
+        transition: all 0.3s ease !important;
+        font-size: 1rem !important;
+        height: 45px !important;
+    }
+
+    .input-sketch:focus {
+        border-color: #4a90e2 !important;
+        box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.15) !important;
+        outline: none !important;
+    }
+
+    .label-sketch {
+        font-weight: 600 !important;
+        margin-right: 8px !important;
+        color: #444 !important;
+        font-size: 1rem !important;
+        white-space: nowrap !important;
+    }
+
+    /* --- BOTÕES DE AÇÃO (Fluxo 3.b) --- */
+    .action-buttons {
+        position: absolute !important;
+        top: 15px !important;
+        right: 15px !important;
+        display: flex;
+        gap: 8px;
+    }
+
+    .btn-float {
+        border: none !important;
+        background: transparent !important;
+        font-size: 1.2rem !important;
+        width: 35px !important;
+        height: 35px !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    /* Botão Vermelho (Remover) */
     .btn-remove-med {
-        transition: all 0.3s ease;
+        color: #e74c3c !important;
+        background-color: rgba(231, 76, 60, 0.1);
+    }
+    .btn-remove-med:hover {
+        background-color: #e74c3c !important;
+        color: white !important;
+        transform: scale(1.1);
     }
 
-    .form-text {
-        font-size: 0.75rem;
+    /* Botão Amarelo (Editar) */
+    .btn-edit-med {
+        color: #f1c40f !important;
+        background-color: rgba(241, 196, 15, 0.1);
+    }
+    .btn-edit-med:hover {
+        background-color: #f1c40f !important;
+        color: white !important;
+        transform: scale(1.1);
     }
 
-    .input-group-text {
-        background-color: #e9ecef;
-        border: 1px solid #ced4da;
+    /* Inputs Layout */
+    .input-quantidade { width: 100px !important; text-align: center !important; }
+    .input-unidade { width: 160px !important; }
+    .input-retirada { width: 120px !important; }
+    .input-intervalo { width: 120px !important; }
+    .input-duracao { width: 120px !important; }
+
+    .medication-entry .row { margin-bottom: 18px !important; }
+    .medication-entry .row:last-child { margin-bottom: 0 !important; }
+
+    .quantidade-unidade-group { display: flex !important; align-items: center !important; gap: 20px !important; }
+    .intervalo-duracao-group { display: flex !important; align-items: center !important; gap: 25px !important; }
+    .retirada-group { display: flex !important; align-items: center !important; gap: 15px !important; }
+
+    /* Responsividade */
+    @media (min-width: 1200px) {
+        #medications-container {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 25px !important;
+        }
     }
-    
-    .select2-container--open {
-        z-index: 999999 !important;
+    @media (min-width: 992px) and (max-width: 1199px) {
+        #medications-container {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 20px !important;
+        }
+    }
+    @media (max-width: 768px) {
+        .medication-entry { padding: 18px !important; }
+        .quantidade-unidade-group, .intervalo-duracao-group, .retirada-group {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 12px !important;
+        }
+        .input-quantidade, .input-unidade, .input-retirada, .input-intervalo, .input-duracao {
+            width: 100% !important; max-width: 100% !important;
+        }
     }
 </style>
 
 <div class="main-content">
-    <div class="content-header">
-        <h2 class="content-title"><i class="fas fa-file-prescription"></i> Prescrição de Medicamentos</h2>
+    <div class="content-header mb-4">
+        <h2 class="content-title text-primary"><i class="fas fa-file-prescription"></i> Nova Prescrição</h2>
     </div>
 
-    <div class="card">
+    <div class="card shadow-sm">
         <div class="card-body">
             <form action="{{ route('criar.prescricao') }}" method="POST" id="prescription-form">
                 @csrf
-
-                <div class="form-group mb-4">
-                    <label for="paciente" class="form-label">Paciente (pesquisa por CPF)</label>
-                    <select name="id_paciente" id="paciente" class="form-select" required>
-                        <option value="" disabled selected>Digite o CPF do paciente...</option>
-                        @foreach($pacientes as $paciente)
-                            <option value="{{ $paciente->id }}">
-                                {{ $paciente->cpf }} - {{ $paciente->nome }}
-                            </option>
-                        @endforeach
-                    </select>
+                
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <label for="paciente" class="form-label h5"><i class="fas fa-user-injured"></i> Paciente</label>
+                        <select name="id_paciente" id="paciente" class="form-select form-select-lg" required>
+                            <option value="" disabled selected>Pesquise por CPF ou Nome...</option>
+                            @foreach($pacientes as $paciente)
+                                <option value="{{ $paciente->id }}">
+                                    {{ $paciente->cpf }} - {{ $paciente->nome }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
                 </div>
 
                 <hr class="my-4">
 
-                <label class="form-label h5 mb-3">
-                    <i class="fas fa-pills"></i> Medicamentos Prescritos
-                </label>
+                <div class="mb-4">
+                    <button type="button" id="add-posologia-btn" class="btn btn-outline-dark border-2 fw-bold">
+                        <i class="fas fa-plus"></i> Adicionar posologia
+                    </button>
+                </div>
 
                 <div id="medications-container">
-                    </div>
-
-                <div class="text-center mb-4">
-                    <button type="button" id="add-posologia-btn" class="btn btn-outline-primary">
-                        <i class="fas fa-plus-circle"></i> Adicionar Posologia
-                    </button>
+                    {{-- Cards gerados via JS entrarão aqui --}}
                 </div>
 
-                <hr class="my-4">
+                <hr class="mt-5">
 
                 <div class="form-group mb-4">
-                    <label for="observacao" class="form-label">
-                        <i class="fas fa-sticky-note"></i> Observações Adicionais
-                    </label>
-                    <textarea name="observacao" id="observacao" class="form-control" rows="4" 
-                              placeholder="Instruções gerais, alertas, contraindicações ou outras informações importantes..."></textarea>
+                    <label class="fw-bold">Observações:</label>
+                    <textarea name="observacao" class="form-control input-sketch" rows="4" style="height: auto !important; min-height: 100px;"></textarea>
                 </div>
 
-                <div class="form-actions d-flex gap-2">
-                    <button type="submit" class="btn btn-success">
-                        <i class="fas fa-save"></i> Gerar Prescrição
-                    </button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="window.history.back()">
-                        <i class="fas fa-arrow-left"></i> Voltar
-                    </button>
+                <div class="d-flex justify-content-end gap-2">
+                    <button type="button" class="btn btn-secondary" onclick="window.history.back()">Cancelar</button>
+                    <button type="submit" class="btn btn-success px-4">Gerar Prescrição</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
 
+{{-- 
+    ================================================================
+    TEMPLATE DO CARD (Escondido)
+    ================================================================
+--}}
 <div id="medication-template" style="display: none;">
-    <div class="medication-entry card border mb-3">
-        <div class="card-body">
-            <div class="row align-items-center mb-3">
-                <div class="col">
-                    <h6 class="card-title mb-0 text-primary">Medicamento #<span class="medication-number">1</span></h6>
-                </div>
-                <div class="col-auto">
-                    <button type="button" class="btn btn-outline-danger btn-sm btn-remove-med">
-                        <i class="fas fa-trash"></i>
-                        <span class="d-none d-md-inline ms-1">Remover</span>
-                    </button>
-                </div>
-            </div>
+    <div class="medication-entry">
+        <div class="action-buttons">
+            <button type="button" class="btn-float btn-edit-med" title="Editar Medicamento">
+                <i class="fas fa-pen"></i>
+            </button>
+            <button type="button" class="btn-float btn-remove-med" title="Remover Posologia">
+                <i class="fas fa-trash-alt"></i>
+            </button>
+        </div>
 
-            <div class="row g-3 mb-3">
-                <div class="col-12">
-                    <label class="form-label fw-semibold">Medicamento</label>
-                    <select name="medicamentos[0][id]" class="form-select" required>
-                        <option value="" disabled selected>Selecione um medicamento...</option>
-                        @foreach($remedios as $remedio)
-                            <option value="{{ $remedio->id }}">{{ $remedio->nome }}</option>
-                        @endforeach
-                    </select>
-                </div>
-            </div>
+        <div class="medication-title">
+            <i class="fas fa-pills me-2 text-primary"></i>
+            <span class="med-name-display">Nome do Remédio</span>
+            <input type="hidden" name="medicamentos[0][id]" class="med-id-input">
+        </div>
 
-            <div class="dosage-group">
-                <h6 class="text-muted mb-3">
-                    <i class="fas fa-syringe"></i> Dosagem e Posologia
-                </h6>
-                
-                <div class="row g-3">
-                    <div class="col-12 col-sm-6 col-md-3">
-                        <label class="form-label">Quantidade</label>
-                        <div class="input-group">
-                            <input type="number" name="medicamentos[0][quantidade]" class="form-control" placeholder="30" min="1" required>
-                            <span class="input-group-text">
-                                <i class="fas fa-hashtag"></i>
-                            </span>
-                        </div>
-                        <small class="form-text text-muted">Qtd. por dose</small>
+        <div class="row mb-3">
+            <div class="col-12">
+                <div class="quantidade-unidade-group">
+                    <div class="d-flex align-items-center">
+                        <span class="label-sketch">Quantidade:</span>
+                        <input type="number" name="medicamentos[0][qtd_tomar]" class="input-sketch input-quantidade" placeholder="1" min="0.1" step="0.1" required>
                     </div>
-
-                    <div class="col-12 col-sm-6 col-md-3">
-                        <label class="form-label">Unidade</label>
-                        <select name="medicamentos[0][unidade]" class="form-select" required>
-                            <option value="" disabled selected>Selecione...</option>
-                            <option value="gotas">Gotas</option>
+                    <div class="d-flex align-items-center">
+                        <span class="label-sketch">Unidade:</span>
+                        <select name="medicamentos[0][unidade]" class="input-sketch input-unidade" required>
                             <option value="comprimido">Comprimido</option>
+                            <option value="gotas">Gotas</option>
                             <option value="sache">Sachê</option>
-                            <option value="ml">ML</option>
-                            <option value="aplicacao">Aplicação</option>
+                            <option value="ml">ml</option>
                         </select>
-                        <small class="form-text text-muted">Unidade medida</small>
                     </div>
+                </div>
+            </div>
+        </div>
 
-                    <div class="col-12 col-sm-6 col-md-3">
-                        <label class="form-label">Intervalo</label>
-                        <div class="input-group">
-                            <input type="number" name="medicamentos[0][intervalo]" class="form-control" placeholder="8" min="1" required>
-                            <span class="input-group-text">horas</span>
-                        </div>
-                        <small class="form-text text-muted">De 8 em 8 horas</small>
+        <div class="row mb-3">
+            <div class="col-12">
+                <div class="retirada-group">
+                    <div class="d-flex align-items-center">
+                        <span class="label-sketch">Retirada:</span>
+                        <input type="number" name="medicamentos[0][quantidade]" class="input-sketch input-retirada" placeholder="30" min="1" required>
+                        <small class="text-muted ms-2">unidades</small>
                     </div>
+                </div>
+            </div>
+        </div>
 
-                    <div class="col-12 col-sm-6 col-md-3">
-                        <label class="form-label">Duração</label>
-                        <div class="input-group">
-                            <input type="number" name="medicamentos[0][duracao]" class="form-control" placeholder="72" min="1" required>
-                            <span class="input-group-text">horas</span>
-                        </div>
-                        <small class="form-text text-muted">Total em horas</small>
+        <div class="row">
+            <div class="col-12">
+                <div class="intervalo-duracao-group">
+                    <div class="d-flex align-items-center">
+                        <span class="label-sketch">Intervalo (h):</span>
+                        <input type="number" name="medicamentos[0][intervalo]" class="input-sketch input-intervalo" placeholder="8" min="1" required>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <span class="label-sketch">Duração (h):</span>
+                        <input type="number" name="medicamentos[0][duracao]" class="input-sketch input-duracao" placeholder="72" min="1" required>
                     </div>
                 </div>
             </div>
@@ -178,31 +270,46 @@
     </div>
 </div>
 
+{{-- Lista fonte simplificada (Backend já filtrou estoque > 0) --}}
+<select id="source-medications" style="display: none;">
+    @foreach($remedios as $remedio)
+        <option value="{{ $remedio->id }}">{{ $remedio->nome }}</option>
+    @endforeach
+</select>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-
 <script>
 $(document).ready(function() {
+    let selectedMedications = [];
 
-    $('#paciente').select2({
-        placeholder: 'Digite o CPF do paciente...',
-        allowClear: true,
-        width: '100%'
-    });
+    // Inicializa Select2 do Paciente
+    $('#paciente').select2({ placeholder: 'Selecione o paciente', width: '100%' });
 
+    // Pega medicamentos disponíveis (não repetidos)
+    function getAvailableMedications() {
+        let availableMedications = '';
+        $('#source-medications option').each(function() {
+            let medicationId = $(this).val();
+            // Especificação 4.1: Não listar medicamentos já selecionados
+            if (!selectedMedications.includes(medicationId)) {
+                availableMedications += `<option value="${medicationId}">${$(this).text()}</option>`;
+            }
+        });
+        return availableMedications;
+    }
+
+    function hasAvailableMedications() {
+        return $('#source-medications option').length > selectedMedications.length;
+    }
+
+    // Reorganiza índices para o Laravel (array[0], array[1]...)
     function reindexMedications() {
-        // Itera apenas sobre os medicamentos DENTRO do container
         $('#medications-container .medication-entry').each(function(index) {
             let entry = $(this);
-            
-            // Atualiza o número (Medicamento #1, #2, etc)
-            entry.find('.medication-number').text(index + 1);
-            
-            // Atualiza os índices dos nomes (medicamentos[0], medicamentos[1], etc)
             entry.find('[name]').each(function() {
                 let name = $(this).attr('name');
                 if (name) {
@@ -210,155 +317,148 @@ $(document).ready(function() {
                     $(this).attr('name', newName);
                 }
             });
-
-            // MODIFICADO: Agora o botão de remover sempre aparece
-            entry.find('.btn-remove-med').show();
         });
     }
 
-    // --- SCRIPT MODIFICADO ---
-    $('#add-posologia-btn').click(function() {
+    // Função genérica para abrir modal de seleção
+    function openMedicationSelector(currentId = null, callback = null) {
+        let options = getAvailableMedications();
         
-        // 1. Pega o HTML dos selects do template ESCONDIDO
-        let remediosOptions = $('#medication-template') // Busca no template
-                                .find('select[name*="[id]"]')
-                                .html();
-        
-        let unidadeOptions = $('#medication-template') // Busca no template
-                               .find('select[name*="[unidade]"]')
-                               .html();
+        // Se for edição, precisamos adicionar o atual temporariamente na lista
+        if(currentId) {
+             let currentText = $('#source-medications option[value="'+currentId+'"]').text();
+             options = `<option value="${currentId}" selected>${currentText}</option>` + options;
+        }
 
-        // 2. Define o HTML que aparecerá no SweetAlert
-        const swalHtml = `
-            <form id="swal-posologia-form" class="text-start p-3">
-                <div class="mb-3">
-                    <label for="swal-medicamento" class="form-label fw-semibold">Medicamento</label>
-                    <select id="swal-medicamento" class="form-select" required>${remediosOptions}</select>
-                </div>
-                <div class="row g-3">
-                    <div class="col-12 col-sm-6">
-                        <label for="swal-quantidade" class="form-label fw-semibold">Quantidade</label>
-                        <input type="number" id="swal-quantidade" class="form-control" placeholder="ex: 30" min="1" required>
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        <label for="swal-unidade" class="form-label fw-semibold">Unidade</label>
-                        <select id="swal-unidade" class="form-select" required>${unidadeOptions}</select>
-                    </div>
-                </div>
-                <div class="row g-3 mt-2">
-                    <div class="col-12 col-sm-6">
-                        <label for="swal-intervalo" class="form-label fw-semibold">Intervalo</label>
-                        <div class="input-group">
-                            <input type="number" id="swal-intervalo" class="form-control" placeholder="ex: 8" min="1" required>
-                            <span class="input-group-text">horas</span>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6">
-                        <label for="swal-duracao" class="form-label fw-semibold">Duração</label>
-                        <div class="input-group">
-                            <input type="number" id="swal-duracao" class="form-control" placeholder="ex: 72" min="1" required>
-                            <span class="input-group-text">horas</span>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        `;
-
-        // 3. Abre o SweetAlert
         Swal.fire({
-            title: 'Adicionar Posologia',
-            html: swalHtml,
-            width: '800px',
+            title: currentId ? 'Alterar Medicamento' : 'Selecionar Medicamento',
+            html: `
+                <div class="text-start">
+                    <label class="fw-bold mb-2">Busque o medicamento:</label>
+                    <select id="swal-med-select" class="form-select w-100">
+                        <option value="" disabled ${!currentId ? 'selected' : ''}>Digite para buscar...</option>
+                        ${options}
+                    </select>
+                </div>
+            `,
             showCancelButton: true,
-            confirmButtonText: '<i class="fas fa-plus"></i> Adicionar',
-            cancelButtonText: '<i class="fas fa-times"></i> Cancelar',
-            confirmButtonColor: '#198754', 
-            cancelButtonColor: '#6c757d',
+            confirmButtonText: 'Confirmar',
+            cancelButtonText: 'Cancelar',
+            confirmButtonColor: '#2c3e50',
             didOpen: () => {
-                $('#swal-medicamento').select2({
-                    placeholder: 'Selecione um medicamento...',
-                    allowClear: true,
+                $('#swal-med-select').select2({
+                    dropdownParent: $('.swal2-container'),
                     width: '100%',
-                    dropdownParent: $('.swal2-modal') 
+                    language: { noResults: () => "Nenhum medicamento encontrado" }
                 });
-                
-                 $('#swal-medicamento').val(null).trigger('change');
-                 $('#swal-unidade').val(null);
             },
             preConfirm: () => {
-                const med = $('#swal-medicamento').val();
-                const qtd = $('#swal-quantidade').val();
-                const und = $('#swal-unidade').val();
-                const interv = $('#swal-intervalo').val();
-                const dur = $('#swal-duracao').val();
-
-                if (!med || !qtd || !und || !interv || !dur) {
-                    Swal.showValidationMessage('Por favor, preencha todos os campos.');
-                    return false; 
-                }
+                let id = $('#swal-med-select').val();
+                let text = $('#swal-med-select option:selected').text();
                 
-                return {
-                    id: med,
-                    quantidade: qtd,
-                    unidade: und,
-                    intervalo: interv,
-                    duracao: dur
-                };
+                if (!id) {
+                    Swal.showValidationMessage('Selecione um medicamento!');
+                    return false;
+                }
+                return { id: id, nome: text };
             }
         }).then((result) => {
+            if (result.isConfirmed && callback) {
+                callback(result.value);
+            }
+        });
+    }
+
+    // --- Ação: Adicionar Nova Posologia ---
+    $('#add-posologia-btn').click(function() {
+        if (!hasAvailableMedications()) {
+            Swal.fire('Aviso', 'Todos os medicamentos disponíveis já foram adicionados.', 'info');
+            return;
+        }
+
+        openMedicationSelector(null, function(dados) {
+            addMedicationCard(dados.id, dados.nome);
+        });
+    });
+
+    function addMedicationCard(id, nome) {
+        selectedMedications.push(id);
+        let template = $('#medication-template .medication-entry').clone();
+
+        template.find('.med-name-display').text(nome);
+        template.find('.med-id-input').val(id);
+
+        template.hide().appendTo('#medications-container').fadeIn(300);
+        reindexMedications();
+        updateAddButtonState();
+    }
+
+    // --- Ação: Editar Medicamento (Botão Amarelo) ---
+    $(document).on('click', '.btn-edit-med', function() {
+        let card = $(this).closest('.medication-entry');
+        let currentId = card.find('.med-id-input').val();
+        
+        openMedicationSelector(currentId, function(dados) {
+            // Se o usuário trocou o remédio
+            if(dados.id !== currentId) {
+                selectedMedications = selectedMedications.filter(id => id !== currentId);
+                selectedMedications.push(dados.id);
+            }
+            
+            card.find('.med-name-display').text(dados.nome);
+            card.find('.med-id-input').val(dados.id);
+            // Foca na quantidade para facilitar a edição
+            card.find('.input-quantidade').focus();
+        });
+    });
+
+    // --- Ação: Remover (Botão Vermelho) ---
+    $(document).on('click', '.btn-remove-med', function() {
+        let card = $(this).closest('.medication-entry');
+        let medicationId = card.find('.med-id-input').val();
+        
+        Swal.fire({
+            title: 'Remover posologia?',
+            text: "Este item será excluído da prescrição.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#e74c3c',
+            confirmButtonText: 'Sim, remover'
+        }).then((result) => {
             if (result.isConfirmed) {
-                const data = result.value;
-                
-                // 5. Clona o template de medicamento ESCONDIDO
-                let newIndex = $('#medications-container .medication-entry').length;
-                let newEntry = $('#medication-template .medication-entry').first().clone(); // Clona do template
-
-                // 6. Preenche os valores no clone com os dados do Swal
-                newEntry.find('select[name*="[id]"]').val(data.id);
-                newEntry.find('input[name*="[quantidade]"]').val(data.quantidade);
-                newEntry.find('select[name*="[unidade]"]').val(data.unidade);
-                newEntry.find('input[name*="[intervalo]"]').val(data.intervalo);
-                newEntry.find('input[name*="[duracao]"]').val(data.duracao);
-
-                // 7. Re-indexa os nomes dos campos (o newIndex será 0 para o primeiro item)
-                newEntry.find('[name]').each(function() {
-                    let name = $(this).attr('name');
-                    if (name) {
-                        let newName = name.replace(/medicamentos\[\d+\]/g, 'medicamentos[' + newIndex + ']');
-                        $(this).attr('name', newName);
-                    }
+                selectedMedications = selectedMedications.filter(id => id !== medicationId);
+                card.fadeOut(300, function() {
+                    $(this).remove();
+                    reindexMedications();
+                    updateAddButtonState();
                 });
-
-                // 8. Adiciona o novo bloco na tela
-                newEntry.hide().appendTo('#medications-container').fadeIn(300);
-                
-                // 9. Re-indexa todos os blocos (para números e botões de remover)
-                reindexMedications();
-                
-                // 10. Rola a tela suavemente para o novo item
-                $('html, body').animate({
-                    scrollTop: newEntry.offset().top - 100
-                }, 500);
             }
         });
     });
-    // --- FIM DO SCRIPT MODIFICADO ---
 
+    function updateAddButtonState() {
+        let btn = $('#add-posologia-btn');
+        if (!hasAvailableMedications()) {
+            btn.prop('disabled', true).addClass('btn-outline-secondary').removeClass('btn-outline-dark');
+            btn.html('<i class="fas fa-check"></i> Todos medicamentos adicionados');
+        } else {
+            btn.prop('disabled', false).addClass('btn-outline-dark').removeClass('btn-outline-secondary');
+            btn.html('<i class="fas fa-plus"></i> Adicionar posologia');
+        }
+    }
 
-    $('#medications-container').on('click', '.btn-remove-med', function() {
-        // Remove o item clicado
-        $(this).closest('.medication-entry').fadeOut(300, function() {
-            $(this).remove();
-            // Re-indexa os itens restantes
-            reindexMedications();
-        });
+    // Validação extra no submit (Garante Fluxo 4.3)
+    $('#prescription-form').on('submit', function(e) {
+        if ($('.medication-entry').length === 0) {
+            e.preventDefault();
+            Swal.fire('Erro', 'Adicione pelo menos uma posologia antes de salvar.', 'error');
+            return;
+        }
     });
 
-    // Roda a reindexação no início (não fará nada, pois o container está vazio)
-    reindexMedications();
+    // Inicializa botão
+    updateAddButtonState();
 });
 </script>
-
-
 
 @endsection

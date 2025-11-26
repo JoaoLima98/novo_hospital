@@ -16,7 +16,11 @@ class MedicoController extends Controller
     public function index(){
         Gate::authorize('medico');
         $pacientes = Paciente::all();
-        $remedios = Remedio::all();
+        $remedios = Remedio::whereHas('estoques', function ($query) {
+            $query->where('quantidade', '>', 0);
+        })
+        ->withSum('estoques', 'quantidade') 
+        ->get();
 
         return view('Medico.criarPrescricao',compact('pacientes','remedios'));
     }
@@ -27,6 +31,7 @@ class MedicoController extends Controller
             'id_paciente' => $request->id_paciente,
             'data_prescricao' => now(),
             'observacao' => $request->observacao,
+            
         ]);
         foreach($request->medicamentos as $remedio){
             PrescricaoRemedio::create([
@@ -37,6 +42,7 @@ class MedicoController extends Controller
                 'unidade_medida' => $remedio['unidade'],
                 'intervalo' => $remedio['intervalo'],
                 'duracao' => $remedio['duracao'],
+                'qtd_tomar' => $remedio['qtd_tomar'],
 
             ]);
         }

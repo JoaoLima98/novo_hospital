@@ -11,7 +11,7 @@ class PrescricaoRemedio extends Model
     protected $table = 'prescricao_remedios';
     
     protected $fillable = ['id_prescricao','id_remedio','quantidade',
-                           'unidade_medida','intervalo','duracao'];
+                           'unidade_medida','intervalo','duracao','qtd_tomar'];
 
     public function remedio(){
         return $this->belongsTo(Remedio::class,'id_remedio');
