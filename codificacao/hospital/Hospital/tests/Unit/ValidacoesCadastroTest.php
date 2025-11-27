@@ -32,6 +32,15 @@ class ValidacoesCadastroTest extends TestCase
 
         $this->service->criarLote($remedio->id, -5);
     }
+    /** @test */
+    public function nao_deve_permitir_lote_vazio()
+    {
+        $this->expectExceptionMessage('O número deve ser maior que zero.');
+
+        $remedio = Remedio::factory()->create();
+
+        $this->service->criarLote($remedio->id, 0);
+    }
 
     /** @test */
     public function deve_buscar_prescricao_com_paciente_valido()
@@ -65,7 +74,8 @@ class ValidacoesCadastroTest extends TestCase
         $prescricao = Prescricao::factory()->create(['id_paciente' => $paciente->id]);
         PrescricaoRemedio::factory()->create([
             'id_prescricao' => $prescricao->id,
-            'id_remedio' => $remedio->id,
+            'id_remedio'    => $remedio->id,
+            'qtd_tomar'     => 1,
         ]);
 
         $this->service->marcarPrescricaoAtendida($prescricao->id, [$remedio->id]);
@@ -75,4 +85,5 @@ class ValidacoesCadastroTest extends TestCase
             'quantidade' => 0,
         ]);
     }
+    
 }
