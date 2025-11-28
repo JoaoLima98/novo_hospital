@@ -283,6 +283,9 @@ Este documento é o "Como" — o manual detalhado para executar, monitorar e con
 | Software | [R$ x,xx] | [Nome das ferramentas ou licenças] |
 
 
+### 5. Gráfico de Burndown
+
+- Deve ser inserido o gráfico (imagem) ou link para o gráfico
 
 ```
 
