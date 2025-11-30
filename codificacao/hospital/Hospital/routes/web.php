@@ -6,6 +6,7 @@ use App\Http\Controllers\IndexController;
 use App\Http\Controllers\MedicoController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RemedioController;
+use App\Http\Controllers\TriagemController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -44,6 +45,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/criar-usuario',[AdminController::class,'criarUsuario'])->name('criar.usuario');
     Route::post('/criar-usuario',[AdminController::class,'StoreUsuario'])->name('store.usuario');
     
+
+    Route::get('/triagem',[TriagemController::class,'create'])->name('criar.triagem');
+    Route::post('/triagem',[TriagemController::class,'store'])->name('triagem.store');
+
+
 });
 
 require __DIR__.'/auth.php';
