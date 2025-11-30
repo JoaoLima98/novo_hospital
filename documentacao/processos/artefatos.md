@@ -283,6 +283,17 @@ Este documento é o "Como" — o manual detalhado para executar, monitorar e con
 | Software | [R$ x,xx] | [Nome das ferramentas ou licenças] |
 
 
+## 5. Gráfico de Burndown
+
+- Deve ser inserido o gráfico (imagem) ou link para o gráfico
+
+
+## 6. Gerenciamento de Risco
+
+- Deve ser uma tabela com as colunas igual na representação abaixo:
+
+| Risco Identificado | Probabilidade | Impacto | Precaução (Prevenção) | Plano de Ação (Se o risco acontecer) |
+|--------------------|--------------|---------|-------------------------|---------------------------------------|
 
 ```
 

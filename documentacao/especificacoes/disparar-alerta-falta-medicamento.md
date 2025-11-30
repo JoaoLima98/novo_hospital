@@ -31,5 +31,5 @@
 
 | DADO | COMPORTAMENTO | RESULTADO | TIPO |
 | :--- | :--- | :--- | :--- |
-| Quantidade de medicamentos acima do alerta | Verificar baixa quantidade de medicamentos | Nada deve acontecer, o alerta não deve ser executado. | Unitário |
-| Quantidade de medicamentos abaixo do alerta | Verificar baixa quantidade de medicamentos | Uma mensagem deve informar que a quantidade de estoque está baixa para os medicamentos, e a quantidade disponível.  | Unitário |
+| Quantidade de medicamentos acima do alerta | Verificar baixa quantidade de medicamentos | Nada deve acontecer, o alerta não deve ser executado. | Exploratóreo baseado em teste |
+| Quantidade de medicamentos abaixo do alerta | Verificar baixa quantidade de medicamentos | Uma mensagem deve informar que a quantidade de estoque está baixa para os medicamentos, e a quantidade disponível.  | Exploratóreo baseado em teste |
