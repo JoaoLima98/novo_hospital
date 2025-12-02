@@ -43,7 +43,7 @@
 
 5.  O Enfermeiro preenche as informações solicitadas.
 6.  O Enfermeiro confirma o cadastro da triagem.
-7.  O sistema exibe uma mensagem de sucesso ("Triagem realizada com sucesso").
+7.  O sistema exibe uma mensagem de sucesso ("Triagem realizada com sucesso") e encaminha o paciente para [prescrever-medicamento](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/prescrever-medicamento.md).
 
 ## 4. Fluxos Alternativos
 
