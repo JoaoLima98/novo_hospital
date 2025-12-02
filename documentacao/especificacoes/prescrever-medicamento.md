@@ -5,7 +5,7 @@
 ## 2. Pré-condições
 
  - Estar logado no sistema com o nível de acesso de médico.
- - Pacientes terem passado pela triagem e disponíveis para prescrição/atendimento.
+ - Pacientes terem passado pela **[triagem](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/fazer-triagem.md#especifica%C3%A7%C3%A3o-do-caso-de-uso-fazer-triagem)** e disponíveis para prescrição/atendimento.
    
 ## 3. Fluxo Principal
 
