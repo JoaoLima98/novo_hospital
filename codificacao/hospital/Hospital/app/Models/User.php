@@ -52,4 +52,14 @@ class User extends Authenticatable
     {
         return $this->hasOne(Medico::class, 'user_id');
     }
+
+    public function enfermeiro()
+    {
+        return $this->hasOne(Enfermeiro::class, 'user_id');
+    }
+
+    public function triagem()
+    {
+        return $this->hasMany(Triagem::class, 'enfermeiro_id');
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Enfermeiro;
 use App\Models\Farmaceutico;
 use App\Models\Medico;
 use App\Models\User;
@@ -50,6 +51,7 @@ class AdminController extends Controller
             Farmaceutico::create([
                 'user_id' => $user->id,
             ]);
+            
         }elseif($request->perfil === 'admin'){
             User::create([
                 'name' => $request->name,
@@ -59,8 +61,18 @@ class AdminController extends Controller
                 'password' => bcrypt($request->password),
             ]);
             //lógica para criar admin
-        }else{
-            //
+        }else if($request->perfil === 'enfermeiro'){
+            $user = User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'telefone' => $request->telefone,
+                'perfil' => 'enfermeiro',
+                'password' => bcrypt($request->password),
+            ]);
+            Enfermeiro::create([
+                'user_id' => $user->id,
+                'coren'    => $request->coren,  
+            ]);
         }
         return back()->with('success','Usuário criado com sucesso!');
     }
