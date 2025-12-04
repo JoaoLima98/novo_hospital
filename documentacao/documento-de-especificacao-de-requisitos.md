@@ -22,6 +22,7 @@
 | 1.5 | João de Azevedo Lima Neto | 15/11/2025 | Atualização no diagrama de caso de uso para separar o caso criar autenticação, agora sendo Cadastrar Funcionário e Iniciar Sessão, além da adição do Encerra Sessão, seus equivalentes acrécimos na descrição de caso de uso |
 | 1.6 | João de Azevedo Lima Neto | 20/11/2025 | Atualização no diagrama de caso de uso para adicionar os casos Disparar alerta de falta de medicamentos e Gerenciar medicamentos bem como suas inserções nas descrições de caso de uso, além do acréscimo da reorganização em ordem alfabética |
 | 1.7 | João de Azevedo Lima Neto | 24/11/2025 | Inserção nas descrições de caso de uso de Fazer Triagem |
+| 1.8 | João de Azevedo Lima Neto | 04/12/2025 | Atualização no diagrama de caso de uso a adição dos novos casos de uso, bem como sua inserção na descrição de casos |
 
 ---
 
@@ -61,7 +62,9 @@ Os atores identificados no contexto deste projeto estão descritos na tabela aba
 
 ### 2.2 Diagrama de caso de uso
 
-<img width="1612" height="1478" alt="Diagrama caso de uso Triagem Hospitalar - Diagrama de caso de uso" src="https://github.com/user-attachments/assets/6ec6c257-f064-49c7-a584-7c996c9e71c4" />
+<img width="1612" height="1840" alt="Diagrama caso de uso Triagem Hospitalar - Diagrama de caso de uso" src="https://github.com/user-attachments/assets/f73857b5-8b73-4df6-b606-ded0727af866" />
+
+
 
 
 ### 2.3 Descrições dos casos de uso:
@@ -74,6 +77,8 @@ Os atores identificados no contexto deste projeto estão descritos na tabela aba
 - [Iniciar Sessão](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/iniciar-sessao.md)
 - [Prescrever Medicamento](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/prescrever-medicamento.md)
 - [Registrar Entrada de Medicamentos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/registrar-entrada-de-medicamentos.md)
+- [Visualiza fila de atendimento](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/visualizar-fila-atendimento.md#caso-de-uso-visualizar-fila-de-atendimento)
+- [Visualizar histórico de atendimento](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/visualizar-historico-atendimento.md#caso-de-uso-visualizar-historico-de-atendimento)
 
 ## 3. Diagrama de Classes
 
