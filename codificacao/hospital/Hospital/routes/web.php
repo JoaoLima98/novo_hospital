@@ -21,9 +21,20 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/medico',[MedicoController::class,'index'])->name('medico');
-    Route::post('/prescricao/criar',[MedicoController::class,'criarPrescricao'])->name('criar.prescricao');
+    #Route::get('/medico',[MedicoController::class,'index'])->name('medico');
+    #Route::post('/prescricao/criar',[MedicoController::class,'criarPrescricao'])->name('criar.prescricao');
     Route::post('/marcar-prescricao-atendida/{id}',[FarmaciaController::class,'marcarPrescricaoAtendida'])->name('marcar.prescricao.atendida');
+
+
+    Route::get('/medico', [MedicoController::class, 'index'])->name('medico.index');
+
+    // Rota para Abrir o Formulário de um Paciente Específico
+    Route::get('/medico/atender/{id}', [MedicoController::class, 'atender'])->name('medico.atender');
+
+    // Rota para Salvar a Prescrição (POST)
+    Route::post('/prescricao/criar', [MedicoController::class, 'criarPrescricao'])->name('criar.prescricao');
+
+
 
     #aqui vai servir tanto pra medico quanto p farmacia/recepcao 
     Route::get('/painel-buscar-guias',[FarmaciaController::class,'painelGuias'])->name('painel.guias');
