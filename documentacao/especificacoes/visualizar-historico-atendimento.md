@@ -22,7 +22,8 @@
   - Um **botão** para exibir mais detalhes da triagem de um paciente através de um **modal**, e exibir o **nome do(a) enfermeiro(a)** que atendeu o paciente;
   - **Data e hora** de atendimento, a data e hora que a prescrição foi enviada para o farmacêutico.
   - Esboço:
-    
+    <img width="868" height="329" alt="image" src="https://github.com/user-attachments/assets/c428f741-3afa-44d8-a4e5-443095c45932" />
+
 
 
 ## 4. Fluxos Alternativos (Exceções)
