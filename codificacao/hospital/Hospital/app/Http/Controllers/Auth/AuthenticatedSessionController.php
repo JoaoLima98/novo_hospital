@@ -31,7 +31,7 @@ class AuthenticatedSessionController extends Controller
         if(auth()->user()->perfil === 'admin'){
             return redirect()->intended(route('dashboard', absolute: false));
         }else if(auth()->user()->perfil === 'medico'){
-            return redirect()->intended(route('medico', absolute: false));
+            return redirect()->intended(route('medico.index', absolute: false));
         }else if(auth()->user()->perfil === 'farmaceutico'){
                         
             return redirect()->intended(route('farmacia', absolute: false));    

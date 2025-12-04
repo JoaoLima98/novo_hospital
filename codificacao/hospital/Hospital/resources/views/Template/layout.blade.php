@@ -220,7 +220,7 @@
                 @if(auth()->check() && auth()->user()->perfil === 'admin')
                     <a href="{{ route('criar.usuario') }}" class="nav-item"><i class="fas fa-user"></i>Criar Usuário</a>
                 @elseif(auth()->check() && auth()->user()->perfil === 'medico')
-                    <a href="{{ url('/medico') }}" class="nav-item"><i class="fas fa-tachometer-alt"></i>Fazer prescrição</a>
+                    <a href="{{ url('/medico') }}" class="nav-item"><i class="fas fa-tachometer-alt"></i>Pacientes</a>
                 @elseif(auth()->check() && auth()->user()->perfil === 'enfermeiro')
                     <a href="{{ url('/triagem') }}" class="nav-item"><i class="fas fa-notes-medical"></i>Realizar Triagem</a>
                 @endif

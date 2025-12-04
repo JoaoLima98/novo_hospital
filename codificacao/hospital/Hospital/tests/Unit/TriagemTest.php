@@ -117,5 +117,6 @@ class TriagemTest extends TestCase
         } catch (\Exception $e) {
             $this->assertEquals('O escore de dor deve estar entre 0 e 10.', $e->getMessage());
         }
+        // ss
     }
 }
