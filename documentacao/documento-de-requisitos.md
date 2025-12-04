@@ -21,6 +21,7 @@
 | 1.4 | João de Azevedo Lima Neto| 15/11/2025 | Correção no RF09 e adição do RF10 |
 | 1.5 | João de Azevedo Lima Neto| 15/11/2025 | Correção no RF05 e adição do RF11 e RF12 |
 | 1.6 | João de Azevedo Lima Neto| 15/11/2025 | Criação do RF13 e RF14 |
+| 1.7 | João de Azevedo Lima Neto| 04/12/2025 | Criação do RF15 e RF16 |
 
 ---
 
