@@ -87,6 +87,8 @@ Tomando por base o contexto do sistema, foram identificados os seguintes requisi
 | **RF12 - Encerrar Sessão** | O sistema deve o encerramento de sessão no sistema | Alta | RF05, RF11 |
 | **RF13 - Gerenciar medicamentos** | O sistema deve permitir ao farmacêutico o gerenciamento de novos medicamentos, inserindo nome e valor de alerta | Alta | - |
 | **RF14 - Disparar alerta de falta de medicamentos** | O sistema deve enviar um alerta quando os medicamentos forem menor que o valor de alerta escolhido pelo farmacêutico | Alta | - |
+| **RF15 - Visualizar fila de atendimento** | O sistema deve mostrar uma tabela dos pacientes em fila de atendimento, baseado na prioridade Manchester tendo critério de desempate Glasgow e Hora de chegada | Alta | - |
+| **RF16 - Visualizar histórico de atendimento** | O sistema deve mostrar uma tabela para o médico dos pacientes que ele já atendeu | Média | - |
 
 ### Regras de Negócio
 
