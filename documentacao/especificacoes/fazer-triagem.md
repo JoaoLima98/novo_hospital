@@ -35,10 +35,13 @@
     * **Acidente de Trabalho:** (Sim ou não **(Boolean - Toggle/Switch)**)
     * **Frequencia Cardiaca (bpm):** (Valor númerico da frequencia cardiaca do paciente em BPM, ex: 186 ou 100);
     * **SpO2 (%):**  (Botão **select** para selecionar a porcentagem de oxigenação do paciente, opções: < 85% - **Hipoxia Severa**, 85% ~ 89% - **Hipoxia Moderada**, 90% ~ 94% - **Hipoxia Leve** ou 95% ~ 100% - **Normal**); 
-    *  **Glicemia:**  (Botão **select** para selecionar a taxa glicêmica do paciente: < 70 - **Hipoglicemico**, 70 ~ 100 - **Normal**, 101 ~ 126 - ** pré-diabético** ou > 126 - **Diabético**)
+    *  **Glicemia:**  (Botão **select** para selecionar a taxa glicêmica do paciente: < 70 - **Hipoglicemico**, 70 ~ 100 - **Normal**, 101 ~ 126 - **pré-diabético** ou > 126 - **Diabético**)
+    *  **Especialistas**: (Botão para **escolher as especialidades** que estão **cadastradas**, vindo do **cadastro de fucionários**. O enfermeiro vai poder selecionar **mais de um especialista**, e **apenas** estes especialistas poderão ver o caso da triagem determinada.)
   
     *  **Esboço**:
-    <img width="1280" height="759" alt="image" src="https://github.com/user-attachments/assets/3a5ab81f-1867-4591-8075-fabc3e4c5835" />
+    <img width="4604" height="3001" alt="Sem título-2025-11-15-1149" src="https://github.com/user-attachments/assets/0342aad4-8812-4e25-a9c8-3d35f11e4812" />
+
+
 
 
 5.  O Enfermeiro preenche as informações solicitadas.
