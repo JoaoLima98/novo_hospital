@@ -13,7 +13,7 @@
 
 ### a) Acontecimento 1º
 1. O ator acessar o sistema;
-2. O sistema apresenta uma tabela com os pacientes que estão esperando atendimento/prescrição médico(a)
+2. O sistema apresenta uma tabela com os pacientes que estão esperando atendimento/prescrição médico(a), os pacientes aqui apresentados, são apenas aqueles que condizem com a especialidade do médico, que foi definido lá na **[triagem](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/fazer-triagem.md#especifica%C3%A7%C3%A3o-do-caso-de-uso-fazer-triagem)**.
 3. A tabela deve estar apresentar os pacientes em ordem de prioridade e os seguintes campos:
   - Nome do paciente;
   - Manchester (Definidor **primário de prioridade**, quanto mais urgente, mais acima aparece na tabela);
