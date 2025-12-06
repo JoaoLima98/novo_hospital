@@ -13,7 +13,7 @@
 <div class="main-content">
     <div class="content-header">
         <h2 class="content-title"><i class="fas fa-calendar-check"></i> Painel de Guias de Prescrição</h2>
-
+        {{-- 
         <form id="formBuscar" action="{{ route('consultar.guias') }}" method="GET">
             @csrf
             <select name="id_paciente" id="paciente" class="form-select">
@@ -28,6 +28,7 @@
                 @endif
             </select>
         </form>
+         --}}
     </div>
 
     @if($ultimasGuias && $ultimasGuias->count() > 0)

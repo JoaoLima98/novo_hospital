@@ -31,15 +31,28 @@
             <form action="{{ route('triagem.store') }}" method="POST" id="formTriagem">
                 @csrf
                 
-                {{-- CAMPO PACIENTE --}}
-                <div class="row mb-4">
-                    <div class="col-12">
+                {{-- CAMPO PACIENTE E ESPECIALIDADES --}}
+                <div class="row mb-4 g-3">
+                    {{-- Seleção de Paciente --}}
+                    <div class="col-md-6">
                         <label for="paciente" class="form-label fw-bold text-secondary text-uppercase small">Paciente</label>
                         <select name="paciente_id" id="paciente" class="form-select" required>
                             <option value=""></option> 
                             @foreach($pacientes as $paciente)
                                 <option value="{{ $paciente->id }}">
                                     {{ $paciente->cpf }} - {{ $paciente->nome }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    {{-- NOVO CAMPO: Especialidades (Select2 Múltiplo) --}}
+                    <div class="col-md-6">
+                        <label for="especialidades" class="form-label fw-bold text-secondary text-uppercase small">Especialidades (Encaminhamento)</label>
+                        <select name="especialidades[]" id="especialidades" class="form-select" multiple="multiple">
+                            @foreach($especialidades as $especialidade)
+                                <option value="{{ $especialidade->id }}">
+                                    {{ $especialidade->nome }}
                                 </option>
                             @endforeach
                         </select>
@@ -283,17 +296,35 @@
     .select2-container--bootstrap-5 .select2-selection {
         border-color: #dee2e6;
         border-radius: 4px;
+        min-height: 38px;
+    }
+    
+    /* Ajuste específico para Select2 Multiple */
+    .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice {
+        background-color: #e2e8f0;
+        border: 1px solid #cbd5e1;
+        color: #334155;
     }
 </style>
 
 
 {{-- SCRIPTS (Lógica Mantida) --}}
 <script>
-    // INICIALIZAÇÃO DO SELECT2
+    // INICIALIZAÇÃO DOS SELECT2
     $(document).ready(function() {
+        // Campo Paciente (Mantido)
         $('#paciente').select2({
             theme: 'bootstrap-5',
             placeholder: 'Pesquisar paciente...',
+            allowClear: true,
+            width: '100%'
+        });
+
+        // NOVO: Campo Especialidades (Múltiplo)
+        $('#especialidades').select2({
+            theme: 'bootstrap-5',
+            placeholder: 'Selecione as especialidades...',
+            closeOnSelect: false, // Opcional: mantêm aberto para selecionar vários
             allowClear: true,
             width: '100%'
         });
