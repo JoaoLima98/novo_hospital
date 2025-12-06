@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Enfermeiro;
+use App\Models\Especialidade;
 use App\Models\Farmaceutico;
 use App\Models\Medico;
 use App\Models\User;
@@ -14,7 +15,8 @@ class AdminController extends Controller
 {
     public function criarUsuario(){
         Gate::authorize('adm');
-        return view('admin.criarUser');
+        $especialidades = Especialidade::all();
+        return view('admin.criarUser', compact('especialidades'));
     }
 
     public function storeUsuario(Request $request){
@@ -31,15 +33,16 @@ class AdminController extends Controller
             if($medicoExiste){
                 return back()->with('error', 'CRM já cadastrado !');
             }
-            Medico::create([
+            $medico = Medico::create([
                 'user_id' => $user->id,
                 'nome'    => $request->name,
-                'especialidade' => $request->especialidade,
                 'telefone' => $request->telefone,
                 'crm' => $request->crm,
             ]);
 
-
+            if ($request->has('especialidade')) {
+                $medico->especialidades()->sync($request->especialidade);
+            }
         }elseif($request->perfil === 'farmaceutico'){
             $user = User::create([
                 'name' => $request->name,

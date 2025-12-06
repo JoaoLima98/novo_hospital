@@ -48,4 +48,8 @@ class Triagem extends Model
     {
         return $this->belongsTo(Enfermeiro::class, 'enfermeiro_id');
     }
+    public function especialidades()
+    {
+        return $this->belongsToMany(Especialidade::class, 'triagem_especialidade');
+    }
 }

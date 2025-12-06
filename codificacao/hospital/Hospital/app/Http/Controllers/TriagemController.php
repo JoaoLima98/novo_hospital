@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Especialidade;
 use App\Models\Paciente;
 use App\Models\Triagem;
 use Illuminate\Http\Request;
@@ -12,7 +13,8 @@ class TriagemController extends Controller
     public function create()
     {
         $pacientes = Paciente::all();
-        return view('Triagem.createTriagem',compact('pacientes'));
+        $especialidades = Especialidade::all();
+        return view('Triagem.createTriagem',compact('pacientes', 'especialidades'));
     }
 
     public function store(Request $request)
@@ -48,6 +50,9 @@ class TriagemController extends Controller
 
             $triagem->save();
 
+            if ($request->has('especialidades')) {
+                $triagem->especialidades()->sync($request->especialidades);
+            }
             DB::commit();
 
             return redirect()
