@@ -54,7 +54,29 @@ O **GitHub Projects** é a ferramenta que utilizamos para rastrear o ciclo de vi
 
 ### 2.2. Versionamento e Consistência (Git/GitHub)
 
+Para garantir a organização do código, o rastreamento do histórico e o isolamento de novas funcionalidades sem comprometer a estabilidade do sistema, adotamos a seguinte estratégia:
 
+-   **Estratégia de Branching:** No início, todas as alterações eram feitas diretamente na branch *develop*, contudo, visando a segurança nas atualizações, passamos a criar branches específicas: 
+    
+    -   `feature/nome-da-funcionalidade`: Para o desenvolvimento de novos recursos.
+        
+    -   `fix/nome-do-erro`: Para a correção de bugs.
+        
+    -   `main`: Branch de produção e documentação. Devido à ausência de ambiente de homologação, as branches de desenvolvimento são testadas localmente e mescladas na _main_ quando funcionais. (No caso da documentação, como não tem efeitos colaterais igual alterações no código, optamos por atualizar diretamente na branch _main_).
+        
+-   **Versionamento de Documentos:** O GitHub garante o controle de versão dos artefatos. No entanto, documentos vivos como [Documento de Requisitos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/documento-de-requisitos.md) e o [Documento de Especificação de Requisitos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/documento-de-especificacao-de-requisitos.md) seguem regras manuais de registro:
+    
+    -   **Alterações de Conteúdo:** Incremento de **0.1** na versão (ex: de 1.0 para 1.1).
+        
+    -   **Ajustes Menores:** Incremento de **0.0.1** na versão (ex: de 1.1 para 1.1.1).
+        
+-   **Padrão de Commits:** Para manter a consistência e o entendimento da equipe:
+    
+    -   A mensagem deve **SEMPRE** descrever objetivamente o que a alteração realiza.
+        
+    -   O commit deve **SEMPRE** estar atribuído/vinculado a uma Issue correspondente.
+        
+    -   _Exceção:_ Alterações realizadas apenas em documentos de processo não exigem vínculo com Issues.
 ---
 
 ## 3. Comunicação e Adaptação
