@@ -11,7 +11,7 @@
 
 | Versão | Responsável | Data | Alterações |
 | :--- | :--- | :--- | :--- |
-| 0.1 | Johnny Reberty Alves Oliveira | 06/10/2025 | Criação do Documento |
+| 0.1 | João de Azevedo Lima Neto | 06/10/2025 | Criação do Documento |
 | 0.5 | João de Azevedo Lima Neto, Jocian Douglas Sousa Carneiro | 01/11/2025 | Reorganização e reestruturação do documento, incluindo ajustes nas seções 3 e 4 |
 | 0.6 | João de Azevedo Lima Neto| 09/11/2025 | Ajuste nos requisitos funcionais |
 | 1.0 | João de Azevedo Lima Neto| 09/11/2025 | Ajustado a seção 3 para conter o minimundo descrito e em forma de diagrama. O diagrama contém apenas o que nosso sistema engloba até o momento |
@@ -22,6 +22,7 @@
 | 1.5 | João de Azevedo Lima Neto| 15/11/2025 | Correção no RF05 e adição do RF11 e RF12 |
 | 1.6 | João de Azevedo Lima Neto| 15/11/2025 | Criação do RF13 e RF14 |
 | 1.7 | João de Azevedo Lima Neto| 04/12/2025 | Criação do RF15 e RF16 |
+| 1.8 | João de Azevedo Lima Neto| 07/12/2025 | Pequenos ajustes na seção 3.1, Reajuste completo nas regras de negócio para condizer com o sistema atual e adição de novas imagens do sistema na seção 5 |
 
 ---
 
@@ -93,18 +94,28 @@ Tomando por base o contexto do sistema, foram identificados os seguintes requisi
 
 ### Regras de Negócio
 
-| Identificador | Descrição | Prioridade | Depende de |
-| :--- | :--- | :--- | :--- |
-| RN01 | Cada paciente deve possuir **apenas um registro ativo por atendimento**.<br>Caso o paciente retorne posteriormente, deve ser **iniciado um novo atendimento vinculado ao seu cadastro existente**. | Alta | |
-| RN02 | O fluxo deve respeitar a ordem: Recepção → Enfermagem → Médico → Farmácia.<br>Nenhum setor pode acessar o paciente **antes que a etapa anterior esteja concluída,** exceto em casos de urgência médica. | Alta | |
-| RN03 | Acesso restrito por perfil profissional:<br>Recepcionista: pode cadastrar e editar apenas dados pessoais.<br>Enfermeiro(a): pode registrar apenas dados clínicos de triagem.<br>Médico(a): pode registrar diagnóstico e prescrição.<br>Farmacêutico(a): pode visualizar prescrição e encerrar atendimento.<br>Administrador: pode gerenciar usuários, relatórios. | Alta | |
-| RN04 | Cada módulo deve conter campos obrigatórios antes de prosseguir para a próxima fase.<br>Exemplo:<br>Recepção: CPF ou Cartão SUS obrigatório.<br>Enfermagem: pelo menos um sintoma registrado.<br>Médico: diagnóstico obrigatório para gerar prescrição. | Alta | |
-| RN05 | Após finalizado o atendimento, o registro não pode mais ser alterado, apenas consultado. Alterações posteriores devem gerar um novo atendimento vinculado ao paciente. | Alta | |
-| RN06 | Cada alteração no registro deve ser **vinculada ao usuário logado** (recepcionista, enfermeira, médico, farmacêutico) com **data e hora da ação**. | Alta | |
-| RN07 | Somente **médicos autenticados** podem registrar prescrições. | Alta | |
-| RN08 | A farmácia só pode liberar medicamentos se:<br><ul><li>houver prescrição médica válida;</li><li>o medicamento constar no estoque do hospital;</li><li>a dispensação for registrada e confirmada pelo farmacêutico.</li></ul> | Alta | |
-| RN09 | O sistema deve gerar **relatórios e códigos compatíveis com o Sistema Único de Saúde**, possibilitando integração futura com bancos de dados públicos. | Baixo | |
-| RN10 | O CPF e o CNS devem seguir o padrão brasileiro estabelecido por seus determinados ministérios; | Alta | |
+| ID   | Nome da Regra | Descrição do Comportamento (Fluxo Alternativo) | Especificação de Origem | Prioridade | Depende de |
+|:-----|:----------------------|:-----------------------------------------------|:-------------------------|:-----------|:-----------|
+| **RN01** | Dados de Acesso Inválidos | Se o email ou senha não forem válidos, o sistema retorna uma mensagem de erro, exemplo: "Credenciais inválidas" | [iniciar-sessao.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/iniciar-sessao.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
+| **RN02** | Controle de acesso. | Se o ator tentar inserir uma rota de acesso de outro perfil o sistema retorna um erro: "Acesso negado" | [iniciar-sessao.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/iniciar-sessao.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
+| **RN03** | Credencias já cadastradas. | Se o email, Coren ou CRM já estiverem cadastrados, o sistema retorna uma mensagem de erro, exemplo: "CRM já cadastrado". | [cadastrar-funcionario.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/cadastrar-funcionario.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
+| **RN04** | Credenciais inválidas. | Se o email, coren ou CRM não seguirem seus determinados padrões, o sistema deve retornar mensagem de erro, exemplo: "O email deve ser no padrão joao@email.com" | [cadastrar-funcionario.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/cadastrar-funcionario.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
+| **RN05** | Campos vazios | O sistema não deve permitir o cadastro com os campos, nome, email e senha vazios. | [cadastrar-funcionario.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/cadastrar-funcionario.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
+| **RN06** | Quantidade de medicamentos acima da quantidade do alerta | Se todos os medicamentos estiverem com quantidade acima do valor de alerta, a mensagem de alerta não deve aparecer | [disparar-alerta-falta-medicamento.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/disparar-alerta-falta-medicamento.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
+| **RN07** | Paciente inexistente | O ator não deve poder buscar um paciente que não está cadastrado no sistema. | [entregar-medicamento-ao-paciente.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/entregar-medicamento-ao-paciente.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
+| **RN08** | Falta de medicamento | O sistema entregará somente os medicamentos que tem na guia e estão disponíveis. Os que estiverem em falta, não serão entregues e a guia será atualizada para o status **"Parcialmente Atendido"**, podendo ser finalizado posteriormente quando o medicamento restante estiver disponível no estoque. **Observação**: Este fluxo vale também caso nenhum dos medicamentos da guia esteja disponível, o status da guia também vai para **Parcialmente Atendido**. | [entregar-medicamento-ao-paciente.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/entregar-medicamento-ao-paciente.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
+| **RN09** | Se a guia já foi totalmente atendida | Se a guia já foi atendida completamente, o botão deve ficar com o Status **"Totalmente Atendida"**. | [entregar-medicamento-ao-paciente.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/entregar-medicamento-ao-paciente.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
+| **RN10** | Dados de Triagem Incompletos | O sistema não deve permitir a criação da triagem sem preencher obrigatoriamente os seguintes campos: **Manchester, Pressão Arterial, Temperatura axilar, Total Glasgow, Tipo de Chegada, Acidente de veículo, Acidente de trabalho, Frequência Cardiaca, SpO2 e Glicemia.** Os demais campos podem ficar em branco. | [fazer-triagem.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/fazer-triagem.md#4-fluxos-alternativos) | ALTA | - |
+| **RN11** | Medicamento Duplicado | Ao gerenciar medicamentos, se tentar inserir um medicamento com o mesmo nome de um já existente, o sistema deve impedir a duplicação. | [gerenciar-medicamentos.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/gerenciar-medicamentos.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
+| **RN12** | Valor de alerta não pode ser abaixo de 5 | O valor de alerta não pode ser abaixo de 5, pois é muito baixo. | [gerenciar-medicamentos.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/gerenciar-medicamentos.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
+| **RN13** | Deletar medicamento com estoque positivo | O sistema deve proibir deletar um medicamento com estoque positivo, se o ator tentar a mensagem similar a seguinte deve ser informada: "Medicamento ainda tem unidades em estoque, remoção não autorizada". | [gerenciar-medicamentos.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/gerenciar-medicamentos.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
+| **RN14** | Medicamento repetido | O médico não deve poder cadastrar uma posologia de um medicamento repetido, o medicamento deve ficar não selecionável ou sumir da lista de posologia; | [prescrever-medicamento.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/prescrever-medicamento.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
+| **RN15** | Medicamentos disponíveis | Os medicamentos só devem aparecer na lista de posologia, se tiverem disponibilidade no estoque maior que 0; | [prescrever-medicamento.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/prescrever-medicamento.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
+| **RN16** | Campos vazios | O sistema deve proibir a prescrição se a posologia estiver com quaisquer campos vazios | [prescrever-medicamento.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/prescrever-medicamento.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
+| **RN17** | Lote com quantidade negativa | O ator não deve poder inserir um número menor que 1 | [registrar-entrada-de-medicamentos.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/registrar-entrada-de-medicamentos.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
+| **RN18** | Campo medicamento obrigatório | O ator tenta cadastrar um lote sem nome. O sistema informa que o campo de medicamento é obrigatório | [registrar-entrada-de-medicamentos.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/registrar-entrada-de-medicamentos.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
+| **RN19** | Campo quantidade obrigatório | O ator tenta cadastrar um lote sem uma quantidade. O sistema informa que a quantidade é inválida. | [registrar-entrada-de-medicamentos.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/registrar-entrada-de-medicamentos.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es)) | ALTA | - |
+
 
 
 ### Requisitos Não Funcionais
@@ -130,6 +141,23 @@ Tomando por base o contexto do sistema, foram identificados os seguintes requisi
 - 3
 
 <img width="1906" height="919" alt="image" src="https://github.com/user-attachments/assets/5ad97f0e-a2ee-467b-aaa8-489180d17017" />
+
+- 4
+
+<img width="1205" height="544" alt="image" src="https://github.com/user-attachments/assets/cbfa9ab0-9241-42a1-9a8d-743b2c8316fc" />
+
+- 5
+
+<img width="1134" height="539" alt="image" src="https://github.com/user-attachments/assets/538dfb89-a66e-4257-ace5-344f45754d20" />
+
+- 6
+
+<img width="1205" height="565" alt="image" src="https://github.com/user-attachments/assets/cdff8e8d-2e78-430f-8191-2df8deeb8a4c" />
+
+- 7
+
+<img width="1300" height="606" alt="image" src="https://github.com/user-attachments/assets/0d3b1e8b-f6fd-4dfc-b6d8-edbd48cfb7fe" />
+
 
 ## 6. Diagrama de Atividades do Produto:
 
