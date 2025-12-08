@@ -38,11 +38,15 @@ A atividade **Planejar** tem objetivo de transformar ideias/demandas iniciais em
 
 **Entradas:** **[Documento de Visão](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#1-documento-de-vis%C3%A3o)**, Solicitação do cliente.
 
-**Saídas:** Nova Iteração, **[Plano de Gerenciamento do Projeto (PGP)](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#7-plano-de-gerenciamento-do-projeto-pgp)**, **[Documento de Especificação de Requisitos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#8-documento-de-especifica%C3%A7%C3%A3o-de-requisitos)**, **[Documento de Requisitos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#3-documento-de-requisitos)**.
+**Saídas:** Nova Iteração, **[Plano de Gerenciamento do Projeto (PGP)](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#7-plano-de-gerenciamento-do-projeto-pgp)**, **[Documento de Especificação de Requisitos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#8-documento-de-especifica%C3%A7%C3%A3o-de-requisitos)**, **[Documento de Requisitos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#3-documento-de-requisitos)**,
+**[Plano de gestão de mudanças e evolução](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/plano-gestao-mudancas-evolucao.md#plano-de-gest%C3%A3o-de-mudan%C3%A7as-e-evolu%C3%A7%C3%A3o)**.
+
+
 ### Principais Tarefas
 
 1.  **Revisar demanada:** Rever a demanda exigida pelo cliente.
 2.  **Definir métricas:** Responsável, prioridade, iteração/posição no backlog, tamanho e estimativa.
+3.  **Garantir Estabilidade:** Garantir que o sistema siga um desenvolvimento estável até durante mudanças devido novas demandas.
 
 ## 3. Especificar Funcionalidades
 
