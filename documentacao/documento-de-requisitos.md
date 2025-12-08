@@ -23,6 +23,7 @@
 | 1.6 | João de Azevedo Lima Neto| 15/11/2025 | Criação do RF13 e RF14 |
 | 1.7 | João de Azevedo Lima Neto| 04/12/2025 | Criação do RF15 e RF16 |
 | 1.8 | João de Azevedo Lima Neto| 07/12/2025 | Pequenos ajustes na seção 3.1, Reajuste completo nas regras de negócio para condizer com o sistema atual e adição de novas imagens do sistema na seção 5 |
+| 1.9 | João de Azevedo Lima Neto| 07/12/2025 | Ajustes na seção 3.2 |
 
 ---
 
@@ -62,7 +63,8 @@ Quanto a cada funcionário **(recepcionista, enfermeira, médico e farmacêutico
 
 ### 3.2 Minimundo - Diagrama de domínio
 
-<img width="1631" height="1234" alt="Diagrama de dominio-hospital" src="https://github.com/user-attachments/assets/f1d7c6e9-4c85-4277-8885-2a447d5c6675" />
+<img width="2300" height="2211" alt="Diagrama de dominio-hospital-v2" src="https://github.com/user-attachments/assets/0f184f9a-47ca-4453-a136-dbaa6b03721d" />
+
 
 ---
 
