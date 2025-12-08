@@ -28,6 +28,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/medico', [MedicoController::class, 'index'])->name('medico.index');
 
+    Route::get('/medico/triagens', [MedicoController::class, 'minhasTriagens'])->name('medico.triagens');
+
     // Rota para Abrir o Formulário de um Paciente Específico
     Route::get('/medico/atender/{id}', [MedicoController::class, 'atender'])->name('medico.atender');
 

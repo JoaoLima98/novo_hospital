@@ -31,7 +31,8 @@ class Triagem extends Model
         'acidente_trabalho',
         'acidente_veiculo', 
         'tipo_envolvimento_veiculo',
-        'atendido'
+        'atendido',
+        'medico_id'
     ];
 
     protected $casts = [
@@ -47,6 +48,10 @@ class Triagem extends Model
     public function enfermeiro()
     {
         return $this->belongsTo(Enfermeiro::class, 'enfermeiro_id');
+    }
+    public function medico()
+    {
+        return $this->belongsTo(Medico::class, 'medico_id');
     }
     public function especialidades()
     {
