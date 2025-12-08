@@ -58,6 +58,7 @@ Cartão para quando o item já foi aceito pelo cliente.
 - [Plano de Testes](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#5-plano-de-testes): Artefato que visa definir os testes do software a fim de manter a qualidade do sistema.
 - [Relatorio de Testes](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#6-relat%C3%B3rio-de-testes-unit%C3%A1rios): Artefato gerado pela ferramenta/biblioteca de testes unitários, que visa relatar os testes que tiveram sucesso e fracassos.
 - [Caso de Teste](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#9-casos-de-teste-explorat%C3%B3rios): Artefato que detalha determinado caso de teste exploratórios.
+- [Plano de gestão de mudanças e evolução](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/plano-gestao-mudancas-evolucao.md#plano-de-gest%C3%A3o-de-mudan%C3%A7as-e-evolu%C3%A7%C3%A3o): Este documento formaliza a estratégia para gerenciar a evolução do projeto, garantindo que mudanças sejam tratadas de forma ágil, colaborativa e transparente.
 
 ## Atividades
 - [Analisar Negócio](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/atividades.md#1-analisar-neg%C3%B3cio) : Entender o contexto, objetivos, problemas e oportunidades diante de uma solicitação. Resulta na definição de escopo e em uma visão geral de cada funcionalidade.
