@@ -23,6 +23,7 @@
 | 1.6 | João de Azevedo Lima Neto | 20/11/2025 | Atualização no diagrama de caso de uso para adicionar os casos Disparar alerta de falta de medicamentos e Gerenciar medicamentos bem como suas inserções nas descrições de caso de uso, além do acréscimo da reorganização em ordem alfabética |
 | 1.7 | João de Azevedo Lima Neto | 24/11/2025 | Inserção nas descrições de caso de uso de Fazer Triagem |
 | 1.8 | João de Azevedo Lima Neto | 04/12/2025 | Atualização no diagrama de caso de uso a adição dos novos casos de uso, bem como sua inserção na descrição de casos |
+| 1.9 | João de Azevedo Lima Neto | 08/12/2025 | Atualização na tabela de atores para informar sobre o uso geral do sistema |
 
 ---
 
@@ -58,6 +59,7 @@ Os atores identificados no contexto deste projeto estão descritos na tabela aba
 | **Médico(a)** | Profissional de saúde responsável pelo diagnóstico e prescrição de medicamentos. |
 | **Farmacêutico(a)** | Profissional responsável pela gestão, controle de estoque e dispensação de medicamentos para os pacientes. |
 | **Administrador** | Usuário com privilégios elevados no sistema, responsável por gerenciar cadastros de funcionários.|
+| **Geral/Todos os atores** | Demarca funcionalidades  todos os os atores utilizam, foi criado para manter organização do diagrama. |
 
 
 ### 2.2 Diagrama de caso de uso
