@@ -84,4 +84,5 @@ Os atores identificados no contexto deste projeto estão descritos na tabela aba
 
 ## 3. Diagrama de Classes
 
-<img width="1273" height="1108" alt="Classe UML - Hospital" src="https://github.com/user-attachments/assets/f8ac3ced-4c2b-4e41-b6d8-d3e4f1d3aeb6" />
+<img width="1620" height="1809" alt="Classe UML - Hospital (1)" src="https://github.com/user-attachments/assets/826b8251-c8c7-4a9f-a1c5-1b8b6382072c" />
+
