@@ -23,7 +23,7 @@
 | 1.6 | João de Azevedo Lima Neto| 15/11/2025 | Criação do RF13 e RF14 |
 | 1.7 | João de Azevedo Lima Neto| 04/12/2025 | Criação do RF15 e RF16 |
 | 1.8 | João de Azevedo Lima Neto| 07/12/2025 | Pequenos ajustes na seção 3.1, Reajuste completo nas regras de negócio para condizer com o sistema atual e adição de novas imagens do sistema na seção 5 |
-| 1.9 | João de Azevedo Lima Neto| 07/12/2025 | Ajustes na seção 3.2 |
+| 1.9 | João de Azevedo Lima Neto| 07/12/2025 | Ajustes na seção 3.2 e atualização no commit |
 
 ---
 
