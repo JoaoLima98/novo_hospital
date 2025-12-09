@@ -18,19 +18,39 @@
 | 1.1 | João de Azevedo Lima Neto, Jocian Douglas Sousa Carneiro | 09/11/2025 | Atualizado diagrama de atividade do projeto para refletir melhor o processo atual |
 | 1.2 | João de Azevedo Lima Neto | 14/11/2025 | Adicionado novo milestone (Marco) |
 | 1.3 | João de Azevedo Lima Neto | 28/11/2025 | Adicionado Burndown |
+| 1.4 | João de Azevedo Lima Neto | 09/12/2025 | Ajuste no EAP e nas descrições do documento segundo orientações do Cliente/Professor Maurício |
 
 
 ## 1. EAP - Estrutura Analítica do Projeto
 
-<img width="3378" height="1208" alt="Diagrama caso de uso Triagem Hospitalar - EAP" src="https://github.com/user-attachments/assets/cd7d1e9d-90cf-4c85-8df3-273bd59d4902" />
+#### Ferramenta de gerenciamento que quebra o projeto em partes menores e gerenciáveis para planejamento e controle.
+
+<img width="4109" height="1217" alt="Diagrama caso de uso Triagem Hospitalar - EAP (1)" src="https://github.com/user-attachments/assets/1173b951-c804-44df-8976-e5d45c060029" />
+
 
 ## Descrição do EAP
 
-### 1. Planejamento
+### 1. Gestão
+
+-   **Mudança:** Previsão de fatores que interferem positivamente para o crescimento do projeto
+
+    -   **Evolução:** Trata-se do crescimento do produto. Inclui a adição de novas funcionalidades que desenvolvem o produto.
+        
+    -   **Adaptação:** Trata-se da manutenção e ajuste do produto para incluir novas funcionalidades que forem solicitados e não faziam parte no escopo inicial.
+
+-   **Risco:** Previsão de possíveis complicações associadas a execução do projeto e ao produto.
+
+-   **Estimativas:** Previsão dos recursos necessários.
+    
+    -   **Esforço:** O volume de trabalho necessário.
+        
+    -   **Custos:** O valor financeiro total do projeto.
+
+### 2. Planejamento
 
 Esta fase define a estrutura, o escopo e os recursos necessários para o projeto.
 
--   **Definir Processos:** Mapeamento de como o trabalho será executado.
+-   **Definição de Processos:** Mapeamento de como o trabalho será executado.
     
     -   **Processo:** O fluxo de trabalho principal.
         
@@ -40,18 +60,12 @@ Esta fase define a estrutura, o escopo e os recursos necessários para o projeto
         
     -   **Papéis:** Responsabilidades da equipe no projeto.
         
--   **Levantar Requisitos:** Definição das funcionalidades e especificações técnicas que o sistema deve ter.
-    
--   **Estimar:** Previsão dos recursos necessários.
-    
-    -   **Esforço:** O volume de trabalho necessário.
-        
-    -   **Custos:** O valor financeiro total do projeto.
+-   **Documento de Requisitos:** Definição das funcionalidades e especificações técnicas que o sistema deve ter.
         
 
 ----------
 
-### 2. Desenvolvimento
+### 3. Desenvolvimento
 
 A fase de construção e codificação do sistema.
 
@@ -64,7 +78,7 @@ A fase de construção e codificação do sistema.
 
 ----------
 
-### 3. Testes
+### 4. Testes
 
 A fase de garantia de qualidade para verificar o funcionamento do sistema e corrigir falhas.
 
@@ -84,14 +98,18 @@ A fase de garantia de qualidade para verificar o funcionamento do sistema e corr
 
 ## 2. Cronograma - (Gantt)
 
+#### Ferramenta de visualização do projeto ao longo do tempo.
+
 [Gráfico GANTT](https://app.clickup.com/90132624030/v/g/2ky55cmy-613)
 
 | Marco (Milestone) | Data Prevista |
 | :--- | :--- |
 | Primeira entrega avaliativa | 12/11/2025 |
-| Prévia da 2ª etapa | 17/12/2025 |
+| Prévia da 2ª etapa | 17/12/2025 - Adiantado para dia 10/12/2025 |
 
 ## 3. Diagrama de Atividades do Projeto
+
+#### Representação visual do fluxo de trabalho, mostrando a sequência lógica e as decisões necessárias para a execução da iteração.
 
 <img width="1810" height="1691" alt="Diagrama de atividade do projeto" src="https://github.com/user-attachments/assets/04012608-8680-41c1-97e0-3334ed4a92c4" />
 
@@ -99,6 +117,8 @@ A fase de garantia de qualidade para verificar o funcionamento do sistema e corr
 ---
 
 ## 4. Estimativas de Esforço e Custo
+
+#### Previsão detalhada do volume de trabalho e do valor financeiro (R$) total necessário.
 
 ### 4.1. Estimativa de Esforço
 | Pacote de Trabalho (EAP) | Estimativa (Horas) | Recursos Alocados |
@@ -126,11 +146,14 @@ A fase de garantia de qualidade para verificar o funcionamento do sistema e corr
 
 ## 5. Gráfico de burndown
 
+#### Gráfico utilizado para acompanhar o trabalho restante versus o tempo, permitindo visualizar o progresso e a capacidade de entrega.
+
 **[Gráfico de burndown](https://docs.google.com/spreadsheets/d/19c3hjhCZ2GJSnl3DyycGhQG0LLYjL1Az5o6ZRBHQJzI/edit?usp=sharing)**
 
 
 ## 6. Gerenciamento de risco
 
+#### Processo de identificação, análise, e planejamento de respostas para eventos incertos que podem afetar negativamente os objetivos do projeto.
 
 | Risco Identificado | Probabilidade | Impacto | Prevenção | Plano de Ação |
 |--------------------|--------------|---------|-------------------------|---------------------------------------|
