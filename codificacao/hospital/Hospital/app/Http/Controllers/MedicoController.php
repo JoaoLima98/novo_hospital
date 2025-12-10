@@ -13,52 +13,73 @@ use Illuminate\Support\Facades\Gate;
 class MedicoController extends Controller
 {
     // Exibe apenas a lista de espera (Triagem)
-    public function index()
-    {
+    public function index(){
         Gate::authorize('medico');
 
-        $pacientesRaw = Paciente::whereHas('triagem', function($q) {
-            $q->where('atendido', 0);
-        })
-        ->with(['triagem' => function($q) {
+        $medico = auth()->user()->medico;
+        $especialidadesMedico = $medico->especialidades->pluck('id');
+
+        $pacientesRaw = Paciente::whereHas('triagem', function($q) use ($especialidadesMedico) {
             $q->where('atendido', 0)
+            ->whereHas('especialidades', function($q2) use ($especialidadesMedico) {
+                    $q2->whereIn('especialidade_id', $especialidadesMedico);
+            });
+        })
+        ->with(['triagem' => function($q) use ($especialidadesMedico) {
+            $q->where('atendido', 0)
+            ->whereHas('especialidades', function($q2) use ($especialidadesMedico) {
+                    $q2->whereIn('especialidade_id', $especialidadesMedico);
+            })
             ->with('enfermeiro');
         }])
         ->get();
 
+        // tua lógica do Manchester/Glasgow
         $prioridadeManchester = [
-            'Emergência' => 1,    // Vermelho
-            'Muito Urgente' => 2, // Laranja
-            'Urgente' => 3,       // Amarelo
-            'Pouco Urgente' => 4, // Verde
-            'Não Urgente' => 5    // Azul
+            'Emergência' => 1,
+            'Muito Urgente' => 2,
+            'Urgente' => 3,
+            'Pouco Urgente' => 4,
+            'Não Urgente' => 5
         ];
 
-        // Lógica de Ordenação (Manchester -> Glasgow -> Data Chegada)
         $pacientes = $pacientesRaw->sort(function ($a, $b) use ($prioridadeManchester) {
             $triagemA = $a->triagem;
             $triagemB = $b->triagem;
 
-            // 1. Manchester
-            $classA = $triagemA->manchester_classificacao ?? 'Não Urgente';
-            $classB = $triagemB->manchester_classificacao ?? 'Não Urgente';
-            
-            $pesoA = $prioridadeManchester[$classA] ?? 99;
-            $pesoB = $prioridadeManchester[$classB] ?? 99;
-
+            $pesoA = $prioridadeManchester[$triagemA->manchester_classificacao] ?? 99;
+            $pesoB = $prioridadeManchester[$triagemB->manchester_classificacao] ?? 99;
             if ($pesoA !== $pesoB) return $pesoA <=> $pesoB;
 
-            // 2. Glasgow (assumindo que menor é mais grave/empate)
             $glasgowA = $triagemA->glasgow ?? 15;
             $glasgowB = $triagemB->glasgow ?? 15;
             if ($glasgowA !== $glasgowB) return $glasgowA <=> $glasgowB;
 
-            // 3. Data (FIFO)
             return $triagemA->created_at <=> $triagemB->created_at;
         });
 
         return view('Medico.index', compact('pacientes'));
     }
+
+    public function minhasTriagens(){
+        Gate::authorize('medico');
+
+        $medico = auth()->user()->medico;
+        $pacientes = Paciente::whereHas('triagem', function($q) use ($medico) {
+            $q->where('medico_id', $medico->id);
+        })
+        ->with(['triagem' => function($q) {
+            $q->with('enfermeiro'); 
+        }])
+        ->get();
+
+        $pacientes = $pacientes->sortByDesc(function($p) {
+            return $p->triagem->created_at ?? 0;
+        });
+
+        return view('Medico.minhasTriagens', compact('pacientes'));
+    }
+
 
     // Carrega a tela de prescrição para um paciente específico
    public function atender($id)
@@ -87,7 +108,7 @@ class MedicoController extends Controller
             ->orderBy('created_at', 'desc')
             ->first();
         if ($ultimaTriagem) {
-            $ultimaTriagem->update(['atendido' => true]);
+            $ultimaTriagem->update(['atendido' => true, "medico_id" => auth()->user()->medico->id]);
         }
         if($request->has('medicamentos')){
             foreach($request->medicamentos as $remedio){

@@ -2,10 +2,12 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Triagem extends Model
 {
+    use HasFactory;
     protected $table = 'triagens';
 
 
@@ -31,7 +33,8 @@ class Triagem extends Model
         'acidente_trabalho',
         'acidente_veiculo', 
         'tipo_envolvimento_veiculo',
-        'atendido'
+        'atendido',
+        'medico_id'
     ];
 
     protected $casts = [
@@ -47,6 +50,10 @@ class Triagem extends Model
     public function enfermeiro()
     {
         return $this->belongsTo(Enfermeiro::class, 'enfermeiro_id');
+    }
+    public function medico()
+    {
+        return $this->belongsTo(Medico::class, 'medico_id');
     }
     public function especialidades()
     {

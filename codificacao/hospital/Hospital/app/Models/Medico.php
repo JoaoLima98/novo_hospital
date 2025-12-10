@@ -22,4 +22,8 @@ class Medico extends Model
     {
         return $this->belongsToMany(Especialidade::class, 'medico_especialidade');
     }
+    public function triagens()
+    {
+        return $this->hasMany(Triagem::class, 'medico_id');
+    }
 }
