@@ -46,7 +46,7 @@ return new class extends Migration
             $table->boolean('acidente_trabalho')->default(false);
             $table->boolean('acidente_veiculo')->default(false);
             $table->string('tipo_envolvimento_veiculo')->nullable(); // Condutor, Passageiro...
-
+            $table->boolean('atendido')->default(false);
             $table->timestamps();
         });
     }
