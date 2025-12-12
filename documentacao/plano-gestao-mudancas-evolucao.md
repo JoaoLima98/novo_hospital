@@ -17,11 +17,20 @@ Este documento formaliza a estratégia para gerenciar a evolução do projeto, g
     2.  O **Analista de Negócio (AN)** realiza a **Análise de Viabilidade** (conforme definido na atividade *Analisar Negócio*), avaliando o impacto na rotina hospitalar e nos artefatos existentes.
 
 * **Critério de Priorização:**
-    As mudanças são ordenadas pelo **Cliente** durante a revisão da iteração e levam em conta caracterização de **Valor de Negócio**, ou seja, se a mudança traz benefício imediato ao sistema.
+
+   As mudanças são ordenadas pelo **Cliente** durante a revisão da iteração e levam em conta o método **MoSCoW**:
+
+   **Must Have (Deve ter):** Obrigatório para a iteração, sem isso a entrega não tem valor.
+
+    **Should Have (Deveria ter):** Importante, mas pode esperar se necessário (tem prioridade secundária).
+
+    **Could Have (Poderia ter):** Desejável se houver tempo/recurso sobrando, (para padrões estéticos apenas).
+
+   **Won't Have (Não terá agora):** Acordado que ficará para um futuro distante.
 
 * **Aprovação:**
-    * **Mudanças de Escopo (Novas Features):** Devem ser exigidas pelo cliente durante a atividade de *Revisar* e selecionadas pelo Gerente de Projeto durante a atividade de *Planejar*, antes do início da iteração.
-    * **Correções Críticas:** Aprovadas imediatamente pelo Analista de Negócio.
+
+    Devem ser consentido com o cliente durante a atividade de *Revisar* e devem ser acordadas as inseções baseado no critérido de priorização acima. Serão inseridas pelo Gerente de Projeto durante a atividade de *Planejar* apenas as selecionadas, como primeira tarefa da iteração.
 
 ### 1.2. Lidar com Mudanças Urgentes e Novas Funcionalidades
 
@@ -90,7 +99,7 @@ Para garantir a organização do código, o rastreamento do histórico e o isola
 
 * **Rituais de Comunicação:**
     * As mudanças planejadas são comunicadas no início de cada Sprint logo após a revisão.
-    * Mudanças emergenciais são comunicadas não só através das **issues** imediatamente via canais de mensagem da equipe.
+    * Mudanças emergenciais são comunicadas não só através das **issues**, mas imediatamente via canais de mensagem da equipe.
 
 * **Adaptação:**
     * A equipe revisa o fluxo de trabalho periodicamente. Se o processo de mudança estiver burocrático ou falho, ele será ajustado na documentação de *Processos* para garantir a melhoria contínua.
