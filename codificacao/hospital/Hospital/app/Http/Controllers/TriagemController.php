@@ -13,7 +13,7 @@ class TriagemController extends Controller
     public function create()
     {
         $pacientes = Paciente::all();
-        $especialidades = Especialidade::all();
+        $especialidades = Especialidade::whereHas('medicos')->get();
         return view('Triagem.createTriagem',compact('pacientes', 'especialidades'));
     }
 
