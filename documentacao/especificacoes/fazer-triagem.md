@@ -6,8 +6,7 @@
 
 ## 2. Pré-condições
 * O usuário (Enfermeiro) deve estar logado no sistema.
-* O paciente deve estar devidamente cadastrado no sistema (Por enquanto estamos utilizando dados mockados/simulados).
-* O paciente deve estar na lista de espera para triagem (Por enquanto estamos utilizando dados mockados/simulados).
+* O paciente deve estar devidamente cadastrado no sistema.
 
 ## 3. Fluxo Principal
 1.  O Enfermeiro acessa a opção de **Triagem** no menu principal.
