@@ -25,6 +25,7 @@
 | 1.8 | João de Azevedo Lima Neto | 04/12/2025 | Atualização no diagrama de caso de uso a adição dos novos casos de uso, bem como sua inserção na descrição de casos |
 | 1.9 | João de Azevedo Lima Neto | 08/12/2025 | Atualização na tabela de atores para informar sobre o uso geral do sistema |
 | 1.9.1 | João de Azevedo Lima Neto | 08/12/2025 | Atualização no diagrama de classe e inserção no registro de auditoria |
+| 2.0 | João de Azevedo Lima Neto | 19/12/2025 | Adicionado descrição do caso de uso Gerenciar Pacientes |
 
 ---
 
@@ -77,6 +78,7 @@ Os atores identificados no contexto deste projeto estão descritos na tabela aba
 - [Entregar Medicamento ao Paciente](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/entregar-medicamento-ao-paciente.md)
 - [Fazer Triagem](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/fazer-triagem.md)
 - [Gerenciar Medicamentos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/gerenciar-medicamentos.md)
+- [Gerenciar Paciente](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/gerenciar-pacientes.md)
 - [Iniciar Sessão](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/iniciar-sessao.md)
 - [Prescrever Medicamento](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/prescrever-medicamento.md)
 - [Registrar Entrada de Medicamentos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/registrar-entrada-de-medicamentos.md)
