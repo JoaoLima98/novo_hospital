@@ -18,9 +18,11 @@ class PacienteFactory extends Factory
     {
         return [
             'nome' => $this->faker->name(),
-            'cpf' => $this->faker->unique()->numerify('###########'),
-            'rg' => $this->faker->unique()->numerify('###########'),
-            'telefone' => $this->faker->unique()->numerify('###########'),
+            'cpf' => $this->faker->numerify('###########'), // Gera 11 dígitos
+            'rg' => $this->faker->numerify('#########'),
+            'telefone' => $this->faker->phoneNumber(),
+            'data_nascimento' => $this->faker->date(),
+            'regulado' => false,
         ];
     }
 }
