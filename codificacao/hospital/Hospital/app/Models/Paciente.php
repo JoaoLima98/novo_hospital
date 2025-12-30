@@ -8,7 +8,32 @@ use Illuminate\Database\Eloquent\Model;
 class Paciente extends Model
 {
     use HasFactory;
-    protected $fillable = ['nome', 'cpf', 'rg', 'telefone'];
+    protected $fillable = [
+        'nome',
+        'cpf',
+        'rg',
+        'telefone',
+        'cartao_sus',
+        'naturalidade',
+        'estado_civil',
+        'profissao',
+        'data_nascimento',
+        'raca_cor',
+        'nome_mae',
+        'nome_pai',
+        'escolaridade',
+        'regulado',
+        'cidade_atual',
+        'estado',
+        'rua',
+        'bairro',
+        'numero_casa',
+    ];
+
+    protected $casts = [
+        'data_nascimento' => 'date',
+        'regulado' => 'boolean',
+    ];
 
     public function prescricoes()
     {
