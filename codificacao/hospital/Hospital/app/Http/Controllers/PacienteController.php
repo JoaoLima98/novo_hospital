@@ -19,7 +19,7 @@ class PacienteController extends Controller
         // Retorna a view store vazia para criar
         return view('pacientes.store');
     }
-
+    
     public function store(Request $request)
     {
         // Validação
@@ -59,7 +59,7 @@ class PacienteController extends Controller
         // Retorna a mesma view store, mas com os dados do paciente
         return view('pacientes.store', compact('paciente'));
     }
-
+    
     public function update(Request $request, Paciente $paciente)
     {
         $data = $request->validate([
