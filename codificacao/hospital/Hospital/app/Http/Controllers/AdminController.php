@@ -76,6 +76,15 @@ class AdminController extends Controller
                 'user_id' => $user->id,
                 'coren'    => $request->coren,  
             ]);
+        }else{
+            $user = User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'telefone' => $request->telefone,
+                'perfil' => 'recepcionista',
+                'password' => bcrypt($request->password),
+            ]);
+            
         }
         return back()->with('success','Usuário criado com sucesso!');
     }

@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FarmaciaController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\MedicoController;
+use App\Http\Controllers\PacienteController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RemedioController;
 use App\Http\Controllers\TriagemController;
@@ -62,7 +63,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/triagem',[TriagemController::class,'create'])->name('criar.triagem');
     Route::post('/triagem',[TriagemController::class,'store'])->name('triagem.store');
 
-
+    Route::resource('pacientes',PacienteController::class);
+    Route::get('/medico/prescricao/{id}', [MedicoController::class, 'atender'])->name('medico.prescricao');
 });
 
 require __DIR__.'/auth.php';

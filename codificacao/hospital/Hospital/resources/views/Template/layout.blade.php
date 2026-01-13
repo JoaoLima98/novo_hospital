@@ -225,6 +225,19 @@
 
                 @elseif(auth()->check() && auth()->user()->perfil === 'enfermeiro')
                     <a href="{{ url('/triagem') }}" class="nav-item"><i class="fas fa-notes-medical"></i>Realizar Triagem</a>
+                
+                @elseif(auth()->check() && auth()->user()->perfil === 'recepcionista')
+    
+                    {{-- Link para o CRUD de Pacientes (Lista, Cadastra, Edita) --}}
+                    <a href="{{ route('pacientes.index') }}" class="nav-item">
+                        <i class="fas fa-user-injured"></i> Pacientes
+                    </a>
+
+                    {{-- Se quiser manter o link da Triagem separado, deixe assim: --}}
+                    <a href="{{ route('pacientes.create') }}" class="nav-item">
+                        <i class="fas fa-user-plus"></i> Cadastrar Paciente
+                    </a>
+
                 @endif
 
                 @yield('nav')
