@@ -26,6 +26,7 @@
 | 1.9 | João de Azevedo Lima Neto | 08/12/2025 | Atualização na tabela de atores para informar sobre o uso geral do sistema |
 | 1.9.1 | João de Azevedo Lima Neto | 08/12/2025 | Atualização no diagrama de classe e inserção no registro de auditoria |
 | 2.0 | João de Azevedo Lima Neto | 19/12/2025 | Adicionado descrição do caso de uso Gerenciar Pacientes |
+| 2.1 | João de Azevedo Lima Neto | 15/01/2026 | Adicionado descrição do caso de uso Atualizar Status do Paciente |
 
 ---
 
@@ -72,6 +73,7 @@ Os atores identificados no contexto deste projeto estão descritos na tabela aba
 
 
 ### 2.3 Descrições dos casos de uso:
+- [Atualizar Status do Paciente](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/atualizar-status-do-paciente.md)
 - [Cadastrar Funcionario](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/cadastrar-funcionario.md)
 - [Disparar alerta de falta de medicamentos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/disparar-alerta-falta-medicamento.md)
 - [Encerra Sessão](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/encerrar-sessao.md)
