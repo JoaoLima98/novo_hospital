@@ -45,13 +45,14 @@
 6. Um **modal** de confirmação é exibido com o resumo dos dados.
 7. O Ator confirma e o sistema registra o paciente no banco de dados.
 
-### b) Acontecimento 2º: Edição de Paciente
+### b) Acontecimento 2º: Edição e Listagem de Pacientes
 
 1. Na lista de pacientes, o Ator utiliza a barra de busca para encontrar um paciente pelo nome ou CPF.
-2. O sistema apresenta o **card** ou linha do paciente com a opção "Editar".
-3. O Ator seleciona "Editar" e o sistema abre o formulário **preenchido** com os dados atuais.
-4. O Ator realiza as alterações necessárias.
-5. O Ator clica em "Salvar" e confirma no **modal**.
+2. A listagem deve apresentar o Paciente, algum documento (CPF, CNS ou RG), Status do paciente vindo do [Atualizar Status do Paciente](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/atualizar-status-do-paciente.md).
+3. O sistema apresenta o **card** ou célula na tabela do paciente com a opção "Editar".
+4. O Ator seleciona "Editar" e o sistema abre o formulário **preenchido** com os dados atuais.
+5. O Ator realiza as alterações necessárias.
+6. O Ator clica em "Salvar" e confirma no **modal**.
 
 ## 4. Fluxos Alternativos (Exceções)
 
