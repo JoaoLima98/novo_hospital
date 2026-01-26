@@ -81,9 +81,7 @@ Para garantir a organização do código, o rastreamento do histórico e o isola
 -   **Estratégia de Milestone:** Os Milestones devem demonstrar a versão do produto e o objetivo da iteração de maneira objetiva como nos exemplos abaixo.
     -   `V1.0: Adição da funcionalidade x`        
     -   `V1.1: juste da funcionalidade x e adição da funcionalidade y`
-   
-        
-    -   `main`: Branch de produção e documentação. Devido à ausência de ambiente de homologação, as branches de desenvolvimento são testadas localmente e mescladas na _main_ quando funcionais. (No caso da documentação, como não tem efeitos colaterais igual alterações no código, optamos por atualizar diretamente na branch _main_).
+
         
 -   **Versionamento de Documentos:** O GitHub garante o controle de versão dos artefatos. No entanto, documentos vivos como [Documento de Requisitos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/documento-de-requisitos.md) e o [Documento de Especificação de Requisitos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/documento-de-especificacao-de-requisitos.md) seguem regras manuais de registro:
     
