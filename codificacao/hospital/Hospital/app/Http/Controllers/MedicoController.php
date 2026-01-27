@@ -16,8 +16,12 @@ class MedicoController extends Controller
     public function index(){
         Gate::authorize('medico');
         $pacientes = Paciente::all();
-        $remedios = Remedio::all();
-
+        $remedios = Remedio::selectRaw('remedios.id, remedios.nome')
+        ->join('estoques', 'estoques.id_remedio', '=', 'remedios.id')
+        ->groupBy('remedios.id', 'remedios.nome')
+        ->havingRaw('SUM(estoques.quantidade) > 1')
+        ->get();
+        
         return view('Medico.criarPrescricao',compact('pacientes','remedios'));
     }
     public function criarPrescricao(Request $request){
