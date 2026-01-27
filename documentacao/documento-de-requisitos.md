@@ -25,6 +25,7 @@
 | 1.8 | João de Azevedo Lima Neto| 07/12/2025 | Pequenos ajustes na seção 3.1, Reajuste completo nas regras de negócio para condizer com o sistema atual e adição de novas imagens do sistema na seção 5 |
 | 1.9 | João de Azevedo Lima Neto| 08/12/2025 | Ajustes na seção 3.2 e atualização no commit |
 | 1.9.1 | João de Azevedo Lima Neto| 26/01/2026 | Ajustes na seção 4, removido um RF que não fazia sentido estar como RF |
+| 1.9.2 | João de Azevedo Lima Neto| 27/01/2026 | Ajustes no diagrama de domínio |
 
 ---
 
@@ -64,7 +65,8 @@ Quanto a cada funcionário **(recepcionista, enfermeira, médico e farmacêutico
 
 ### 3.2 Minimundo - Diagrama de domínio
 
-<img width="2300" height="2211" alt="Diagrama de dominio-hospital-v2" src="https://github.com/user-attachments/assets/0f184f9a-47ca-4453-a136-dbaa6b03721d" />
+<img width="2689" height="2211" alt="Diagrama de dominio-hospital-v3" src="https://github.com/user-attachments/assets/459c261d-b090-42cb-9ccb-9eccbcdbe830" />
+
 
 
 ---
