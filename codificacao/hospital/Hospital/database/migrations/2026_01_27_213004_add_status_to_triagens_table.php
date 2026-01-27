@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::table('triagens', function (Blueprint $table) {
             $table->enum('status', [
-                'aguardando_atendimento',  // Triagem finalizada
-                'em_atendimento',          // Médico chamou
-                'aguardando_medicamentos', // Médico prescreveu
-                'finalizado',              // Farmácia entregou
-                'cancelado'                // Exceção
+                'aguardando_atendimento',  
+                'em_atendimento',          
+                'aguardando_medicamentos', 
+                'finalizado',              
+                'cancelado'                
             ])
-            ->default('aguardando_atendimento') // Opcional: define o estado inicial
+            ->default('aguardando_atendimento') 
             ->after('id');
         });
     }
