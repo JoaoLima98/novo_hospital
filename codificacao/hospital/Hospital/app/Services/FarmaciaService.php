@@ -11,7 +11,7 @@ class FarmaciaService
 {
     public function criarLote($idRemedio, $quantidade)
     {
-        if ($quantidade < 0) {
+        if ($quantidade <= 0 || $quantidade === null) {
             throw new Exception('O número deve ser maior que zero.');
         }
 
@@ -42,5 +42,9 @@ class FarmaciaService
         }
 
         return true;
+    }
+
+    public function retornarAlertaEstoque(){
+        
     }
 }

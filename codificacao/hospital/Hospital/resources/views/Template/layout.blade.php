@@ -220,7 +220,24 @@
                 @if(auth()->check() && auth()->user()->perfil === 'admin')
                     <a href="{{ route('criar.usuario') }}" class="nav-item"><i class="fas fa-user"></i>Criar Usuário</a>
                 @elseif(auth()->check() && auth()->user()->perfil === 'medico')
-                    <a href="{{ url('/medico') }}" class="nav-item"><i class="fas fa-tachometer-alt"></i>Fazer prescrição</a>
+                    <a href="{{ url('/medico') }}" class="nav-item"><i class="fas fa-tachometer-alt"></i>Triagens</a>
+                    <a href="{{ url('/medico/triagens') }}" class="nav-item"><i class="fas fa-tachometer-alt"></i>Meus atendimentos</a>
+
+                @elseif(auth()->check() && auth()->user()->perfil === 'enfermeiro')
+                    <a href="{{ url('/triagem') }}" class="nav-item"><i class="fas fa-notes-medical"></i>Realizar Triagem</a>
+                
+                @elseif(auth()->check() && auth()->user()->perfil === 'recepcionista')
+    
+                    {{-- Link para o CRUD de Pacientes (Lista, Cadastra, Edita) --}}
+                    <a href="{{ route('pacientes.index') }}" class="nav-item">
+                        <i class="fas fa-user-injured"></i> Pacientes
+                    </a>
+
+                    {{-- Se quiser manter o link da Triagem separado, deixe assim: --}}
+                    <a href="{{ route('pacientes.create') }}" class="nav-item">
+                        <i class="fas fa-user-plus"></i> Cadastrar Paciente
+                    </a>
+
                 @endif
 
                 @yield('nav')

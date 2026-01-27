@@ -7,6 +7,7 @@ use App\Http\Requests\Auth\LoginRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
 class AuthenticatedSessionController extends Controller
@@ -30,9 +31,9 @@ class AuthenticatedSessionController extends Controller
         if(auth()->user()->perfil === 'admin'){
             return redirect()->intended(route('dashboard', absolute: false));
         }else if(auth()->user()->perfil === 'medico'){
-            return redirect()->intended(route('medico', absolute: false));
+            return redirect()->intended(route('medico.index', absolute: false));
         }else if(auth()->user()->perfil === 'farmaceutico'){
-            
+                        
             return redirect()->intended(route('farmacia', absolute: false));    
         }
         return redirect()->intended(route('dashboard', absolute: false));

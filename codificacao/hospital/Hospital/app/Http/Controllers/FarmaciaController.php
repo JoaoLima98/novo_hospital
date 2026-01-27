@@ -40,11 +40,25 @@ class FarmaciaController extends Controller
         ])
             ->orderBy('id', 'desc')
             ->get();
+        
 
+        $dados = \App\Models\Estoque::select('id_remedio', DB::raw('SUM(quantidade) as total'))
+            ->with('remedio')
+            ->groupBy('id_remedio')
+            ->get();
+            $remedios = [];
+        foreach($dados as $dado){
+            if($dado->total < $dado->remedio->qtd_alerta ){
+                $remedios[] = $dado;
+            }
+            
+        }
+        
         return view('Farmacia.buscarGuiasPaciente', [
             'pacientes' => Paciente::all(),
             'ultimasGuias' => $todasGuias,
-            'pacienteSelecionado' => null
+            'pacienteSelecionado' => null,
+            'remedios' => $remedios,
         ]);
     }
 
@@ -172,5 +186,21 @@ class FarmaciaController extends Controller
             DB::rollBack();
             return back()->with('error', 'Erro ao atender prescrição: ' . $e->getMessage());
         }
+    }
+    public function remedios(){
+        $remedios = Remedio::all();
+        return view('Farmacia.remedios',compact('remedios'));
+    }
+    public function alertaEstoque(Request $request, int $id){
+        $remedio = Remedio::find($id);
+        if(!$remedio)
+            response()->json(['success'  => true,'message'  => 'Remédio não encontrado !']);
+        
+        $remedio->update([
+            'qtd_alerta' => $request->qtd_alerta
+        ]);
+
+        return response()->json(['success'  => true,
+                                 'message'  => 'Quantidade de alerta alterado com sucesso! ']);
     }
 }

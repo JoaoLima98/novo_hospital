@@ -16,7 +16,8 @@
 
 1.  O sistema apresenta a aba "Cadastrar Funcionário"
 2. O Ator insere o nome, email, senha, telefone e perfil _(Médico, Recepcionista, etc...)_ do novo funcionário
-3. 3.1 Se o perfil selecionado for o perfil de médico, o campo **"CRM"** _(CRM médico é a sigla para Conselho Regional de Medicina e, mais especificamente, refere-se ao registro profissional obrigatório que um médico obtém ao se inscrever em um conselho estadual para poder exercer a profissão legalmente no Brasil. O CRM deve conter até 6 dígitos)_ e o campo **"Especialidade"** devem ser apresentados, pois são campos exclusivos de médico.
+3. 3.1 Se o perfil selecionado for o perfil de médico, o campo **"CRM"** _(CRM médico é a sigla para Conselho Regional de Medicina e, mais especificamente, refere-se ao registro profissional obrigatório que um médico obtém ao se inscrever em um conselho estadual para poder exercer a profissão legalmente no Brasil. O CRM deve conter até 6 dígitos)_ e o campo **"Especialidade"** (O campo especialidade será determinante para saber quais pacientes serão encaminhados para cada médico, exemplo: problema no coração para cardiologista) devem ser apresentados, pois são campos exclusivos de médico.
+	
 	3.2 Se o perfil selecionado for o perfil de enfermeiro, o campo **"COREN"** _(COREN significa  Conselho Regional de Enfermagem, uma autarquia federal que atua em cada estado para fiscalizar e regulamentar o exercício da profissão de enfermagem. O COREN deve conter até 6 dígitos)_ deve ser apresentado, pois é um campo exclusivo de enfermeiro.
 
 4.  O Ator seleciona o botão salvar.

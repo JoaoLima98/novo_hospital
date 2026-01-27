@@ -3,6 +3,7 @@
 @section('title', 'Painel de Guias')
 
 @section('nav')
+<a href="{{ route('remedios') }}" class="nav-item"><i class="fas fa-pills"></i>Remédios</a>
 <a href="{{ route('consultar.estoque') }}" class="nav-item"><i class="fas fa-pills"></i> Estoque de remédios</a>
 <a href="{{ route('painel.guias') }}" class="nav-item"><i class="fas fa-calendar-check"></i> Entregar Medicamentos</a>
 
@@ -12,7 +13,7 @@
 <div class="main-content">
     <div class="content-header">
         <h2 class="content-title"><i class="fas fa-calendar-check"></i> Painel de Guias de Prescrição</h2>
-
+        {{-- 
         <form id="formBuscar" action="{{ route('consultar.guias') }}" method="GET">
             @csrf
             <select name="id_paciente" id="paciente" class="form-select">
@@ -27,6 +28,7 @@
                 @endif
             </select>
         </form>
+         --}}
     </div>
 
     @if($ultimasGuias && $ultimasGuias->count() > 0)
@@ -242,4 +244,28 @@ $(document).ready(function() {
     });
 });
 </script>
+@if($remedios)
+<script>
+    let lista = `
+        <ul style="text-align: center; list-style: none; padding: 0;">
+            @foreach($remedios as $item)
+                <li style="margin-bottom: 6px;">
+                    <strong>{{ $item->remedio->nome }}</strong> — Restam: {{ $item->total }}
+                </li>
+            @endforeach
+        </ul>
+    `;
+
+    Swal.fire({
+        title: "Estoque Baixo!",
+        html: lista,
+        icon: "warning",
+        confirmButtonText: "Ok",
+        customClass: {
+            popup: 'swal2-center-popup'
+        }
+    });
+</script>
+
+@endif 
 @endsection

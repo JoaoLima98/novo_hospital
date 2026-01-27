@@ -283,6 +283,17 @@ Este documento é o "Como" — o manual detalhado para executar, monitorar e con
 | Software | [R$ x,xx] | [Nome das ferramentas ou licenças] |
 
 
+## 5. Gráfico de Burndown
+
+- Deve ser inserido o gráfico (imagem) ou link para o gráfico
+
+
+## 6. Gerenciamento de Risco
+
+- Deve ser uma tabela com as colunas igual na representação abaixo:
+
+| Risco Identificado | Probabilidade | Impacto | Precaução (Prevenção) | Plano de Ação (Se o risco acontecer) |
+|--------------------|--------------|---------|-------------------------|---------------------------------------|
 
 ```
 
@@ -391,5 +402,88 @@ O que precisa estar pronto antes do teste começar.
 
 ---
 **Observações:** [Inserir observações relevantes ou "sem observações"]
+
+```
+
+
+## 10. Plano de Gestão de Mudanças e Evolução
+
+Este documento formaliza a estratégia para gerenciar a evolução do projeto, garantindo que mudanças sejam tratadas de forma ágil, colaborativa e transparente, refletindo a natureza iterativa do desenvolvimento.
+
+### Template:
+
+```
+
+
+# Plano de Gestão de Mudanças e Evolução
+
+**Projeto:** Nome do projeto
+
+
+Descrição do documento
+
+---
+
+## 1. Abordagem de Controle de Mudanças
+
+
+## 1. Abordagem de Controle de Mudanças
+
+### 1.1. Priorização e Aprovação de Mudanças
+
+Detalhar o processo completo para uma solicitação de mudança (correção, melhoria ou nova funcionalidade).
+
+-   Como as mudanças serão priorizadas?  
+    (Quem decide? Quais critérios são utilizados — valor para o cliente, risco, esforço, etc.?)
+    
+-   Qual será o processo para aprovar ou rejeitar mudanças?  
+    (Quem? Em qual momento?)
+    
+
+### 1.2. Lidar com Mudanças Urgentes e Novas Funcionalidades
+
+-   Qual é a estratégia para lidar com mudanças urgentes (Hotfixes) que surgem no decorrer de uma interação/sprint?
+    
+-   Como novas funcionalidades inesperadas, mas de alto valor, serão inseridas no backlog sem desorganizar o planejamento atual?
+    
+
+----------
+
+## 2. Utilização de Ferramentas e Artefatos
+
+### 2.1. Monitoramento e Rastreabilidade (GitHub Projects)
+
+-   Como o GitHub Projects será configurado e usado para rastrear o ciclo de vida de uma mudança (da sugestão à entrega)?
+    
+-   Quais colunas, labels ou campos serão utilizados para indicar o status de uma mudança?  
+    (Ex.: “Solicitada”, “Priorizada”, “Em Desenvolvimento”, “Em Revisão”, “Implementada”.)
+    
+
+### 2.2. Versionamento e Consistência (Git/GitHub)
+
+-   Como o processo de branching (Git Flow, Trunk-Based Development etc.) ajudará a rastrear o histórico de mudanças, isolar desenvolvimento e garantir a consistência do código?
+    
+-   Detalhar a política de commit (convenções de mensagens) e o uso de tags para marcar versões (ex.: `v1.0.0`) e registrar o histórico de decisões e mudanças.
+    
+
+----------
+
+## 3. Comunicação e Adaptação
+
+### 3.1. Documentação do Histórico de Decisões
+
+-   Qual é o plano para documentar o histórico de decisões de mudança?  
+    Onde isso será registrado? (Ex.: Comments nas Issues, documento específico.)
+    
+-   Como garantir que a documentação do projeto (design de arquitetura, manuais etc.) seja atualizada em sincronia com as mudanças implementadas?
+    
+
+### 3.2. Comunicação e Adaptação da Equipe
+
+-   Como pretendem comunicar essas mudanças para todos os envolvidos (desenvolvedores, stakeholders, cliente)?  
+    (Ex.: reuniões diárias, Sprint Review, Release Notes no GitHub, e-mail.)
+    
+-   Qual é o plano para garantir que todos acompanhem e se adaptem às evoluções de forma eficaz, minimizando confusão e retrabalho?
+
 
 ```
