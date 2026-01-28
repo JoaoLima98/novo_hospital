@@ -70,6 +70,8 @@ Para garantir a organização do código, o rastreamento do histórico e o isola
     -   `feature/nome-da-funcionalidade`: Para o desenvolvimento de novos recursos.
         
     -   `fix/nome-do-erro`: Para a correção de bugs.
+ 
+    -   `test/nome-do-teste`: Para a implementação de testes.
         
     -   `main`: Branch de produção e documentação. Devido à ausência de ambiente de homologação, as branches de desenvolvimento são testadas localmente e mescladas na _main_ quando funcionais. (No caso da documentação, como não tem efeitos colaterais igual alterações no código, optamos por atualizar diretamente na branch _main_).
 
@@ -77,6 +79,7 @@ Para garantir a organização do código, o rastreamento do histórico e o isola
     
     -   `feature/nome-da-feature`        
     -   `fix/nome-do-ajuste`
+    -   `test/nome-do-teste`: Para a implementação de testes.
         
 -   **Estratégia de Milestone:** Os Milestones devem demonstrar a versão do produto e o objetivo da iteração de maneira objetiva como nos exemplos abaixo.
     -   `V1.0: Adição da funcionalidade x`        
