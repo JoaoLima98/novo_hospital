@@ -1,6 +1,6 @@
 name: Laravel Tests
 
-# Quando isso vai rodar?
+
 on:
   push:
     branches: [ "main", "master" ]
