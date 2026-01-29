@@ -34,7 +34,8 @@ class Triagem extends Model
         'acidente_veiculo', 
         'tipo_envolvimento_veiculo',
         'atendido',
-        'medico_id'
+        'medico_id',
+        'status',
     ];
 
     protected $casts = [

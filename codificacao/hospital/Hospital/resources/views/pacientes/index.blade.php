@@ -26,7 +26,6 @@
                     {{-- Input CPF --}}
                     <div class="col-12 col-md-4">
                         <label for="filtro_cpf" class="form-label small text-muted fw-bold">Buscar por CPF</label>
-                        {{-- maxlength 14 para travar no tamanho do CPF --}}
                         <input type="text" id="filtro_cpf" class="form-control" placeholder="000.000.000-00" maxlength="14">
                     </div>
                 </div>
@@ -43,12 +42,32 @@
                                 <th class="ps-4 py-3">Nome do Paciente</th>
                                 <th>CPF</th>
                                 <th>Telefone</th>
-                                <th>Cidade</th>
+                                {{-- ALTERADO: De Cidade para Status --}}
+                                <th class="text-center">Status Atual</th>
                                 <th class="text-end pe-4">Ações</th>
                             </tr>
                         </thead>
                         <tbody>
                             @forelse($pacientes as $paciente)
+                                {{-- 
+                                    LÓGICA DE STATUS E CORES 
+                                    Recupera a triagem mais recente pelo relacionamento definido no Model
+                                --}}
+                                @php
+                                    $triagem = $paciente->triagem; // Pega a relação latestOfMany
+                                    $statusRaw = $triagem ? $triagem->status : null;
+
+                                    // Define cor e texto baseado no Enum
+                                    $statusConfig = match($statusRaw) {
+                                        'aguardando_atendimento'  => ['class' => 'bg-warning text-dark', 'label' => 'Aguardando atendimento médico'],
+                                        'em_atendimento'          => ['class' => 'bg-info text-dark',    'label' => 'Em atendimento médico'],
+                                        'aguardando_medicamentos' => ['class' => 'bg-primary',           'label' => 'Aguardando medicamentos'],
+                                        'finalizado'              => ['class' => 'bg-success',           'label' => 'Finalizado'],
+                                        'cancelado'               => ['class' => 'bg-danger',            'label' => 'Cancelado'],
+                                        default                   => ['class' => 'bg-secondary bg-opacity-25 text-muted', 'label' => 'Sem triagem registrada'],
+                                    };
+                                @endphp
+
                                 <tr class="linha-paciente">
                                     <td class="ps-4 py-3">
                                         <div class="d-flex align-items-center">
@@ -56,17 +75,21 @@
                                                 <i class="fas fa-user fa-lg"></i>
                                             </div>
                                             <div>
-                                                {{-- CLASSE ALVO: td-nome --}}
                                                 <h5 class="mb-0 fw-bold text-dark fs-5 text-uppercase td-nome">{{ $paciente->nome }}</h5>
                                                 <small class="text-muted fs-6">ID: #{{ $paciente->id }}</small>
                                             </div>
                                         </div>
                                     </td>
                                     
-                                    {{-- CLASSE ALVO: td-cpf --}}
                                     <td class="fs-6 td-cpf">{{ $paciente->cpf }}</td>
                                     <td class="fs-6">{{ $paciente->telefone }}</td>
-                                    <td class="fs-6">{{ $paciente->cidade_atual }}</td>
+                                    
+                                    {{-- COLUNA STATUS --}}
+                                    <td class="text-center">
+                                        <span class="badge rounded-pill {{ $statusConfig['class'] }} px-3 py-2 fw-normal fs-7">
+                                            <i class="fas fa-circle fa-xs me-1"></i> {{ $statusConfig['label'] }}
+                                        </span>
+                                    </td>
                                     
                                     <td class="text-end pe-4">
                                         <div class="btn-group">
@@ -84,7 +107,6 @@
                                 </tr>
                             @endforelse
                             
-                            {{-- Mensagem de Não Encontrado --}}
                             <tr id="msg-nao-encontrado" style="display: none;">
                                 <td colspan="5" class="text-center py-5 text-muted">
                                     <i class="fas fa-search fa-2x mb-3 d-block opacity-50"></i>
@@ -95,17 +117,13 @@
                     </table>
                 </div>
             </div>
-            <div class="card-footer bg-white d-flex justify-content-end py-3">
-                {{ $pacientes->links() }}
-            </div>
+            {{-- REMOVIDO: Footer com Paginação --}}
         </div>
     </div>
 </div>
 
-{{-- SCRIPT PURO JS (Vanilla) --}}
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    
     // Selecionando elementos
     const inputNome = document.getElementById('filtro_nome');
     const inputCpf = document.getElementById('filtro_cpf');
@@ -115,61 +133,49 @@ document.addEventListener('DOMContentLoaded', function() {
     // Função de Filtro Principal
     function filtrarTabela() {
         const termoNome = inputNome.value.toLowerCase().trim();
-        // Remove tudo que não for número da busca do CPF
         const termoCpf = inputCpf.value.replace(/\D/g, ''); 
 
         let encontrouAlguem = false;
 
         linhas.forEach(function(linha) {
-            // Pega o elemento dentro da linha
             const elNome = linha.querySelector('.td-nome');
             const elCpf = linha.querySelector('.td-cpf');
 
-            // Proteção caso o HTML mude e não ache o elemento
             if (elNome && elCpf) {
                 const textoNome = elNome.textContent.toLowerCase();
-                // Limpa o CPF da tabela para comparar apenas números
                 const textoCpf = elCpf.textContent.replace(/\D/g, '');
 
                 const bateuNome = textoNome.includes(termoNome);
                 const bateuCpf = (termoCpf === '') || textoCpf.includes(termoCpf);
 
                 if (bateuNome && bateuCpf) {
-                    linha.style.display = ''; // Mostra a linha (volta ao padrão da tabela)
+                    linha.style.display = ''; 
                     encontrouAlguem = true;
                 } else {
-                    linha.style.display = 'none'; // Esconde
+                    linha.style.display = 'none'; 
                 }
             }
         });
 
-        // Controle da mensagem de "Nada encontrado"
         if (msgNaoEncontrado) {
             msgNaoEncontrado.style.display = encontrouAlguem ? 'none' : '';
         }
     }
 
-    // Função para Máscara de CPF (Vanilla JS - Sem plugins)
     function mascaraCPF(valor) {
         return valor
-            .replace(/\D/g, '') // substitui qualquer caracter que nao seja numero por nada
-            .replace(/(\d{3})(\d)/, '$1.$2') // captura 2 grupos de numero o primeiro de 3 e o segundo de 1, apos capturar o primeiro grupo ele adiciona um ponto antes do segundo grupo de numero
+            .replace(/\D/g, '')
+            .replace(/(\d{3})(\d)/, '$1.$2')
             .replace(/(\d{3})(\d)/, '$1.$2')
             .replace(/(\d{3})(\d{1,2})/, '$1-$2')
-            .replace(/(-\d{2})\d+?$/, '$1'); // captura 2 numeros seguidos de um traço e não deixa ser digitado mais nada
+            .replace(/(-\d{2})\d+?$/, '$1');
     }
 
-    // Event Listeners (Gatilhos)
-    
-    // 1. Gatilho para o NOME
     inputNome.addEventListener('input', filtrarTabela);
-
-    // 2. Gatilho para o CPF (Aplica máscara visual e depois filtra)
     inputCpf.addEventListener('input', function(e) {
         e.target.value = mascaraCPF(e.target.value);
         filtrarTabela();
     });
-
 });
 </script>
 @endsection

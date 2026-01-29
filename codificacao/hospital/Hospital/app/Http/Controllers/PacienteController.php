@@ -10,7 +10,7 @@ class PacienteController extends Controller
     public function index()
     {
         // Paginação para não pesar a lista
-        $pacientes = Paciente::orderBy('nome')->paginate(10);
+        $pacientes = Paciente::with('triagem')->orderBy('nome')->get();
         return view('pacientes.index', compact('pacientes'));
     }
 

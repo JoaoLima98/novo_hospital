@@ -87,6 +87,13 @@ class MedicoController extends Controller
         Gate::authorize('medico');
 
         $paciente = Paciente::with('triagem')->findOrFail($id);
+
+        $lastTriagem = Triagem::where('paciente_id', $id)
+            ->orderBy('created_at', 'desc')
+            ->first();
+        
+        $lastTriagem->status = 'em_atendimento';
+        $lastTriagem->save();
         // atendido
         $remedios = Remedio::whereHas('estoques', function ($query) {
             $query->where('quantidade', '>', 0);
@@ -109,6 +116,8 @@ class MedicoController extends Controller
             ->first();
         if ($ultimaTriagem) {
             $ultimaTriagem->update(['atendido' => true, "medico_id" => auth()->user()->medico->id]);
+            $ultimaTriagem->status = "aguardando_medicamentos";
+            $ultimaTriagem->save();
         }
         if($request->has('medicamentos')){
             foreach($request->medicamentos as $remedio){

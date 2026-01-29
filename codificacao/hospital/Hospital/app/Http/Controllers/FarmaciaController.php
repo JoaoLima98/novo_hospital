@@ -123,6 +123,7 @@ class FarmaciaController extends Controller
     public function marcarPrescricaoAtendida(Request $request, int $id)
     {
         $prescricao = Prescricao::with('remedios')->find($id);
+        
         if (!$prescricao) {
             return back()->with('error', 'Prescrição não encontrada.');
         }
@@ -150,12 +151,11 @@ class FarmaciaController extends Controller
 
                 $lote = $remedio->estoques()->where('quantidade', '>=', $quantidadeNecessaria)->first();
                 if (!$lote) {
-
                     $lote = $remedio->estoques()->where('quantidade', '>', 0)->first();
                 }
                 
                 if (!$lote) {
-                     throw new \Exception('Nenhum lote com estoque encontrado para ' . $remedio->nome . ', embora o total agregado exista.');
+                        throw new \Exception('Nenhum lote com estoque encontrado para ' . $remedio->nome . '.');
                 }
                 
                 $lote->decrement('quantidade', $quantidadeNecessaria);
@@ -166,18 +166,37 @@ class FarmaciaController extends Controller
             
             $totalRemediosNaGuia = $prescricao->remedios()->count();
             
+            // Recarrega os dados atualizados do banco
             $prescricao->load('remedios'); 
             
             $totalRemediosAtendidos = $prescricao->remedios->where('pivot.atendido', true)->count();
 
             $novoStatus = 'nao_atendido';
+            
+            // --- AQUI ESTÁ A MÁGICA ---
+            
+
             if ($totalRemediosAtendidos == $totalRemediosNaGuia) {
                 $novoStatus = 'atendido';
+
+                // 1. Busca a última triagem desse paciente
+                $ultimaTriagem = \App\Models\Triagem::where('paciente_id', $prescricao->id_paciente)
+                                    ->latest() // Pega a mais recente
+                                    ->first();
+
+                // 2. Se achar, muda o status para 'finalizado'
+                if ($ultimaTriagem) {
+                    $ultimaTriagem->update(['status' => 'finalizado']);
+                    
+                }
+
             } elseif ($totalRemediosAtendidos > 0) {
                 $novoStatus = 'atendido_parcialmente';
             }
+            // ---------------------------
 
             $prescricao->update(['prescricao_atendida' => $novoStatus]);
+            
             DB::commit();
 
             return back()->with('success', 'Prescrição atendida com sucesso! Status: ' . $novoStatus);

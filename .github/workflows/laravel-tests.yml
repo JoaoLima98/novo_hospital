@@ -21,7 +21,7 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: '8.2' # Mude para a versão do seu projeto (8.1, 8.3, etc)
-        extensions: mbstring, dom, fileinfo, sqlite3
+        extensions: mbstring, dom, fileinfo, sqlite3, zip, unzip, pdo, pdo_sqlite, curl
 
     # 3. Copia o arquivo de ambiente
     - name: Copy .env
@@ -29,7 +29,7 @@ jobs:
 
     # 4. Instala as dependências (a pasta vendor é criada AQUI e morre AQUI)
     - name: Install Dependencies
-      run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+      run: composer install --no-ansi --no-interaction --no-scripts --prefer-dist
 
     # 5. Gera a chave da aplicação
     - name: Generate key
