@@ -174,6 +174,8 @@ class FarmaciaController extends Controller
             $novoStatus = 'nao_atendido';
             
             // --- AQUI ESTÁ A MÁGICA ---
+            
+
             if ($totalRemediosAtendidos == $totalRemediosNaGuia) {
                 $novoStatus = 'atendido';
 
@@ -185,6 +187,7 @@ class FarmaciaController extends Controller
                 // 2. Se achar, muda o status para 'finalizado'
                 if ($ultimaTriagem) {
                     $ultimaTriagem->update(['status' => 'finalizado']);
+                    
                 }
 
             } elseif ($totalRemediosAtendidos > 0) {
