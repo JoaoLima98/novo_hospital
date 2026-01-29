@@ -27,6 +27,7 @@
 | 1.9.1 | João de Azevedo Lima Neto | 08/12/2025 | Atualização no diagrama de classe e inserção no registro de auditoria |
 | 2.0 | João de Azevedo Lima Neto | 19/12/2025 | Adicionado descrição do caso de uso Gerenciar Pacientes |
 | 2.1 | João de Azevedo Lima Neto | 15/01/2026 | Adicionado descrição do caso de uso Atualizar Status do Paciente |
+| 2.2 | João de Azevedo Lima Neto | 27/01/2026 | Ajustado diagrama de caso de uso |
 
 ---
 
@@ -67,7 +68,8 @@ Os atores identificados no contexto deste projeto estão descritos na tabela aba
 
 ### 2.2 Diagrama de caso de uso
 
-<img width="1612" height="1840" alt="Diagrama caso de uso Triagem Hospitalar - Diagrama de caso de uso" src="https://github.com/user-attachments/assets/f73857b5-8b73-4df6-b606-ded0727af866" />
+<img width="1592" height="1660" alt="Diagrama caso de uso Triagem Hospitalar - Diagrama de caso de uso" src="https://github.com/user-attachments/assets/f0f06b23-63cc-4109-ae31-304fcbf253df" />
+
 
 
 
