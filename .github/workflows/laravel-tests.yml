@@ -1,6 +1,5 @@
 name: Laravel Tests
 
-
 on:
   push:
     branches: [ "main", "master" ]
@@ -12,36 +11,46 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # 1. Baixa o seu código para a máquina virtual
+    # 1. Baixa o código
     - name: Checkout do código
       uses: actions/checkout@v4
 
-    # 2. Prepara o PHP na máquina virtual
+    # 2. (NOVO) Passo de Debug para ver a estrutura de pastas
+    # Se der erro, olhe o log deste passo para ver onde o composer.json está
+    - name: Listar arquivos (Debug)
+      run: |
+        echo "=== LISTANDO DIRETÓRIO ATUAL ==="
+        pwd
+        ls -la
+        echo "=== LISTANDO SUBDIRETÓRIOS ==="
+        ls -R
+
+    # 3. Prepara o PHP (CORRIGIDO: adicionei zip, unzip e pdo_sqlite)
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.2' # Mude para a versão do seu projeto (8.1, 8.3, etc)
+        php-version: '8.2' 
         extensions: mbstring, dom, fileinfo, sqlite3, zip, unzip, pdo, pdo_sqlite, curl
 
-    # 3. Copia o arquivo de ambiente
+    # 4. Copia o .env
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
 
-    # 4. Instala as dependências (a pasta vendor é criada AQUI e morre AQUI)
+    # 5. Instala dependências (CORRIGIDO: removido -q para ver erros)
     - name: Install Dependencies
       run: composer install --no-ansi --no-interaction --no-scripts --prefer-dist
 
-    # 5. Gera a chave da aplicação
+    # 6. Gera a chave
     - name: Generate key
       run: php artisan key:generate
 
-    # 6. Cria o banco de dados SQLite em memória (para ser rápido)
+    # 7. Cria o banco SQLite
     - name: Create Database
       run: |
         touch database/database.sqlite
         
-    # 7. Roda os testes
-    - name: Execute tests (Unit and Feature tests)
+    # 8. Roda os testes
+    - name: Execute tests
       env:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
