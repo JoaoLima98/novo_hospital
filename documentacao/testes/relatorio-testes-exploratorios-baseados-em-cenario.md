@@ -64,10 +64,68 @@
 
 ### Cenário 1: Inserção/Edição com valor de alerta definido como 4 ou menos
 
-- **Link**: 
-- **Resultado**: 
+- **Link**:  https://drive.google.com/drive/folders/1AYOQB3qyuO-u1Ao9olKrYOHDHotEnZvo?usp=drive_link
+- **Resultado**: Incongruência detectada. O alerta está sendo permitido para valores menores que 5
 
 ### Cenário 2: Cancelar modal de cadastro de medicamento
 
-- **Link**: 
-- **Resultado**: 
+- **Link**:  https://drive.google.com/drive/folders/1AYOQB3qyuO-u1Ao9olKrYOHDHotEnZvo?usp=drive_link
+- **Resultado**:  Incongruência detectada. Não encontrei a página de inserir medicamento.
+
+## Especificação [gerenciar-pacientes](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/gerenciar-pacientes.md#caso-de-uso-gerenciar-pacientes)
+
+### Cenário 1: Preencher todos os campos corretamente e confirmar
+
+- **Link**: https://drive.google.com/drive/folders/1F4IpVSEsCzVsr4MzsWgIQql4DlGnx9c1?usp=drive_link
+- **Resultado**: Resultado esperado atingido. O paciente foi cadastrado com sucesso.
+
+### Cenário 2: Clicar em "Cancelar" durante a edição
+
+- **Link**: https://drive.google.com/drive/folders/1F4IpVSEsCzVsr4MzsWgIQql4DlGnx9c1?usp=drive_link
+- **Resultado**:  Resultado esperado atingido. Os dados do paciente se permaneceram inalterados.
+
+## Especificação [iniciar-sessao](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/iniciar-sessao.md#caso-de-uso-iniciar-sess%C3%A3o)
+
+### Cenário 1: Inserir email e senha corretamente
+
+- **Link**: https://drive.google.com/drive/folders/1es9S5u_IJu9uAUamw7EJtxGb5-DYy9JN?usp=drive_link
+- **Resultado**: Resultado esperado atingido. Sessão iniciada com sucesso.
+
+### Cenário 2: Tentar acessar uma rota que o ator não deve ter acesso
+
+- **Link**: https://drive.google.com/drive/folders/1es9S5u_IJu9uAUamw7EJtxGb5-DYy9JN?usp=drive_link
+- **Resultado**: Resultado indesejado. O usuário enfermeiro teve acesso ao consultar estoque que deveria ser visível apenas para os farmacêuticos
+
+
+## Especificação [prescrever-medicamento](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/prescrever-medicamento.md#caso-de-uso-prescrever-medicamento)
+
+### Cenário 1: Inserir medicamento repetido
+
+- **Link**: *A fazer*
+- **Resultado**: *A fazer*
+
+### Cenário 2: Estoque menor que 1 de determinado medicamento
+
+- **Link**: *A fazer*
+- **Resultado**: *A fazer*
+
+## Especificação [registrar-entrada-de-medicamentos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/registrar-entrada-de-medicamentos.md#caso-de-uso-registrar-entrada-de-medicamentos)
+
+### Cenário: Cancelar operação de cadastro de lotes
+
+- **Link**: https://drive.google.com/drive/folders/1Br5NsaZr95ZS43FKRw_q6NqINN7PH9Oa?usp=drive_link
+- **Resultado**: Resultado esperado atingido. Nenhum lote novo foi criado.
+
+## Especificação [visualizar-fila-de-atendimento](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/visualizar-fila-atendimento.md#caso-de-uso-visualizar-fila-de-atendimento)
+
+### Cenário: Realizar triagem de pacientes com diferentes níveis de prioridade
+
+- **Link**: *A fazer*
+- **Resultado**: *A fazer*
+
+## Especificação [visualizar-historico-de-atendimento](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/visualizar-historico-atendimento.md#caso-de-uso-visualizar-historico-de-atendimento)
+
+### Cenário: Realizar prescrição de um paciente
+
+- **Link**: *A fazer*
+- **Resultado**: *A fazer*
