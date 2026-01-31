@@ -101,13 +101,13 @@
 
 ### Cenário 1: Inserir medicamento repetido
 
-- **Link**: *A fazer*
-- **Resultado**: *A fazer*
+- **Link**: https://drive.google.com/drive/u/3/folders/1wyesk9Pt6qquKd7dF1LpZSecr39Ffxb2
+- **Resultado**: Resultado esperado atingido. O medicamento já selecionado não apareceu para escolher novamente na posologia.
 
 ### Cenário 2: Estoque menor que 1 de determinado medicamento
 
-- **Link**: *A fazer*
-- **Resultado**: *A fazer*
+- **Link**: https://drive.google.com/drive/u/3/folders/1wyesk9Pt6qquKd7dF1LpZSecr39Ffxb2
+- **Resultado**: Resultado esperado atingido. O medicamento sem unidades no estoque não apareceu para escolher novamente na posologia.
 
 ## Especificação [registrar-entrada-de-medicamentos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/registrar-entrada-de-medicamentos.md#caso-de-uso-registrar-entrada-de-medicamentos)
 
@@ -118,14 +118,14 @@
 
 ## Especificação [visualizar-fila-de-atendimento](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/visualizar-fila-atendimento.md#caso-de-uso-visualizar-fila-de-atendimento)
 
-### Cenário: Realizar triagem de pacientes com diferentes níveis de prioridade
+### Cenário: Realizar triagem de pacientes com diferentes níveis de prioridade - A tabela deve mostrar os pacientes em ordem de prioridade
 
-- **Link**: *A fazer*
-- **Resultado**: *A fazer*
+- **Link**: https://drive.google.com/drive/folders/1jebXkHcK1unjRc6S-WZ1QzsogEULe4RG?usp=drive_link
+- **Resultado**: Resultado esperado atingido. A tabela foi preenchida corretamente por ordem de prioridade.
 
 ## Especificação [visualizar-historico-de-atendimento](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/visualizar-historico-atendimento.md#caso-de-uso-visualizar-historico-de-atendimento)
 
-### Cenário: Realizar prescrição de um paciente
+### Cenário: Realizar prescrição de um paciente - A tabela deve mostrar os pacientes em ordem de prioridade
 
-- **Link**: *A fazer*
-- **Resultado**: *A fazer*
+- **Link**: https://drive.google.com/drive/folders/1tMgdHuifQDG9YP-22Vfyj8g-TPkfa_xq?usp=drive_link
+- **Resultado**: Resultado esperado atingido. A tabela foi preenchida corretamente por ordem de prioridade.
