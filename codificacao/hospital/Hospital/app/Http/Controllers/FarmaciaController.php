@@ -96,6 +96,7 @@ class FarmaciaController extends Controller
 
     public function criarLote()
     {
+        Gate::authorize('farmaceutico');
         $remedios = Remedio::all();
         return view('Estoque.criarLote', compact('remedios'));
     }
