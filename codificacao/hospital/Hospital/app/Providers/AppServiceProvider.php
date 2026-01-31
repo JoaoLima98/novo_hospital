@@ -23,6 +23,10 @@ class AppServiceProvider extends ServiceProvider
             return $user->perfil === 'farmaceutico';
         });
 
+        Gate::define('enfermeiro',function(User $user){
+            return $user->perfil === 'enfermeiro';
+        });
+
     }
 
     /**
