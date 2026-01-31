@@ -106,6 +106,9 @@ A fase de garantia de qualidade para verificar o funcionamento do sistema e corr
 | :--- | :--- |
 | Primeira entrega avaliativa | 12/11/2025 |
 | Prévia da 2ª etapa | 17/12/2025 - Adiantado para dia 10/12/2025 |
+| Reta final - Entrega do produto e última apresentação. | 04/02/2026 - Antes da estratégia de Milestones implementada |
+| Adição da funcionalidade de Status do Paciente e Adição de testes | 04/02/2026 - Depois da estratégia de Milestones implementada |
+| Ajustes nas documentações do produto final | 11/02/2026 |
 
 ## 3. Diagrama de Atividades do Projeto
 
