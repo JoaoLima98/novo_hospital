@@ -5,7 +5,10 @@ on:
     branches: [ "main", "master" ]
   pull_request:
     branches: [ "main", "master" ]
-
+    
+defaults:
+      run:
+        working-directory: codificacao
 jobs:
   laravel-tests:
     runs-on: ubuntu-latest
