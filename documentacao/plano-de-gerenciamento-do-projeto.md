@@ -19,13 +19,15 @@
 | 1.2 | João de Azevedo Lima Neto | 14/11/2025 | Adicionado novo milestone (Marco) |
 | 1.3 | João de Azevedo Lima Neto | 28/11/2025 | Adicionado Burndown |
 | 1.4 | João de Azevedo Lima Neto | 09/12/2025 | Ajuste no EAP e nas descrições do documento segundo orientações do Cliente/Professor Maurício |
+| 1.3 | João de Azevedo Lima Neto | 02/02/2025 | Adições de gráficos e ajustes no EAP e Estimativas de esforço e custo |
 
 
 ## 1. EAP - Estrutura Analítica do Projeto
 
 #### Ferramenta de gerenciamento que quebra o projeto em partes menores e gerenciáveis para planejamento e controle.
 
-<img width="4109" height="1217" alt="Diagrama caso de uso Triagem Hospitalar - EAP (1)" src="https://github.com/user-attachments/assets/1173b951-c804-44df-8976-e5d45c060029" />
+<img width="4278" height="1217" alt="Diagrama caso de uso Triagem Hospitalar - EAP (1)" src="https://github.com/user-attachments/assets/7c97d2dd-b95e-4741-b2b4-82c512de599b" />
+
 
 
 ## Descrição do EAP
@@ -85,6 +87,8 @@ A fase de garantia de qualidade para verificar o funcionamento do sistema e corr
 -   **Unitários:** Verificação isolada das menores partes do código.
     
 -   **Caixa Branca:** Testes baseados no conhecimento da estrutura interna do código.
+
+-   **Caixa Preta:** Testes sem conhecimento da estrutura interna do código.
     
 -   **Documentos:** Criação da documentação formal de teste.
     
@@ -126,29 +130,18 @@ A fase de garantia de qualidade para verificar o funcionamento do sistema e corr
 
 #### Previsão detalhada do volume de trabalho e do valor financeiro (R$) total necessário.
 
-### 4.1. Estimativa de Esforço
-| Pacote de Trabalho (EAP) | Estimativa (Horas) | Recursos Alocados |
-| :--- | :--- | :--- |
-| Definição dos processos (Papéis, Artefatos e Atividades) | 8h | Gerente de Projeto|
-| Levantamento de Requisitos | 8h | Analista de Negócio |
-| Estimar esforço e custo | 8h | Gerente de Projeto |
-| Desenvolvimento Backend e Banco de Dados | 60h | Desenvolvedor|
-| Desenvolvimento Frontend | 50h | Desenvolvedor |
-| Testes Unitários | 6h | Desenvolvedor|
-| Testes Caixa Branca| 6h | Analista de Negócio|
-| Documentação dos Testes | 4h | Analista de Negócio |
-| Total Estimado | 150h | |
-
-### 4.2. Estimativa de Custo
-| Categoria de Custo                       | Estimativa (R$) | Justificativa / Descrição                                                                 |
-|------------------------------------------|-----------------|--------------------------------------------------------------------------------------------|
-| Desenvolvedor (R$ 50/h × 116h)           | R$ 5.800,00     | Custo total das horas de backend, frontend e testes unitários                              |
-| Gerente de Projeto (R$ 80/h × 16h)       | R$ 1.280,00     | Custo total das horas de definição de processos e estimativa de esforço/custo              |
-| Analista de Negócio (R$ 65/h × 18h)      | R$ 1.170,00     | Custo total das horas de levantamento, testes caixa branca e documentação                  |
-| Hospedagem                               | R$ 350,00       | Hostinger (plano anual compartilhado)                                                      |
-| Domínio                                  | R$ 50,00        | Registro de domínio anual (.com ou .com.br)                                                |
-| Ferramentas e Licenças                   | R$ 200,00       | Softwares de apoio (Clickup, VS Code extensões pagas)                            |
-| **Total Estimado**                       | **R$ 8.850,00** | **Soma das estimativas de custo acima**   
+| Pacote de Trabalho (EAP) | Estimativa (Horas) | Recursos Alocados | Taxa (R$/h) | Custo Estimado (R$) |
+| :--- | :---: | :--- | :---: | :---: |
+| Definição dos processos (Papéis, Artefatos e Atividades) | 19h | Gerente de Projeto | R$ 80 | R$ 1.520,00 |
+| Levantamento de Requisitos | 19h | Analista de Negócio | R$ 65 | R$ 1.235,00 |
+| Estimar esforço e custo | 19h | Gerente de Projeto | R$ 80 | R$ 1.520,00 |
+| Desenvolvimento Backend e Banco de Dados | 142h | Desenvolvedor | R$ 50 | R$ 7.100,00 |
+| Desenvolvimento Frontend | 119h | Desenvolvedor | R$ 50 | R$ 5.950,00 |
+| Testes Unitários | 14h | Desenvolvedor | R$ 50 | R$ 700,00 |
+| Testes Caixa Branca | 14h | Desenvoldedor/Testador | R$ 50 | R$ 700,00 |
+| Testes Caixa Preta | 14h | Analista de Negócio | R$ 65 | R$ 910,00 |
+| Documentação dos Testes | 10h | Analista de Negócio | R$ 65 | R$ 650,00 |
+| **Total Geral** | **370h** | - | - | **R$ 20.285,00** |
 
 ## 5. Gráficos de controle
 
