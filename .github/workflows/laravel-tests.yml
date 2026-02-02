@@ -15,7 +15,7 @@ jobs:
         working-directory: ./codificacao/hospital/Hospital
 
     steps:
-    # 1. Baixa o código
+    # 1. Baixa o códigoo
     - name: Checkout do código
       uses: actions/checkout@v4
 
