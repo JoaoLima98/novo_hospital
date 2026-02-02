@@ -100,7 +100,10 @@ A fase de garantia de qualidade para verificar o funcionamento do sistema e corr
 
 #### Ferramenta de visualização do projeto ao longo do tempo.
 
-[Gráfico GANTT](https://app.clickup.com/90132624030/v/g/2ky55cmy-613)
+[Gráfico GANTT - Clickup](https://app.clickup.com/90132624030/v/g/2ky55cmy-613)
+
+**OBSERVAÇÃO:** Em nosso Github Projects tem disponível um gráfico de Gantt da produção real do sistema.
+
 
 | Marco (Milestone) | Data Prevista |
 | :--- | :--- |
