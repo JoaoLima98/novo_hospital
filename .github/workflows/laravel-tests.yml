@@ -10,51 +10,59 @@ jobs:
   laravel-tests:
     runs-on: ubuntu-latest
 
+    # --- CONFIGURAÇÃO DO DIRETÓRIO ---
+    # Define que todos os comandos 'run' rodam nesta pasta.
+    # CUIDADO: Linux diferencia maiúsculas (Hospital != hospital).
+    # Verifique se o nome da pasta no GitHub é exatamente "Hospital".
     defaults:
       run:
-        working-directory: ./codificacao/hospital/Hospital 
+        working-directory: ./codificacao/hospital/Hospital
 
     steps:
-    # 1. Baixa o código (O checkout sempre roda na raiz primeiro, isso é normal)
+    # 1. Baixa o código
     - name: Checkout do código
       uses: actions/checkout@v4
 
-    # 2. Debug para garantir que estamos na pasta certa
-    - name: Listar arquivos (Debug)
+    # 2. Debug para garantir que o caminho está certo
+    - name: Verificar pasta atual (Debug)
       run: |
-        echo "=== ONDE ESTOU AGORA? ==="
+        echo "=== CAMINHO ATUAL ==="
         pwd
-        echo "=== O QUE TEM AQUI? ==="
+        echo "=== LISTA DE ARQUIVOS ==="
         ls -la
-        # Se aparecer o artisan e o composer.json aqui, DEU CERTO.
+        # Se você ver 'artisan' e 'composer.json' aqui, vai funcionar.
 
-    # 3. Setup PHP
+    # 3. Configura o PHP
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
         php-version: '8.2'
-        extensions: mbstring, dom, fileinfo, sqlite3, zip, unzip, pdo, pdo_sqlite, curl
+        extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite3, pdo_sqlite, bcmath, fileinfo
 
-    # 4. Copia o .env
-    - name: Copy .env
-      run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+    # 4. Prepara o arquivo de ambiente
+    - name: Copiar .env
+      run: cp .env.example .env
 
-    # 5. Instala dependências
-    - name: Install Dependencies
-      run: composer install --no-ansi --no-interaction --no-scripts --prefer-dist
+    # 5. Instala dependências do Laravel
+    - name: Instalar Dependências (Composer)
+      run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
-    # 6. Gera a chave
-    - name: Generate key
+    # 6. Corrige permissões (Essencial para não dar erro de log/permissão)
+    - name: Corrigir Permissões de Pastas
+      run: chmod -R 777 storage bootstrap/cache
+
+    # 7. Gera a chave de criptografia
+    - name: Gerar Key
       run: php artisan key:generate
 
-    # 7. Cria o banco SQLite
-    - name: Create Database
+    # 8. Cria o arquivo do banco de dados SQLite vazio
+    - name: Criar Banco de Dados SQLite
       run: |
-        # Como já definimos o working-directory, o 'database/' é relativo à pasta do Laravel
+        mkdir -p database
         touch database/database.sqlite
-      
-    # 8. Roda os testes
-    - name: Execute tests
+
+    # 9. Roda os testes usando SQLite
+    - name: Executar Testes
       env:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
