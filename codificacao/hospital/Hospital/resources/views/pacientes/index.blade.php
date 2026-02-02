@@ -26,6 +26,7 @@
                     {{-- Input CPF --}}
                     <div class="col-12 col-md-4">
                         <label for="filtro_cpf" class="form-label small text-muted fw-bold">Buscar por CPF</label>
+                        {{-- maxlength 14 para travar no tamanho do CPF --}}
                         <input type="text" id="filtro_cpf" class="form-control" placeholder="000.000.000-00" maxlength="14">
                     </div>
                 </div>
@@ -42,8 +43,7 @@
                                 <th class="ps-4 py-3">Nome do Paciente</th>
                                 <th>CPF</th>
                                 <th>Telefone</th>
-                                {{-- ALTERADO: De Cidade para Status --}}
-                                <th class="text-center">Status Atual</th>
+                                <th>Cidade</th>
                                 <th class="text-end pe-4">Ações</th>
                             </tr>
                         </thead>
@@ -75,6 +75,7 @@
                                                 <i class="fas fa-user fa-lg"></i>
                                             </div>
                                             <div>
+                                                {{-- CLASSE ALVO: td-nome --}}
                                                 <h5 class="mb-0 fw-bold text-dark fs-5 text-uppercase td-nome">{{ $paciente->nome }}</h5>
                                                 <small class="text-muted fs-6">ID: #{{ $paciente->id }}</small>
                                             </div>
@@ -107,6 +108,7 @@
                                 </tr>
                             @endforelse
                             
+                            {{-- Mensagem de Não Encontrado --}}
                             <tr id="msg-nao-encontrado" style="display: none;">
                                 <td colspan="5" class="text-center py-5 text-muted">
                                     <i class="fas fa-search fa-2x mb-3 d-block opacity-50"></i>
@@ -117,7 +119,7 @@
                     </table>
                 </div>
             </div>
-            {{-- REMOVIDO: Footer com Paginação --}}
+            
         </div>
     </div>
 </div>

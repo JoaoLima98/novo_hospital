@@ -7,11 +7,13 @@ use App\Models\Paciente;
 use App\Models\Triagem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
 
 class TriagemController extends Controller
 {
     public function create()
     {
+        Gate::authorize('enfermeiro');
         $pacientes = Paciente::all();
         $especialidades = Especialidade::whereHas('medicos')->get();
         return view('Triagem.createTriagem',compact('pacientes', 'especialidades'));

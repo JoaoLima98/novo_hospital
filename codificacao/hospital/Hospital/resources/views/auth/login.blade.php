@@ -45,7 +45,7 @@
                        class="w-full border border-gray-300 rounded-lg p-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 transition">
                 <!-- Mostra erros de validação do Laravel -->
                 @error('email')
-                    <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                    <p class="text-red-500 text-sm mt-1">Email ou senha inválidos</p>
                 @enderror
             </div>
 
