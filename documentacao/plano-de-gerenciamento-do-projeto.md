@@ -147,11 +147,20 @@ A fase de garantia de qualidade para verificar o funcionamento do sistema e corr
 | Ferramentas e Licenças                   | R$ 200,00       | Softwares de apoio (Clickup, VS Code extensões pagas)                            |
 | **Total Estimado**                       | **R$ 8.850,00** | **Soma das estimativas de custo acima**   
 
-## 5. Gráfico de burndown
+## 5. Gráficos de controle
 
 #### Gráfico utilizado para acompanhar o trabalho restante versus o tempo, permitindo visualizar o progresso e a capacidade de entrega.
 
 **[Gráfico de burndown](https://docs.google.com/spreadsheets/d/19c3hjhCZ2GJSnl3DyycGhQG0LLYjL1Az5o6ZRBHQJzI/edit?usp=sharing)**
+
+**Gráfico Burnup:**
+
+<img width="1200" height="864" alt="burnuo" src="https://github.com/user-attachments/assets/ae3b2d70-f2fc-4d62-94aa-8fe660c18afd" />
+
+**Gráfico de produção:**
+
+<img width="1200" height="864" alt="chart_status_complete" src="https://github.com/user-attachments/assets/517d8945-f1eb-48d1-a98f-89e6d3589fbd" />
+
 
 
 ## 6. Gerenciamento de risco
