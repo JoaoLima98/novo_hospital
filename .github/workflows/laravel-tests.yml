@@ -10,10 +10,6 @@ jobs:
   laravel-tests:
     runs-on: ubuntu-latest
 
-    # --- CONFIGURAÇÃO DO DIRETÓRIO ---
-    # Define que todos os comandos 'run' rodam nesta pasta.
-    # CUIDADO: Linux diferencia maiúsculas (Hospital != hospital).
-    # Verifique se o nome da pasta no GitHub é exatamente "Hospital".
     defaults:
       run:
         working-directory: ./codificacao/hospital/Hospital
