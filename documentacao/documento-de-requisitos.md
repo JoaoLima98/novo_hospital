@@ -26,6 +26,7 @@
 | 1.9 | João de Azevedo Lima Neto| 08/12/2025 | Ajustes na seção 3.2 e atualização no commit |
 | 1.9.1 | João de Azevedo Lima Neto| 26/01/2026 | Ajustes na seção 4, removido um RF que não fazia sentido estar como RF |
 | 1.9.2 | João de Azevedo Lima Neto| 27/01/2026 | Ajustes no diagrama de domínio |
+| 2.0 | João de Azevedo Lima Neto| 02/02/2026 | Atualizado RNs e Protótipos |
 
 ---
 
@@ -119,6 +120,9 @@ Tomando por base o contexto do sistema, foram identificados os seguintes requisi
 | **RN17** | Lote com quantidade negativa | O ator não deve poder inserir um número menor que 1 | [registrar-entrada-de-medicamentos.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/registrar-entrada-de-medicamentos.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
 | **RN18** | Campo medicamento obrigatório | O ator tenta cadastrar um lote sem nome. O sistema informa que o campo de medicamento é obrigatório | [registrar-entrada-de-medicamentos.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/registrar-entrada-de-medicamentos.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
 | **RN19** | Campo quantidade obrigatório | O ator tenta cadastrar um lote sem uma quantidade. O sistema informa que a quantidade é inválida. | [registrar-entrada-de-medicamentos.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/registrar-entrada-de-medicamentos.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es)) | ALTA | - |
+| **RN20** | CPF único no sistema | Se o Ator tentar cadastrar um CPF que já existe no banco de dados, o sistema bloqueia a operação e informa: "Paciente já cadastrado com este CPF. | [gerenciar-pacientes.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/gerenciar-pacientes.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
+| **RN21** | Campos Obrigatórios | O sistema deve proibir o cadastro se os campos Nome, CPF, Data de Nascimento e Telefone estiverem vazios. O sistema deve destacar os campos em vermelho. | [gerenciar-pacientes.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/gerenciar-pacientes.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
+| **RN22** | Cancelar Operação | A qualquer momento, se o Ator clicar em "Cancelar" ou fechar o modal, os dados inseridos são descartados e o sistema retorna à tela de listagem. | [gerenciar-pacientes.md](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/especificacoes/gerenciar-pacientes.md#4-fluxos-alternativos-exce%C3%A7%C3%B5es) | ALTA | - |
 
 
 
@@ -162,6 +166,13 @@ Tomando por base o contexto do sistema, foram identificados os seguintes requisi
 
 <img width="1300" height="606" alt="image" src="https://github.com/user-attachments/assets/0d3b1e8b-f6fd-4dfc-b6d8-edbd48cfb7fe" />
 
+-8
+
+<img width="1267" height="600" alt="image" src="https://github.com/user-attachments/assets/70e34832-ec58-4226-a1ea-17c15c8e1b49" />
+
+-9
+
+<img width="1134" height="592" alt="image" src="https://github.com/user-attachments/assets/11049898-ca91-4b23-8c5e-e521fd44afa0" />
 
 ## 6. Diagrama de Atividades do Produto:
 
