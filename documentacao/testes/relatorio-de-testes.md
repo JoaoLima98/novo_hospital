@@ -1,5 +1,5 @@
 # Relatório de testes geral:
-<img width="1600" height="165" alt="image" src="https://github.com/user-attachments/assets/fd08a97a-dadc-48e3-8749-393e381aaf7d" />
+<img width="1900" height="248" alt="image" src="https://github.com/user-attachments/assets/425f05f8-dd00-41ba-a827-de2c3958123c" />
 
 
 # Relatório de testes cadastrar:
