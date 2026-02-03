@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: [ "main", "master" ]
 
-
 defaults:
   run:
     working-directory: codificacao/hospital/Hospital
@@ -19,16 +18,6 @@ jobs:
     - name: Checkout do código
       uses: actions/checkout@v4
 
-    # Passo de Debug CRUCIAL: Vai mostrar onde está o composer.json
-    - name: Listar arquivos (Debug)
-      run: |
-        echo "=== ONDE ESTOU? ==="
-        pwd
-        echo "=== O QUE TEM NA PASTA ATUAL? ==="
-        ls -la
-        echo "=== BUSCANDO COMPOSER.JSON (RECURSIVO) ==="
-        find . -name "composer.json"
-
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
@@ -39,7 +28,6 @@ jobs:
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
 
     - name: Install Dependencies
-      # Adicionei || true para que se falhar, a gente consiga ver o log do debug acima
       run: composer install --no-ansi --no-interaction --no-scripts --prefer-dist
 
     - name: Generate key
@@ -53,4 +41,5 @@ jobs:
       env:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
-      run: php artisan test
+      # MUDANÇA AQUI: Usando o executor direto para obedecer o XML
+      run: vendor/bin/phpunit
