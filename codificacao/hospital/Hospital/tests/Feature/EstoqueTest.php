@@ -6,12 +6,12 @@ use Tests\TestCase;
 use App\Models\User; // <--- Importante: Importar a Model User
 use App\Models\Remedio;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-
+use PHPUnit\Framework\Attributes\Test;
 class EstoqueTest extends TestCase
 {
     use RefreshDatabase;
 
-    /** @test */
+    #[Test]
     public function deve_criar_um_novo_lote_de_estoque_com_sucesso()
     {
         

@@ -8,7 +8,7 @@ use App\Models\Medico;
 use App\Models\Farmaceutico;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Gate;
-
+use PHPUnit\Framework\Attributes\Test;
 class AdminCriaUsuariosTest extends TestCase
 {
     use RefreshDatabase;
@@ -20,7 +20,7 @@ class AdminCriaUsuariosTest extends TestCase
         Gate::define('adm', fn($user) => $user->perfil === 'admin');
     }
 
-    /** @test */
+    #[Test]
     public function admin_deve_criar_medico_com_sucesso()
     {
         $admin = User::factory()->create(['perfil' => 'admin']);
@@ -42,7 +42,7 @@ class AdminCriaUsuariosTest extends TestCase
         $this->assertDatabaseHas('medicos', ['crm' => '12345-SP']);
     }
 
-    /** @test */
+    #[Test]
     public function admin_nao_deve_criar_medico_com_crm_repetido()
     {
         $admin = User::factory()->create(['perfil' => 'admin']);
@@ -63,7 +63,7 @@ class AdminCriaUsuariosTest extends TestCase
              ->assertSessionHas('error', 'CRM já cadastrado !'); // <--- Testa o erro de CRM
     }
 
-    /** @test */
+    #[Test]
     public function admin_deve_criar_farmaceutico_com_sucesso()
     {
         $admin = User::factory()->create(['perfil' => 'admin']);

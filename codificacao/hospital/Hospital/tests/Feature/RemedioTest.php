@@ -6,12 +6,12 @@ use Tests\TestCase;
 use App\Models\User;
 use App\Models\Remedio;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-
+use PHPUnit\Framework\Attributes\Test;
 class RemedioTest extends TestCase
 {
     use RefreshDatabase;
 
-    /** @test */
+    #[Test]
     public function nao_deve_permitir_cadastrar_remedio_com_nome_repetido()
     {
         // 1. Cria um usuário (assumindo que precisa estar logado, se não precisar, tire o actingAs)

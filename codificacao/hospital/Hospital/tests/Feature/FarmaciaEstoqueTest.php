@@ -11,7 +11,7 @@ use App\Models\Paciente;
 use App\Models\Medico;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Gate;
-
+use PHPUnit\Framework\Attributes\Test;
 class FarmaciaEstoqueTest extends TestCase
 {
     use RefreshDatabase;
@@ -23,7 +23,7 @@ class FarmaciaEstoqueTest extends TestCase
         Gate::define('farmaceutico', fn($user) => $user->perfil === 'farmaceutico');
     }
 
-    /** @test */
+    #[Test]
     public function nao_deve_atender_prescricao_se_estoque_for_insuficiente()
     {
         // 1. DADO: Um farmacêutico logado

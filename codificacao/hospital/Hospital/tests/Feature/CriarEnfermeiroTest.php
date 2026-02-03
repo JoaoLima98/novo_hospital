@@ -6,7 +6,7 @@ use Tests\TestCase;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Gate;
-
+use PHPUnit\Framework\Attributes\Test;
 class CriarEnfermeiroTest extends TestCase
 {
     use RefreshDatabase;
@@ -20,7 +20,7 @@ class CriarEnfermeiroTest extends TestCase
         });
     }
 
-    /** @test */
+    #[Test]
     public function admin_deve_criar_usuario_enfermeiro_com_sucesso()
     {
         // 1. PREPARAÇÃO (Cenário)

@@ -10,7 +10,7 @@ use App\Models\Remedio;
 use App\Models\Triagem;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Gate;
-
+use PHPUnit\Framework\Attributes\Test;
 class CriarPrescricaoTest extends TestCase
 {
     use RefreshDatabase; 
@@ -25,7 +25,7 @@ class CriarPrescricaoTest extends TestCase
         });
     }
 
-    /** @test */
+    #[Test]
     public function um_medico_pode_criar_uma_prescricao_e_finalizar_a_triagem()
     {
         //PREPARAÇÃO
