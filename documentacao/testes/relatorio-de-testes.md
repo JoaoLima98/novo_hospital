@@ -11,6 +11,8 @@
 <img width="1885" height="191" alt="image" src="https://github.com/user-attachments/assets/051f26fb-4d98-440f-896e-1beb5319a3af" />
 
 
+# Relatório de testes administrador:
+<img width="1886" height="192" alt="image" src="https://github.com/user-attachments/assets/a530accf-5aac-41b5-b2a0-b075d68e2f72" />
 
 
 # Relatório de testes farmacia:
