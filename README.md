@@ -1,6 +1,8 @@
 # novo_hospital
 Sistema de dados e acompanhamento hospitalar
 
+Link de acesso para demonstração/testes: https://pink-finch-695246.hostingersite.com/
+
 # Como rodar os testes unitários do projeto
 
 Um passo a passo simples pra rodar apenas os testes Unit do Laravel.
