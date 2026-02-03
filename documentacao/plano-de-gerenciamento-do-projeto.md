@@ -106,7 +106,7 @@ A fase de garantia de qualidade para verificar o funcionamento do sistema e corr
 
 [Gráfico GANTT - Clickup](https://app.clickup.com/90132624030/v/g/2ky55cmy-613)
 
-**OBSERVAÇÃO:** Em nosso Github Projects tem disponível um gráfico de Gantt da produção real do sistema.
+[Gantt do Github Projects](https://github.com/users/JoaoLima98/projects/5/views/4)
 
 
 | Marco (Milestone) | Data Prevista |
@@ -149,11 +149,15 @@ A fase de garantia de qualidade para verificar o funcionamento do sistema e corr
 
 **[Gráfico de burndown](https://docs.google.com/spreadsheets/d/19c3hjhCZ2GJSnl3DyycGhQG0LLYjL1Az5o6ZRBHQJzI/edit?usp=sharing)**
 
-**Gráfico Burnup:**
+**Gráfico Burnup:** 
+
+*Legenda: Roxo = Completo - Verde = Aberto*
 
 <img width="1200" height="864" alt="burnuo" src="https://github.com/user-attachments/assets/ae3b2d70-f2fc-4d62-94aa-8fe660c18afd" />
 
 **Gráfico de produção:**
+
+*Legenda: Roxo = Completo - Verde = Aberto*
 
 <img width="1200" height="864" alt="chart_status_complete" src="https://github.com/user-attachments/assets/517d8945-f1eb-48d1-a98f-89e6d3589fbd" />
 
