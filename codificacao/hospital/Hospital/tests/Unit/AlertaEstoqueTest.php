@@ -8,7 +8,7 @@ use App\Models\User;
 use App\Services\PrescricaoService;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-class CadastroPosologiaTest extends TestCase
+class AlertaEstoqueTest extends TestCase
 {
     /**
      * A basic unit test example.
