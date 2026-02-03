@@ -7,8 +7,9 @@
 
 
 
-# Relatório de testes medico:
-<img width="1600" height="141" alt="image" src="https://github.com/user-attachments/assets/f042974e-79fc-4684-8b76-8d6bb5e81e7c" />
+# Relatório de testes triagem:
+<img width="1885" height="191" alt="image" src="https://github.com/user-attachments/assets/051f26fb-4d98-440f-896e-1beb5319a3af" />
+
 
 
 
