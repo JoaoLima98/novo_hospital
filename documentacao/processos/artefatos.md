@@ -370,38 +370,27 @@ A seguir, são apresentados os diagramas de casos de uso e descrições associad
 
 ```
 
-## 9. Casos de teste (Exploratórios)
+## 9. Relatório de testes exploratórios baseado em cenários
 
-Documento que detalha determinados casos de testes, sendo obrigatórios para os cenários exploratórios e opcionais para os unitários.
+Artefato que visa relatar os testes de caixa preta realizados com o relato e o vídeo da execução do teste.
 
 ### Template
 
 ```
 
-# Caso de Teste: [Inserir Nome]
-**Resumo:** [Inserir o título ou objetivo resumido do teste]
+# Relatório de testes exploratórios baseado em cenários
 
----
+## Especificação: Especificação x com o link
 
-- **Prioridade:** [Baixa / Média / Alta]
-- **Status:** [Planejado / Aprovado / Falhou / Em Execução]
-- **Executor:** [Nome do Responsável]
-- **Data de criação:** DD/MM/AAAA
+### Cenário X: Cenário detalhado.
 
-### Pré-condição
-O que precisa estar pronto antes do teste começar.
-* Ex: Estar logado no sistema com perfil administrativo.
+- **Link**: Link do vídeo do teste sendo realizado.
+- **Resultado**: Resultado do teste, se atingiu o resultado esperado ou foi encontrado alguma incongruência/erro.
 
-### Passos
-1. [Ação 1 - ex: Acessar a tela X]
-2. [Ação 2 - ex: Clicar no botão Y]
-3. [Ação 3 - ex: Preencher campo Z]
+### Cenário y: Cenário detalhado.
 
-### Resultado Esperado
-* [Descrever exatamente o que o sistema deve fazer após os passos acima]
-
----
-**Observações:** [Inserir observações relevantes ou "sem observações"]
+- **Link**: Link do vídeo do teste sendo realizado.
+- **Resultado**: Resultado do teste, se atingiu o resultado esperado ou foi encontrado alguma incongruência/erro.
 
 ```
 
