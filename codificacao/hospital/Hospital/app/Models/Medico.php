@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Medico extends Model
 {
     use HasFactory;
-    protected $fillable = ['nome', 'crm', 'especialidade', 'telefone','user_id'];
+    protected $fillable = ['nome', 'crm', 'telefone','user_id'];
 
     public function prescricoes()
     {

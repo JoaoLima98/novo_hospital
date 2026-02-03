@@ -11,11 +11,15 @@ class RemedioController extends Controller
         return view('Remedio.createRemedio');
     }
     public function store(Request $request){
+        
         $nome = $request->nome;
         $jaExiste = Remedio::where('nome', $nome)->first();
         if($jaExiste)
             return back()->with('error', 'Remédio já existe !');
-        Remedio::create($nome);
+        Remedio::create([
+            'nome' => $request->nome,
+            'qtd_alerta' => $request->qtd_alerta ?? 10,
+        ]);
         return back()->with('success', 'Remedio cadastrado com sucesso ! Agora poderá ser feito pedidos em lotes !');
     }
 }
