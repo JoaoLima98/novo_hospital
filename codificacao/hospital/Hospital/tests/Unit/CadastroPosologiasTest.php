@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Services\PrescricaoService;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use PHPUnit\Framework\Attributes\Test;
 class CadastroPosologiasTest extends TestCase
 {
     /**
@@ -21,7 +22,7 @@ class CadastroPosologiasTest extends TestCase
         $this->prescricaoService = new PrescricaoService();
     }
 
-    /** @test */
+    #[Test]
     public function nao_deve_criar_prescricao_com_medicamento_com_campos_vazios()
     {
         $service = new \App\Services\PrescricaoService();

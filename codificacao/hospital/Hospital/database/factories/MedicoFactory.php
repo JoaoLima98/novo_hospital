@@ -21,7 +21,7 @@ class MedicoFactory extends Factory
             'user_id' => User::factory(),
             'nome' => $this->faker->name(),
             'crm' => $this->faker->unique()->numerify('#####'),
-            'especialidade' => $this->faker->jobTitle(), 
+            # 'especialidade' => $this->faker->jobTitle(), 
             'telefone' => $this->faker->phoneNumber(),
         ];
     }

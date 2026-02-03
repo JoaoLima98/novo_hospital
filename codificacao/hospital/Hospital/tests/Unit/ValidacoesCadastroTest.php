@@ -10,7 +10,7 @@ use App\Models\Prescricao;
 use App\Models\PrescricaoRemedio;
 use App\Services\FarmaciaService; 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-
+use PHPUnit\Framework\Attributes\Test;
 class ValidacoesCadastroTest extends TestCase
 {
     use RefreshDatabase;
@@ -23,7 +23,7 @@ class ValidacoesCadastroTest extends TestCase
         $this->service = new FarmaciaService();
     }
 
-    /** @test */
+    #[Test]
     public function nao_deve_permitir_quantidade_negativa()
     {
         $this->expectExceptionMessage('O número deve ser maior que zero.');
@@ -32,7 +32,7 @@ class ValidacoesCadastroTest extends TestCase
 
         $this->service->criarLote($remedio->id, -5);
     }
-    /** @test */
+    #[Test]
     public function nao_deve_permitir_lote_vazio()
     {
         $this->expectExceptionMessage('O número deve ser maior que zero.');
@@ -42,7 +42,7 @@ class ValidacoesCadastroTest extends TestCase
         $this->service->criarLote($remedio->id, 0);
     }
 
-    /** @test */
+    #[Test]
     public function deve_buscar_prescricao_com_paciente_valido()
     {
         $paciente = Paciente::factory()->create();
@@ -53,7 +53,7 @@ class ValidacoesCadastroTest extends TestCase
         $this->assertEquals($prescricao->id, $resultado->id);
     }
 
-    /** @test */
+    #[Test]
     public function deve_retornar_erro_para_paciente_inexistente()
     {
         $this->expectExceptionMessage('Paciente não encontrado.');
@@ -61,7 +61,7 @@ class ValidacoesCadastroTest extends TestCase
         $this->service->buscarGuia(9999);
     }
 
-    /** @test */
+    #[Test]
     public function deve_marcar_prescricao_atendida_e_atualizar_estoque()
     {
         $remedio = Remedio::factory()->create();

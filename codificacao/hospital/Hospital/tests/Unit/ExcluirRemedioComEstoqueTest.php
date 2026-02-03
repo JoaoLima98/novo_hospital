@@ -9,10 +9,11 @@ use App\Models\User;
 use App\Services\PrescricaoService;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use PHPUnit\Framework\Attributes\Test;
 class ExcluirRemedioComEstoqueTest extends TestCase
 {
     use RefreshDatabase;
-    /** @test */
+    #[Test]
     public function nao_deve_excluir_remedio_com_estoque_disponivel()
     {
         $service = new \App\Services\RemedioService();

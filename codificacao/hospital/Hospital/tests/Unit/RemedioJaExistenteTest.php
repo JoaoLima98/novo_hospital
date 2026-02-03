@@ -11,11 +11,11 @@ use App\Services\RemedioService;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Request;
-
+use PHPUnit\Framework\Attributes\Test;
 class RemedioJaExistenteTest extends TestCase
 {
     use RefreshDatabase;
-    /** @test */
+    #[Test]
     public function nao_deve_cadastrar_remedio_com_nome_duplicado()
     {
         $service = new RemedioService();

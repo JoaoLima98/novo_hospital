@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->string('nome');
             $table->string('crm')->unique();
-            $table->string('especialidade');
+            #$table->string('especialidade');
             $table->string('telefone');
             $table->timestamps();
         });

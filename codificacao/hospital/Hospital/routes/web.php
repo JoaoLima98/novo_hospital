@@ -53,6 +53,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/consultar-estoque',[FarmaciaController::class,'consultarEstoque'])->name('consultar.estoque');
 
     Route::get('/criar-remedio',[RemedioController::class,'create'])->name('criar.remedio');
+    Route::post('/criar-remedio',[RemedioController::class,'store'])->name('remedio.store');
     Route::get('/criar-estoque',[FarmaciaController::class,'criarLote'])->name('criar.lote');
     Route::post('/criar-lote',[FarmaciaController::class,'storeLote'])->name('store.lote');
 

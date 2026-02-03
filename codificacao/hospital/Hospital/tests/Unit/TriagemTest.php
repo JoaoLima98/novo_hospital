@@ -7,7 +7,7 @@ use App\Services\TriagemService;
 use App\Models\User;
 use App\Models\Paciente;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-
+use PHPUnit\Framework\Attributes\Test;
 class TriagemTest extends TestCase
 {
     use RefreshDatabase;
@@ -24,7 +24,7 @@ class TriagemTest extends TestCase
         $this->paciente = Paciente::factory()->create();
     }
 
-    /** @test */
+    #[Test]
     public function deve_realizar_triagem_com_sucesso()
     {
         $dados = [
@@ -55,7 +55,7 @@ class TriagemTest extends TestCase
         $this->assertInstanceOf(\App\Models\Triagem::class, $resultado);
     }
 
-    /** @test */
+    #[Test]
     public function nao_deve_permitir_cadastro_sem_manchester()
     {
         $dados = [
@@ -70,7 +70,7 @@ class TriagemTest extends TestCase
         $this->service->registrarTriagem($dados, $this->enfermeiro->id);
     }
 
-    /** @test */
+    #[Test]
     public function nao_deve_permitir_cadastro_sem_glasgow()
     {
         $dados = [
@@ -85,7 +85,7 @@ class TriagemTest extends TestCase
         $this->service->registrarTriagem($dados, $this->enfermeiro->id);
     }
 
-    /** @test */
+    #[Test]
     public function valida_intervalos_de_glasgow_e_dor()
     {
         // Glasgow abaixo do permitido

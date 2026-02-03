@@ -6,7 +6,7 @@ use Tests\TestCase;
 use App\Services\UserService;
 use App\Services\MedicoService;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-
+use PHPUnit\Framework\Attributes\Test;
 class CadastroTest extends TestCase
 {
     use RefreshDatabase;
@@ -21,7 +21,7 @@ class CadastroTest extends TestCase
         $this->medicoService = new MedicoService();
     }
 
-    /** @test */
+    #[Test]
     public function nao_deve_permitir_email_repetido()
     {
         \App\Models\User::factory()->create(['email' => 'joao@email.com']);
@@ -36,7 +36,7 @@ class CadastroTest extends TestCase
         ]);
     }
 
-    /** @test */
+    #[Test]
     public function deve_aceitar_email_valido()
     {
         $this->userService->cadastrarUser([
@@ -49,7 +49,7 @@ class CadastroTest extends TestCase
         $this->assertDatabaseHas('users', ['email' => 'joao@email.com']);
     }
 
-    /** @test */
+    #[Test]
     public function nao_deve_aceitar_email_invalido()
     {
         $this->expectExceptionMessage('email deve seguir o padrão joao@email.com');
@@ -62,7 +62,7 @@ class CadastroTest extends TestCase
         ]);
     }
 
-    /** @test */
+    #[Test]
     public function nao_deve_permitir_crm_repetido()
     {
         \App\Models\Medico::factory()->create(['crm' => '12345']);

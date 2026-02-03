@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Services;
 
 use App\Models\Prescricao;
@@ -8,6 +9,7 @@ class PrescricaoService
 {
     public function criarPrescricao(array $dados)
     {
+        
         foreach ($dados['medicamentos'] as $remedio) {
             if (
                 empty($remedio['id']) ||
@@ -17,19 +19,20 @@ class PrescricaoService
                 empty($remedio['duracao']) ||
                 empty($remedio['qtd_tomar'])
             ) {
-                // Retorna OK se algum campo estiver vazio
-                return 'OK';
+                
+                return 'OK'; 
             }
         }
 
-        // Se todos os campos preenchidos, cria normalmente
+        
         $prescricao = Prescricao::create([
-            'id_medico' => $dados['id_medico'],
-            'id_paciente' => $dados['id_paciente'],
+            'id_medico' => $dados['id_medico'] ?? null,
+            'id_paciente' => $dados['id_paciente'] ?? null,
             'data_prescricao' => now(),
             'observacao' => $dados['observacao'] ?? null,
         ]);
 
+        // 3. Criação dos Itens da Prescrição (Filhos)
         foreach ($dados['medicamentos'] as $remedio) {
             PrescricaoRemedio::create([
                 'id_prescricao' => $prescricao->id,
@@ -42,6 +45,7 @@ class PrescricaoService
             ]);
         }
 
+        // Retorna o objeto criado (Sucesso)
         return $prescricao;
     }
 }
