@@ -57,7 +57,7 @@ Cartão para quando o item já foi aceito pelo cliente.
 - [Produto](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#4-produto-software-execut%C3%A1vel) : Artefato executável e entregável do que foi solicitado e desenvolvido.
 - [Plano de Testes](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#5-plano-de-testes): Artefato que visa definir os testes do software a fim de manter a qualidade do sistema.
 - [Relatorio de Testes](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#6-relat%C3%B3rio-de-testes-unit%C3%A1rios): Artefato gerado pela ferramenta/biblioteca de testes unitários, que visa relatar os testes que tiveram sucesso e fracassos.
-- [Caso de Teste](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#9-casos-de-teste-explorat%C3%B3rios): Artefato que detalha determinado caso de teste exploratórios.
+- [Relatório de testes exploratórios baseado em cenários](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/processos/artefatos.md#9-relat%C3%B3rio-de-testes-explorat%C3%B3rios-baseado-em-cen%C3%A1rios): Artefato que visa relatar os testes de caixa preta realizados com o relato e o vídeo da execução do teste.
 - [Plano de gestão de mudanças e evolução](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/plano-gestao-mudancas-evolucao.md#plano-de-gest%C3%A3o-de-mudan%C3%A7as-e-evolu%C3%A7%C3%A3o): Este documento formaliza a estratégia para gerenciar a evolução do projeto, garantindo que mudanças sejam tratadas de forma ágil, colaborativa e transparente.
 
 ## Atividades

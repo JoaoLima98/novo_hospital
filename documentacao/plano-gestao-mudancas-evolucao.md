@@ -65,6 +65,14 @@ O **GitHub Projects** é a ferramenta que utilizamos para rastrear o ciclo de vi
 
 Para garantir a organização do código, o rastreamento do histórico e o isolamento de novas funcionalidades sem comprometer a estabilidade do sistema, adotamos a seguinte estratégia:
 
+-   **Nomenclatura de versionamento:** Por padrão decidimos adotar a Nomenclatura de versionamento mais amplamente adotada na indústria de desenvolvimento de software que é o Versionamento Semântico:
+
+Exemplo: X.Y.Z
+
+    - MAJOR (X - Versão Maior): Incrementado quando há mudanças significativas ou incompatíveis com versões anteriores (breaking changes). Ex: 1.0.0 -> 2.0.0.
+    - MINOR (Y - Versão Menor): Incrementado quando novas funcionalidades são adicionadas, mas a compatibilidade com versões anteriores é mantida. Ex: 1.5.0 -> 1.6.0.
+    - PATCH (Z - Versão de Correção): Incrementado quando são feitas pequenas correções de bugs (bugfixes) que não adicionam novos recursos e são retrocompatíveis. Ex: 1.5.1 -> 1.5.2. 
+
 -   **Estratégia de Branching:** No início, todas as alterações eram feitas diretamente na branch *develop*, contudo, visando a segurança nas atualizações, passamos a criar branches específicas: 
     
     -   `feature/nome-da-funcionalidade`: Para o desenvolvimento de novos recursos.
@@ -81,16 +89,9 @@ Para garantir a organização do código, o rastreamento do histórico e o isola
     -   `fix/nome-do-ajuste`
     -   `test/nome-do-teste`: Para a implementação de testes.
         
--   **Estratégia de Milestone:** Os Milestones devem demonstrar a versão do produto e o objetivo da iteração de maneira objetiva como nos exemplos abaixo.
-    -   `V1.0: Adição da funcionalidade x`        
-    -   `V1.1: juste da funcionalidade x e adição da funcionalidade y`
-
-        
--   **Versionamento de Documentos:** O GitHub garante o controle de versão dos artefatos. No entanto, documentos vivos como [Documento de Requisitos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/documento-de-requisitos.md) e o [Documento de Especificação de Requisitos](https://github.com/JoaoLima98/novo_hospital/blob/main/documentacao/documento-de-especificacao-de-requisitos.md) seguem regras manuais de registro:
-    
-    -   **Alterações de Conteúdo:** Incremento de **0.1** na versão (ex: de 1.0 para 1.1).
-        
-    -   **Ajustes Menores:** Incremento de **0.0.1** na versão (ex: de 1.1 para 1.1.1).
+-   **Estratégia de Milestone:** Os Milestones devem demonstrar um conjunto de funcionalidades que serão entregues de maneira objetiva como nos exemplos abaixo.
+    -   `Adição da funcionalidade x`        
+    -   `A\juste da funcionalidade x e adição da funcionalidade y`
         
 -   **Padrão de Commits:** Para manter a consistência e o entendimento da equipe:
     

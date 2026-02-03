@@ -28,6 +28,7 @@
 | 2.0 | João de Azevedo Lima Neto | 19/12/2025 | Adicionado descrição do caso de uso Gerenciar Pacientes |
 | 2.1 | João de Azevedo Lima Neto | 15/01/2026 | Adicionado descrição do caso de uso Atualizar Status do Paciente |
 | 2.2 | João de Azevedo Lima Neto | 27/01/2026 | Ajustado diagrama de caso de uso |
+| 2.3 | João de Azevedo Lima Neto | 02/02/2026 | Diagrama de Classes atualizado |
 
 ---
 
@@ -91,5 +92,6 @@ Os atores identificados no contexto deste projeto estão descritos na tabela aba
 
 ## 3. Diagrama de Classes
 
-<img width="1620" height="1809" alt="Classe UML - Hospital (1)" src="https://github.com/user-attachments/assets/826b8251-c8c7-4a9f-a1c5-1b8b6382072c" />
+<img width="2080" height="1809" alt="Classe UML - Hospital" src="https://github.com/user-attachments/assets/d1369de9-33fc-4eac-b7bb-0963b804ce02" />
+
 
