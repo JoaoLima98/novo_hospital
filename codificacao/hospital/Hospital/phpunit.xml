@@ -3,18 +3,14 @@
          xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
          bootstrap="vendor/autoload.php"
          colors="true"
-         
          failOnWarning="false"
          failOnRisky="false"
          failOnDeprecation="false"
          failOnNotice="false"
-         
-         convertDeprecationsToExceptions="false"
-         convertErrorsToExceptions="true"
-         convertNoticesToExceptions="false"
-         convertWarningsToExceptions="false"
-         processIsolation="false"
-         stopOnFailure="false"
+         displayDetailsOnTestsThatTriggerDeprecations="false"
+         displayDetailsOnTestsThatTriggerErrors="false"
+         displayDetailsOnTestsThatTriggerNotices="false"
+         displayDetailsOnTestsThatTriggerWarnings="false"
 >
     <testsuites>
         <testsuite name="Unit">
